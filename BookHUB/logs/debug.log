@@ -1,0 +1,11 @@
+INFO 2021-01-22 16:31:20,585 views 19080 15856 hi
+INFO 2021-01-22 17:53:46,037 views 11836 14404 Error
+INFO 2021-01-22 17:53:46,037 views 11836 14404 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:55:35,326 views 11836 14404 Error
+INFO 2021-01-22 17:55:35,326 views 11836 14404 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:57:41,203 views 11836 14404 Error
+INFO 2021-01-22 17:57:41,203 views 11836 14404 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:58:46,563 views 6244 9780 Error
+INFO 2021-01-22 17:58:46,563 views 6244 9780 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:59:17,050 views 21792 9492 Error
+INFO 2021-01-22 17:59:17,052 views 21792 9492 'collections.OrderedDict' object has no attribute 'publist'
