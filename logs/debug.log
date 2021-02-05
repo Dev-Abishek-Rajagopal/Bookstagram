@@ -1,0 +1,19 @@
+INFO 2021-01-22 16:31:20,585 views 19080 15856 hi
+INFO 2021-01-22 17:53:46,037 views 11836 14404 Error
+INFO 2021-01-22 17:53:46,037 views 11836 14404 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:55:35,326 views 11836 14404 Error
+INFO 2021-01-22 17:55:35,326 views 11836 14404 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:57:41,203 views 11836 14404 Error
+INFO 2021-01-22 17:57:41,203 views 11836 14404 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:58:46,563 views 6244 9780 Error
+INFO 2021-01-22 17:58:46,563 views 6244 9780 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-22 17:59:17,050 views 21792 9492 Error
+INFO 2021-01-22 17:59:17,052 views 21792 9492 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-01-26 19:48:45,936 process 27140 19060 Error
+INFO 2021-01-26 19:48:45,939 process 27140 19060 App_User matching query does not exist.
+INFO 2021-01-26 19:53:08,145 process 13112 24012 App_User object (1)
+INFO 2021-01-26 19:54:04,723 process 14584 23788 App_User object (1)
+INFO 2021-01-26 19:54:16,481 process 19132 11688 reader
+INFO 2021-01-26 19:56:11,181 process 3076 17168 reader
+INFO 2021-01-26 19:56:22,790 process 3076 17168 reader
+INFO 2021-01-26 19:57:31,973 process 3076 17168 reader
