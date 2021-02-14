@@ -8,4 +8,4 @@ pip3 install djongo
 
 pip3 install django-unixtimestampfield
 
-pip3 install django-fernet-fields
+pip3 install django-fernet-fields==0.6
