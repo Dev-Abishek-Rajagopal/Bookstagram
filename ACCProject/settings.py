@@ -32,7 +32,7 @@ SECRET_KEY = '!vc3_zj)yp4fke24wan1289ap5)69t4fd@(el#uu(%a95tkd^!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [':5a0cf98d48b7.ngrok.io','127.0.0.1']
+ALLOWED_HOSTS = [':5a0cf98d48b7.ngrok.io','127.0.0.1', 'www.bookstagram.com' ,'bookstagram.com']
 
 
 

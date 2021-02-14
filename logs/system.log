@@ -158,3 +158,45 @@ WARNING 2021-02-02 18:48:54,435 log 17088 21580 Not Found: /favicon.ico
 WARNING 2021-02-02 18:48:54,436 basehttp 17088 21580 "GET /favicon.ico HTTP/1.1" 404 2090
 WARNING 2021-02-02 18:49:02,266 log 17088 5504 Not Found: /favicon.ico
 WARNING 2021-02-02 18:49:02,266 basehttp 17088 5504 "GET /favicon.ico HTTP/1.1" 404 2090
+WARNING 2021-02-10 02:59:54,236 log 18832 17992 Not Found: /
+WARNING 2021-02-10 02:59:54,237 basehttp 18832 17992 "GET / HTTP/1.1" 404 2032
+WARNING 2021-02-10 02:59:54,334 log 18832 17992 Not Found: /favicon.ico
+WARNING 2021-02-10 02:59:54,334 basehttp 18832 17992 "GET /favicon.ico HTTP/1.1" 404 2083
+WARNING 2021-02-10 03:00:09,458 log 18832 17992 Not Found: /
+WARNING 2021-02-10 03:00:09,458 basehttp 18832 17992 "GET / HTTP/1.1" 404 2032
+WARNING 2021-02-10 03:00:18,095 log 18832 17992 Not Found: /book/store/
+WARNING 2021-02-10 03:00:18,096 basehttp 18832 17992 "GET /book/store/ HTTP/1.1" 404 2083
+ERROR 2021-02-10 03:18:53,997 log 13984 17296 Internal Server Error: /store/user/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'BookVeiwSet' object has no attribute 'list_User'
+ERROR 2021-02-10 03:18:53,999 basehttp 13984 17296 "POST /store/user/?username=ImUser&usertype=reader&password=ImUser&country=canada&mailid=ImUser@ca.com&contact=1001000 HTTP/1.1" 500 69715
+ERROR 2021-02-10 03:20:06,161 log 9636 19972 Internal Server Error: /store/user/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserVeiwSet' object has no attribute 'list_User'
+ERROR 2021-02-10 03:20:06,162 basehttp 9636 19972 "POST /store/user/?username=ImUser&usertype=reader&password=ImUser&country=canada&mailid=ImUser@ca.com&contact=1001000 HTTP/1.1" 500 69715
+WARNING 2021-02-10 03:25:45,970 log 7852 19996 Not Found: /
+WARNING 2021-02-10 03:25:45,970 basehttp 7852 19996 "GET / HTTP/1.1" 404 2032
+WARNING 2021-02-10 03:39:57,939 log 10848 5680 Not Found: /store/login/
+WARNING 2021-02-10 03:39:57,940 basehttp 10848 5680 "POST /store/login/ HTTP/1.1" 404 2827
+WARNING 2021-02-10 03:41:04,728 log 10848 5680 Not Found: /store/book/login/
+WARNING 2021-02-10 03:41:04,728 basehttp 10848 5680 "POST /store/book/login/ HTTP/1.1" 404 31
+WARNING 2021-02-14 16:50:33,582 log 17108 11188 Not Found: /
+WARNING 2021-02-14 16:50:33,582 basehttp 17108 11188 "GET / HTTP/1.1" 404 2032
+WARNING 2021-02-14 16:50:33,631 log 17108 11188 Not Found: /favicon.ico
+WARNING 2021-02-14 16:50:33,631 basehttp 17108 11188 "GET /favicon.ico HTTP/1.1" 404 2083

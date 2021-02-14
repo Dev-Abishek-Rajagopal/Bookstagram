@@ -11,10 +11,10 @@ from fernet_fields import EncryptedTextField
 
 class App_User(models.Model):
 
-    username = models.CharField(max_length=200,default="user")
-    usertype = models.CharField(max_length=200,default="both")
-    password = EncryptedTextField(max_length=600,default="*")
-    country = models.CharField(max_length=200,default="Canada")
+    username = models.CharField(max_length=200)
+    usertype = models.CharField(max_length=200)
+    password = EncryptedTextField(max_length=600)
+    country = models.CharField(max_length=200)
     mailid = models.CharField(max_length=200,null=True)
     contact =  models.CharField(max_length=200,null=True)
     friends = models.IntegerField(default=0)

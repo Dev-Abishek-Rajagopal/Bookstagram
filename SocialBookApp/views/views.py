@@ -96,7 +96,7 @@ class UserVeiwSet(ModelViewSet):
     serializer_class = App_UserSerializer
 
 
-    def list_Book(self, request):
+    def list_User(self, request):
         try:
             App_User_list = App_User.objects.all()
             serializer = App_UserSerializer(App_User_list, many=True)
@@ -113,7 +113,7 @@ class UserVeiwSet(ModelViewSet):
             return Response(str(e), status=200)
 
 
-    def create_Book(self, request):
+    def create_User(self, request):
         try:
             serializer = App_UserSerializer(data=request.data)
             if serializer.is_valid():
@@ -125,7 +125,7 @@ class UserVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
-    def get_Book(self, request,*args, **kwargs):
+    def get_User(self, request,*args, **kwargs):
         try:
             pk = self.kwargs['pk']
             list = App_User.objects.get(id=pk)
@@ -136,7 +136,7 @@ class UserVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
-    def delete_Book(self, request,*args, **kwargs):
+    def delete_User(self, request,*args, **kwargs):
         try:
             pk = self.kwargs['pk']
             item = App_User.objects.get(id=pk)
@@ -147,7 +147,7 @@ class UserVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
-    def update_Book(self, request, *args, **kwargs):
+    def update_User(self, request, *args, **kwargs):
         try:
             serializer = App_UserSerializer(data=request.data)
             pk = self.kwargs['pk']

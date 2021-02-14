@@ -57,7 +57,7 @@ class App_UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = App_User;
-        fields = ('username', 'usertype', 'password', 'likes', 'country','mailid',"contact",'friends','wallet');
+        fields = ('username', 'usertype', 'password', 'country','mailid',"contact",'friends','wallet');
 
     def create(self, validated_data):
         try:

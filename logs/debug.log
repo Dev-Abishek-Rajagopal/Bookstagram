@@ -17,3 +17,9 @@ INFO 2021-01-26 19:54:16,481 process 19132 11688 reader
 INFO 2021-01-26 19:56:11,181 process 3076 17168 reader
 INFO 2021-01-26 19:56:22,790 process 3076 17168 reader
 INFO 2021-01-26 19:57:31,973 process 3076 17168 reader
+INFO 2021-02-10 03:20:44,544 views 8572 17100 Error
+INFO 2021-02-10 03:20:44,544 views 8572 17100 Field name `likes` is not valid for model `App_User`.
+INFO 2021-02-10 03:21:41,787 views 8572 17100 Error
+INFO 2021-02-10 03:21:41,787 views 8572 17100 Field name `likes` is not valid for model `App_User`.
+INFO 2021-02-10 03:40:19,627 process 10848 5680 ImUser
+INFO 2021-02-10 03:41:04,728 process 10848 5680 ImUser

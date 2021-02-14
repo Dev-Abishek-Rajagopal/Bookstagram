@@ -7,7 +7,7 @@ Created on 20-JAN-2021
 
 from django.conf.urls import url
 
-from SocialBookApp.views.views import (BookVeiwSet)
+from SocialBookApp.views.views import (BookVeiwSet,UserVeiwSet)
 from SocialBookApp.views.process import (LoginCheckSet)
 
 
@@ -23,6 +23,17 @@ book_id = BookVeiwSet.as_view({
     'delete': 'delete_Book'
 })
 
+user = UserVeiwSet.as_view({
+    'get' : 'list_User',
+    'post' : 'create_User',
+})
+
+user_id = UserVeiwSet.as_view({
+    'get' : 'get_User',
+    'put': 'update_User',
+    'delete': 'delete_User'
+})
+
 login = LoginCheckSet.as_view({
     'post' : 'login',
 
@@ -31,5 +42,10 @@ login = LoginCheckSet.as_view({
 urlpatterns = [
     url(r'^book/$', book),
     url(r'^book/(?P<pk>\d+)/$', book_id),
+
     url(r'^book/login/$', login),
+
+    url(r'^user/$', user),
+    url(r'^user/(?P<pk>\d+)/$', user_id),
+
 ]
