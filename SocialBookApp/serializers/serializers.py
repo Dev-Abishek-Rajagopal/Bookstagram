@@ -13,6 +13,7 @@ from rest_framework import serializers
 
 from SocialBookApp.models.bookmodels import (Book)
 from SocialBookApp.models.usermodels import (App_User)
+from django.contrib.auth.models import User
 from rest_framework.response import Response
 
 logger = logging.getLogger("book.request")
@@ -50,6 +51,38 @@ class BookSerializer(serializers.ModelSerializer):
             logger.info("Error")
             logger.info(str(e))
 
+class UserSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = User;
+        fields = ('username','first_name', 'last_name', 'email');
+
+    def create(self, validated_data):
+        try:
+            return User.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+
+    def update(self, instance, validated_data):
+        try:
+            instance.id = validated_data.get('id', instance.id);
+            instance.name = validated_data.get('name', instance.name);
+            instance.authname_id = validated_data.get('authname', instance.authname);
+            # instance.publist = validated_data.get('publist', instance.publist);
+            instance.rate = validated_data.get('rate', instance.rate);
+            instance.likes = validated_data.get('likes', instance.likes);
+            instance.share = validated_data.get('share', instance.share);
+            instance.views = validated_data.get('rate', instance.views);
+            instance.save();
+            return instance;
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
 
 
 class App_UserSerializer(serializers.ModelSerializer):
@@ -57,7 +90,7 @@ class App_UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = App_User;
-        fields = ('username', 'usertype', 'password', 'country','mailid',"contact",'friends','wallet');
+        fields = ('user','first_name', 'active', 'last_name','username', 'usertype', 'password', 'country','email',"contact",'friends','wallet');
 
     def create(self, validated_data):
         try:
@@ -75,7 +108,7 @@ class App_UserSerializer(serializers.ModelSerializer):
             instance.password = validated_data.get('password', instance.password);
 
             instance.country = validated_data.get('country', instance.country);
-            instance.mailid = validated_data.get('mailid', instance.mailid);
+            instance.email = validated_data.get('email', instance.email);
             instance.contact = validated_data.get('contact', instance.contact);
             instance.friends = validated_data.get('friends', instance.friends);
             instance.wallet = validated_data.get('wallet', instance.wallet);

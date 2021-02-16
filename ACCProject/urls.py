@@ -28,4 +28,5 @@ from django.conf.urls import url, include
 urlpatterns = [
     url(r'^store/', include('SocialBookApp.urls')),
     path('admin/', admin.site.urls),
+    path('verification/', include('verify_email.urls')),
 ]

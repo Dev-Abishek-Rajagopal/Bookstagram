@@ -22,7 +22,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+import os
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_json_api',
     'SocialBookApp',
+    'rest_framework.authtoken'
+
 ]
 
 MIDDLEWARE = [
@@ -84,6 +86,16 @@ FERNET_KEYS = [
     "q^@n3ybwz%_w+4pqk_%rhz#_^vks-l^!&4)&-&+==ioag&lj5e"
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+    ],
+
+}
+
+
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -100,6 +112,8 @@ DATABASES = {
 
     }
 }
+# AUTH_USER_MODEL = 'SocialBookApp.App_User'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

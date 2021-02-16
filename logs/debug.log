@@ -23,3 +23,203 @@ INFO 2021-02-10 03:21:41,787 views 8572 17100 Error
 INFO 2021-02-10 03:21:41,787 views 8572 17100 Field name `likes` is not valid for model `App_User`.
 INFO 2021-02-10 03:40:19,627 process 10848 5680 ImUser
 INFO 2021-02-10 03:41:04,728 process 10848 5680 ImUser
+INFO 2021-02-16 01:18:45,887 views 18480 14288 Error
+INFO 2021-02-16 01:18:45,887 views 18480 14288 Unsupported media type "multipart/form-data; boundary=--------------------------716873232965113471849124" in request.
+INFO 2021-02-16 01:21:08,746 views 18480 14288 Error
+INFO 2021-02-16 01:21:08,746 views 18480 14288 Unsupported media type "multipart/form-data; boundary=--------------------------698687443818055169569483" in request.
+INFO 2021-02-16 01:21:37,513 views 18480 14288 Error
+INFO 2021-02-16 01:21:37,514 views 18480 14288 Unsupported media type "multipart/form-data; boundary=--------------------------930646023103806128693123" in request.
+INFO 2021-02-16 01:21:38,866 views 18480 14288 Error
+INFO 2021-02-16 01:21:38,867 views 18480 14288 Unsupported media type "multipart/form-data; boundary=--------------------------689477655035901707241900" in request.
+INFO 2021-02-16 01:25:02,774 views 11572 19324 Error
+INFO 2021-02-16 01:25:02,774 views 11572 19324 Unsupported media type "multipart/form-data; boundary=--------------------------830666754140397996183751" in request.
+INFO 2021-02-16 02:07:50,863 views 14096 4960 Error
+INFO 2021-02-16 02:07:50,863 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------808707821582168066084888" in request.
+INFO 2021-02-16 02:08:12,212 views 14096 4960 Error
+INFO 2021-02-16 02:08:12,212 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------908297997283870823965669" in request.
+INFO 2021-02-16 02:08:36,209 views 14096 4960 Error
+INFO 2021-02-16 02:08:36,209 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------407309616847017253763739" in request.
+INFO 2021-02-16 02:08:37,251 views 14096 4960 Error
+INFO 2021-02-16 02:08:37,251 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------414013119498170833303513" in request.
+INFO 2021-02-16 02:08:38,631 views 14096 4960 Error
+INFO 2021-02-16 02:08:38,631 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------409325552362150109208562" in request.
+INFO 2021-02-16 02:09:09,020 views 14096 4960 Error
+INFO 2021-02-16 02:09:09,020 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------097055080854314461073963" in request.
+INFO 2021-02-16 02:09:34,561 views 14096 4960 Error
+INFO 2021-02-16 02:09:34,561 views 14096 4960 Unsupported media type "multipart/form-data; boundary=--------------------------356023123053250128910199" in request.
+INFO 2021-02-16 02:09:59,747 views 10824 10800 Error
+INFO 2021-02-16 02:09:59,747 views 10824 10800 Unsupported media type "multipart/form-data; boundary=--------------------------777884609050587921549094" in request.
+INFO 2021-02-16 02:10:00,753 views 10824 10800 Error
+INFO 2021-02-16 02:10:00,753 views 10824 10800 Unsupported media type "multipart/form-data; boundary=--------------------------186837378554420324672956" in request.
+INFO 2021-02-16 02:10:01,500 views 10824 10800 Error
+INFO 2021-02-16 02:10:01,500 views 10824 10800 Unsupported media type "multipart/form-data; boundary=--------------------------335146184755032355031260" in request.
+INFO 2021-02-16 02:10:17,536 views 10824 17480 Error
+INFO 2021-02-16 02:10:17,536 views 10824 17480 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:53,578 views 6188 16824 Error
+INFO 2021-02-16 02:10:53,578 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:54,263 views 6188 16824 Error
+INFO 2021-02-16 02:10:54,264 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:54,785 views 6188 16824 Error
+INFO 2021-02-16 02:10:54,785 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:55,329 views 6188 16824 Error
+INFO 2021-02-16 02:10:55,329 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:55,889 views 6188 16824 Error
+INFO 2021-02-16 02:10:55,889 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:56,418 views 6188 16824 Error
+INFO 2021-02-16 02:10:56,419 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:10:57,665 views 6188 16824 Error
+INFO 2021-02-16 02:10:57,666 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:11:00,373 views 6188 16824 Error
+INFO 2021-02-16 02:11:00,373 views 6188 16824 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:11:47,395 views 6188 8296 Error
+INFO 2021-02-16 02:11:47,395 views 6188 8296 Unsupported media type "multipart/form-data; boundary=--------------------------659449779538363834171861" in request.
+INFO 2021-02-16 02:12:05,958 views 7976 19420 Error
+INFO 2021-02-16 02:12:05,958 views 7976 19420 Unsupported media type "multipart/form-data; boundary=--------------------------210132994196402383391798" in request.
+INFO 2021-02-16 02:13:03,635 views 7976 19420 Error
+INFO 2021-02-16 02:13:03,635 views 7976 19420 Unsupported media type "multipart/form-data; boundary=--------------------------425791134907677536660456" in request.
+INFO 2021-02-16 02:19:15,756 views 12336 12816 Error
+INFO 2021-02-16 02:19:15,756 views 12336 12816 Field name `mailid` is not valid for model `App_User`.
+INFO 2021-02-16 02:25:19,016 views 14092 3272 {'username': 'Imreaders', 'first_name': 'im', 'last_name': 'user', 'email': 'im@user.com'}
+INFO 2021-02-16 02:26:20,220 views 19984 3728 {'username': 'Imreaders', 'first_name': 'im', 'last_name': 'user', 'email': 'im@user.com'}
+INFO 2021-02-16 02:28:32,582 views 20280 9004 Imreaderss
+INFO 2021-02-16 02:28:32,585 views 20280 9004 Imreaderss
+INFO 2021-02-16 02:30:18,844 views 18036 1060 Imreaderssw
+INFO 2021-02-16 02:30:18,847 views 18036 1060 Imreaderssw
+INFO 2021-02-16 02:30:18,847 views 18036 1060 Imreaderssw
+INFO 2021-02-16 02:33:39,414 views 16432 7120 Imauth
+INFO 2021-02-16 02:34:12,764 views 10096 15184 Imauths
+INFO 2021-02-16 02:35:23,190 views 15372 19032 Imauthss
+INFO 2021-02-16 02:35:23,194 views 15372 19032 Error
+INFO 2021-02-16 02:35:23,194 views 15372 19032 This QueryDict instance is immutable
+INFO 2021-02-16 02:40:57,373 views 2728 19852 Imauthssw
+INFO 2021-02-16 02:40:57,377 views 2728 19852 Error
+INFO 2021-02-16 02:40:57,377 views 2728 19852 'QueryDict' object has no attribute 'data'
+INFO 2021-02-16 02:41:15,472 views 4160 7892 Imaut
+INFO 2021-02-16 02:42:18,713 views 13104 19176 Im
+INFO 2021-02-16 02:45:47,576 views 11108 20144 Ima
+INFO 2021-02-16 03:07:52,193 views 11108 20144 userreader
+INFO 2021-02-16 03:11:19,424 views 11108 20144 userauthor
+INFO 2021-02-16 03:14:25,864 views 19948 22652 Error
+INFO 2021-02-16 03:14:25,864 views 19948 22652 Cannot resolve keyword 'username' into field. Choices are: created, key, user, user_id
+INFO 2021-02-16 03:15:07,695 views 11312 20564 Error
+INFO 2021-02-16 03:15:07,695 views 11312 20564 Field 'id' expected a number but got 'userauthor'.
+INFO 2021-02-16 03:15:08,822 views 11312 20564 Error
+INFO 2021-02-16 03:15:08,822 views 11312 20564 Field 'id' expected a number but got 'userauthor'.
+INFO 2021-02-16 03:15:29,104 views 16608 20244 Error
+INFO 2021-02-16 03:15:29,104 views 16608 20244 'id'
+INFO 2021-02-16 03:15:38,642 views 16608 20244 Error
+INFO 2021-02-16 03:15:38,643 views 16608 20244 'id'
+INFO 2021-02-16 03:16:06,731 views 14100 23676 Error
+INFO 2021-02-16 03:16:06,731 views 14100 23676 'id'
+INFO 2021-02-16 03:16:31,150 views 14100 23676 Error
+INFO 2021-02-16 03:16:31,150 views 14100 23676 'id'
+INFO 2021-02-16 03:18:08,882 views 20312 4904 {'user': 17, 'first_name': 'im', 'last_name': 'user', 'username': 'userauthor', 'usertype': 'reader', 'password': 'pass', 'country': 'ca', 'email': 'im@user.com', 'contact': None, 'friends': 0, 'wallet': 500}
+INFO 2021-02-16 03:19:10,211 views 21592 19792 f94280e61158e2c667d98afadd5ce9a0f030cc57
+INFO 2021-02-16 03:19:13,433 views 21592 19792 f94280e61158e2c667d98afadd5ce9a0f030cc57
+INFO 2021-02-16 03:20:07,026 views 4600 11892 f94280e61158e2c667d98afadd5ce9a0f030cc57
+INFO 2021-02-16 03:34:29,715 process 22052 23960 pass
+INFO 2021-02-16 03:35:00,622 process 3856 3568 pass
+INFO 2021-02-16 03:35:22,710 process 21316 24544 pass
+INFO 2021-02-16 03:35:35,694 process 16352 11420 pass
+INFO 2021-02-16 04:39:26,585 views 348 19944 userautho
+INFO 2021-02-16 04:39:26,591 views 348 19944 Error
+INFO 2021-02-16 04:39:26,591 views 348 19944 Cannot resolve keyword 'username' into field. Choices are: created, key, user, user_id
+INFO 2021-02-16 04:40:06,945 views 348 19944 newuser
+INFO 2021-02-16 04:40:06,951 views 348 19944 Error
+INFO 2021-02-16 04:40:06,951 views 348 19944 Cannot resolve keyword 'username' into field. Choices are: created, key, user, user_id
+INFO 2021-02-16 04:43:42,803 views 22956 5812 newuser1
+INFO 2021-02-16 04:43:42,809 views 22956 5812 ji
+INFO 2021-02-16 04:43:42,810 views 22956 5812 Error
+INFO 2021-02-16 04:43:42,810 views 22956 5812 Cannot resolve keyword 'username' into field. Choices are: created, key, user, user_id
+INFO 2021-02-16 04:45:12,084 views 15500 20668 newuser2
+INFO 2021-02-16 04:45:12,090 views 15500 20668 ji
+INFO 2021-02-16 04:45:12,092 views 15500 20668 jay
+INFO 2021-02-16 04:45:12,102 views 15500 20668 377161d9eec9fd954f3d8d6929cd9d67b9f96458
+INFO 2021-02-16 04:45:12,102 process 15500 20668 Sending HTML Email
+INFO 2021-02-16 04:45:12,103 process 15500 20668 'SMTPCON' object has no attribute 'cc'
+INFO 2021-02-16 04:47:09,046 views 20556 17992 newuser3
+INFO 2021-02-16 04:47:09,052 views 20556 17992 ji
+INFO 2021-02-16 04:47:09,054 views 20556 17992 jay
+INFO 2021-02-16 04:47:09,066 views 20556 17992 53d5a6cc195953e1cdc083f9f5bddba7aed00756
+INFO 2021-02-16 04:47:09,066 process 20556 17992 Sending HTML Email
+INFO 2021-02-16 04:47:09,066 process 20556 17992 in py
+INFO 2021-02-16 04:47:09,906 process 20556 17992 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 04:47:10,471 process 20556 17992 'SMTPCON' object has no attribute 'cc'
+INFO 2021-02-16 04:47:53,661 views 13588 17996 newuser4
+INFO 2021-02-16 04:47:53,667 views 13588 17996 ji
+INFO 2021-02-16 04:47:53,669 views 13588 17996 jay
+INFO 2021-02-16 04:47:53,680 views 13588 17996 479caa1f375ce489062466385176aa7acc71e55d
+INFO 2021-02-16 04:47:53,680 process 13588 17996 Sending HTML Email
+INFO 2021-02-16 04:47:53,680 process 13588 17996 in py
+INFO 2021-02-16 04:47:54,429 process 13588 17996 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 05:01:07,609 views 22664 8524 newuser5
+INFO 2021-02-16 05:01:07,614 views 22664 8524 ji
+INFO 2021-02-16 05:01:07,616 views 22664 8524 jay
+INFO 2021-02-16 05:01:07,627 views 22664 8524 3fbc08762d23acbc251e427c7dff6bb297c414fd
+INFO 2021-02-16 05:01:07,627 views 22664 8524 Error
+INFO 2021-02-16 05:01:07,627 views 22664 8524 can only concatenate str (not "int") to str
+INFO 2021-02-16 05:01:59,075 views 24284 16848 newuser6
+INFO 2021-02-16 05:01:59,081 views 24284 16848 ji
+INFO 2021-02-16 05:01:59,083 views 24284 16848 jay
+INFO 2021-02-16 05:01:59,094 views 24284 16848 91f7293c0da41e17a76726e3ee8c2c3fd5ce003b
+INFO 2021-02-16 05:01:59,094 process 24284 16848 Sending HTML Email
+INFO 2021-02-16 05:01:59,094 process 24284 16848 in py
+INFO 2021-02-16 05:01:59,849 process 24284 16848 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 05:03:41,756 views 19784 22836 newuser7
+INFO 2021-02-16 05:03:41,762 views 19784 22836 ji
+INFO 2021-02-16 05:03:41,764 views 19784 22836 jay
+INFO 2021-02-16 05:03:41,774 views 19784 22836 bcf3516d101577a92c400f8241eb64cb15e00952
+INFO 2021-02-16 05:03:41,774 process 19784 22836 Sending HTML Email
+INFO 2021-02-16 05:03:41,774 process 19784 22836 in py
+INFO 2021-02-16 05:03:42,515 process 19784 22836 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 05:04:00,420 views 19784 24488 Error
+INFO 2021-02-16 05:04:00,420 views 19784 24488 name 'pk' is not defined
+INFO 2021-02-16 05:05:11,953 views 3856 10040 Error
+INFO 2021-02-16 05:05:11,953 views 3856 10040 App_User matching query does not exist.
+INFO 2021-02-16 05:09:44,786 views 2152 11904 Error
+INFO 2021-02-16 05:09:44,786 views 2152 11904 Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+INFO 2021-02-16 05:18:48,994 views 15924 23796 Error
+INFO 2021-02-16 05:18:48,994 views 15924 23796 Field 'id' expected a number but got '26/'.
+INFO 2021-02-16 05:19:54,893 views 23388 16364 Error
+INFO 2021-02-16 05:19:54,893 views 23388 16364 invalid literal for int() with base 10: '26/'
+INFO 2021-02-16 05:28:29,696 views 20628 5896 Error
+INFO 2021-02-16 05:28:29,696 views 20628 5896 invalid literal for int() with base 10: '26  -H access_token=f94280e61158e2c667d98afadd5ce9a0f030cc57'
+INFO 2021-02-16 14:13:58,900 views 13764 3696 Error
+INFO 2021-02-16 14:13:58,901 views 13764 3696 'WSGIRequest' object has no attribute 'query_params'
+INFO 2021-02-16 14:20:01,447 views 6036 8704 Error
+INFO 2021-02-16 14:20:01,447 views 6036 8704 'WSGIRequest' object has no attribute 'query_params'
+INFO 2021-02-16 15:29:14,916 views 7380 5652 newuser8
+INFO 2021-02-16 15:29:14,922 views 7380 5652 ji
+INFO 2021-02-16 15:29:14,925 views 7380 5652 jay
+INFO 2021-02-16 15:29:14,936 views 7380 5652 904c02e305071111c61d369d384b4f732b12c1e1
+INFO 2021-02-16 15:29:14,936 views 7380 5652 904c02e305071111c61d369d384b4f732b12c1e1
+INFO 2021-02-16 15:29:14,936 process 7380 5652 Sending HTML Email
+INFO 2021-02-16 15:29:14,936 process 7380 5652 in py
+INFO 2021-02-16 15:29:15,763 process 7380 5652 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 15:33:47,199 views 14064 20460 newuser9
+INFO 2021-02-16 15:33:47,205 views 14064 20460 ji
+INFO 2021-02-16 15:33:47,207 views 14064 20460 jay
+INFO 2021-02-16 15:33:47,218 views 14064 20460 ace51cde38e0449bcb7573e16f945ab5f3ac939a
+INFO 2021-02-16 15:33:47,218 views 14064 20460 ace51cde38e0449bcb7573e16f945ab5f3ac939a
+INFO 2021-02-16 15:33:47,218 process 14064 20460 Sending HTML Email
+INFO 2021-02-16 15:33:47,218 process 14064 20460 in py
+INFO 2021-02-16 15:33:48,007 process 14064 20460 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 15:34:45,670 views 3288 5776 newuser10
+INFO 2021-02-16 15:34:45,677 views 3288 5776 ji
+INFO 2021-02-16 15:34:45,679 views 3288 5776 jay
+INFO 2021-02-16 15:34:45,691 views 3288 5776 81793f863a87a477a2702490b9ef4fc6594b064c
+INFO 2021-02-16 15:34:45,691 views 3288 5776 81793f863a87a477a2702490b9ef4fc6594b064c
+INFO 2021-02-16 15:34:45,691 process 3288 5776 Sending HTML Email
+INFO 2021-02-16 15:34:45,691 process 3288 5776 in py
+INFO 2021-02-16 15:34:46,449 process 3288 5776 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 15:40:27,285 process 19856 5468 pass
+INFO 2021-02-16 15:41:16,386 process 19856 5468 pass
+INFO 2021-02-16 15:43:31,356 views 19856 10224 newuser11
+INFO 2021-02-16 15:43:31,363 views 19856 10224 ji
+INFO 2021-02-16 15:43:31,366 views 19856 10224 jay
+INFO 2021-02-16 15:43:31,380 views 19856 10224 3c27bc2e2fb788da1cf58ab755fd429e8fd26f4b
+INFO 2021-02-16 15:43:31,381 views 19856 10224 3c27bc2e2fb788da1cf58ab755fd429e8fd26f4b
+INFO 2021-02-16 15:43:31,381 process 19856 10224 Sending HTML Email
+INFO 2021-02-16 15:43:31,381 process 19856 10224 in py
+INFO 2021-02-16 15:43:32,133 process 19856 10224 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-16 15:43:50,152 process 19856 10224 pass

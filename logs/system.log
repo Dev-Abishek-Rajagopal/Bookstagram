@@ -200,3 +200,167 @@ WARNING 2021-02-14 16:50:33,582 log 17108 11188 Not Found: /
 WARNING 2021-02-14 16:50:33,582 basehttp 17108 11188 "GET / HTTP/1.1" 404 2032
 WARNING 2021-02-14 16:50:33,631 log 17108 11188 Not Found: /favicon.ico
 WARNING 2021-02-14 16:50:33,631 basehttp 17108 11188 "GET /favicon.ico HTTP/1.1" 404 2083
+WARNING 2021-02-16 00:33:03,309 log 18964 5484 Not Found: /
+WARNING 2021-02-16 00:33:03,309 basehttp 18964 5484 "GET / HTTP/1.1" 404 2032
+WARNING 2021-02-16 00:33:03,370 log 18964 5484 Not Found: /favicon.ico
+WARNING 2021-02-16 00:33:03,370 basehttp 18964 5484 "GET /favicon.ico HTTP/1.1" 404 2083
+WARNING 2021-02-16 01:18:08,366 log 18480 19060 Not Found: /
+WARNING 2021-02-16 01:18:08,367 basehttp 18480 19060 "GET / HTTP/1.1" 404 2032
+WARNING 2021-02-16 02:10:17,578 log 10824 17480 Not Found: /favicon.ico
+WARNING 2021-02-16 02:10:17,579 basehttp 10824 17480 "GET /favicon.ico HTTP/1.1" 404 2083
+WARNING 2021-02-16 03:34:04,245 log 22052 23960 Not Found: /store/login
+WARNING 2021-02-16 03:34:04,245 basehttp 22052 23960 "POST /store/login HTTP/1.1" 404 2824
+WARNING 2021-02-16 03:34:19,341 log 22052 23960 Not Found: /store/login/
+WARNING 2021-02-16 03:34:19,341 basehttp 22052 23960 "POST /store/login/ HTTP/1.1" 404 2827
+WARNING 2021-02-16 03:39:52,227 log 16352 11420 Not Found: /store/book/login/
+WARNING 2021-02-16 03:39:52,227 basehttp 16352 11420 "POST /store/book/login/ HTTP/1.1" 404 42
+WARNING 2021-02-16 03:46:43,704 log 12496 20996 Unauthorized: /store/book/
+WARNING 2021-02-16 03:46:43,704 basehttp 12496 20996 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 03:48:59,205 log 12496 20996 Unauthorized: /store/book/
+WARNING 2021-02-16 03:48:59,205 basehttp 12496 20996 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 03:49:03,639 log 12496 20996 Unauthorized: /store/book/
+WARNING 2021-02-16 03:49:03,640 basehttp 12496 20996 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 03:54:16,858 log 12496 20996 Unauthorized: /store/book/
+WARNING 2021-02-16 03:54:16,858 basehttp 12496 20996 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 04:54:40,286 log 17256 12912 Unauthorized: /store/book/
+WARNING 2021-02-16 04:54:40,286 basehttp 17256 12912 "GET /store/book/ HTTP/1.1" 401 5090
+WARNING 2021-02-16 05:03:12,997 log 21028 24128 Not Found: /store/book/activate_user/25/
+WARNING 2021-02-16 05:03:12,998 basehttp 21028 24128 "GET /store/book/activate_user/25/ HTTP/1.1" 404 3175
+WARNING 2021-02-16 05:10:29,936 log 6988 21512 Unauthorized: /store/book/
+WARNING 2021-02-16 05:10:29,936 basehttp 6988 21512 "GET /store/book/ HTTP/1.1" 401 5090
+WARNING 2021-02-16 05:13:36,033 log 24240 23920 Unauthorized: /store/book/
+WARNING 2021-02-16 05:13:36,033 basehttp 24240 23920 "GET /store/book/ HTTP/1.1" 401 5090
+WARNING 2021-02-16 05:13:38,292 log 24240 23920 Unauthorized: /store/book/
+WARNING 2021-02-16 05:13:38,292 basehttp 24240 23920 "GET /store/book/ HTTP/1.1" 401 5090
+ERROR 2021-02-16 05:13:50,167 log 24240 23920 Internal Server Error: /store/activate_user/26/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: activate_User() missing 1 required positional argument: 'request'
+ERROR 2021-02-16 05:13:50,169 basehttp 24240 23920 "GET /store/activate_user/26/ HTTP/1.1" 500 93075
+ERROR 2021-02-16 05:16:33,731 log 17712 21976 Internal Server Error: /store/activate_user/26/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: activate_User() got an unexpected keyword argument 'pk'
+ERROR 2021-02-16 05:16:33,732 basehttp 17712 21976 "GET /store/activate_user/26/ HTTP/1.1" 500 93015
+WARNING 2021-02-16 05:18:44,052 log 15924 23796 Method Not Allowed: /store/activate_user/
+WARNING 2021-02-16 05:18:44,053 basehttp 15924 23796 "POST /store/activate_user/?pk=26/ HTTP/1.1" 405 41
+WARNING 2021-02-16 05:20:16,156 log 20184 20676 Unauthorized: /store/book/
+WARNING 2021-02-16 05:20:16,157 basehttp 20184 20676 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 05:28:00,322 log 20628 5896 Unauthorized: /store/book/
+WARNING 2021-02-16 05:28:00,323 basehttp 20628 5896 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 05:28:03,024 log 20628 5896 Unauthorized: /store/book/
+WARNING 2021-02-16 05:28:03,024 basehttp 20628 5896 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 05:28:05,531 log 20628 5896 Unauthorized: /store/book/
+WARNING 2021-02-16 05:28:05,531 basehttp 20628 5896 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 05:29:28,350 log 20628 5896 Unauthorized: /store/book/
+WARNING 2021-02-16 05:29:28,350 basehttp 20628 5896 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 05:29:59,450 log 20628 5896 Unauthorized: /store/book/
+WARNING 2021-02-16 05:29:59,451 basehttp 20628 5896 "GET /store/book/ HTTP/1.1" 401 58
+ERROR 2021-02-16 14:13:58,944 log 13764 3696 Internal Server Error: /store/activate_user/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2021-02-16 14:13:58,945 basehttp 13764 3696 "GET /store/activate_user/?pk=26 HTTP/1.1" 500 67908
+ERROR 2021-02-16 14:20:01,473 log 6036 8704 Internal Server Error: /store/activate_user/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+ERROR 2021-02-16 14:20:01,474 basehttp 6036 8704 "GET /store/activate_user/?pk=26 HTTP/1.1" 500 67908
+WARNING 2021-02-16 14:20:40,263 log 22656 13716 Unauthorized: /store/book/
+WARNING 2021-02-16 14:20:40,263 basehttp 22656 13716 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 14:22:35,305 log 4292 3340 Unauthorized: /store/book/
+WARNING 2021-02-16 14:22:35,305 basehttp 4292 3340 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 14:22:36,589 log 4292 3340 Unauthorized: /store/book/
+WARNING 2021-02-16 14:22:36,590 basehttp 4292 3340 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 14:22:39,860 log 4292 3340 Unauthorized: /store/book/
+WARNING 2021-02-16 14:22:39,860 basehttp 4292 3340 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 14:24:14,802 log 15724 24368 Unauthorized: /store/book/
+WARNING 2021-02-16 14:24:14,803 basehttp 15724 24368 "GET /store/book/ HTTP/1.1" 401 58
+WARNING 2021-02-16 15:00:10,490 log 15884 19488 Unauthorized: /store/book/
+WARNING 2021-02-16 15:00:10,490 basehttp 15884 19488 "GET /store/book/ HTTP/1.1" 401 5090
+WARNING 2021-02-16 15:00:11,296 log 15884 20728 Not Found: /favicon.ico
+WARNING 2021-02-16 15:00:11,297 basehttp 15884 20728 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-16 15:00:30,742 log 15884 19748 Not Found: /store/activate_user/26/
+WARNING 2021-02-16 15:00:30,742 basehttp 15884 19748 "GET /store/activate_user/26/ HTTP/1.1" 404 3142
+WARNING 2021-02-16 15:01:01,298 log 15884 21444 Unauthorized: /store/book/
+WARNING 2021-02-16 15:01:01,298 basehttp 15884 21444 "GET /store/book/ HTTP/1.1" 401 5090
+WARNING 2021-02-16 15:01:14,222 log 15884 21444 Unauthorized: /store/book/
+WARNING 2021-02-16 15:01:14,222 basehttp 15884 21444 "GET /store/book/ HTTP/1.1" 401 5090
+ERROR 2021-02-16 15:25:23,910 log 18140 12320 Internal Server Error: /store/user
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/store/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2021-02-16 15:25:23,911 basehttp 18140 12320 "POST /store/user HTTP/1.1" 500 69742
+WARNING 2021-02-16 15:40:27,286 log 19856 5468 Not Found: /store/book/login/
+WARNING 2021-02-16 15:40:27,286 basehttp 19856 5468 "POST /store/book/login/ HTTP/1.1" 404 49
+WARNING 2021-02-16 15:41:01,441 log 19856 20540 Unauthorized: /store/book/
+WARNING 2021-02-16 15:41:01,442 basehttp 19856 20540 "GET /store/book/ HTTP/1.1" 401 5090
+ERROR 2021-02-16 15:43:24,552 log 19856 5468 Internal Server Error: /store/user
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/store/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2021-02-16 15:43:24,553 basehttp 19856 5468 "POST /store/user HTTP/1.1" 500 69879
+WARNING 2021-02-16 15:43:50,152 log 19856 10224 Not Found: /store/book/login/
+WARNING 2021-02-16 15:43:50,153 basehttp 19856 10224 "POST /store/book/login/ HTTP/1.1" 404 49
