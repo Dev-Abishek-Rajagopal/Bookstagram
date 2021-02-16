@@ -105,7 +105,6 @@ class UserVeiwSet(ModelViewSet):
 
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
-
     queryset = App_User.objects.all()
     serializer_class = App_UserSerializer
 
@@ -131,7 +130,7 @@ class UserVeiwSet(ModelViewSet):
     def get_User(self, request,*args, **kwargs):
         try:
             pk = self.kwargs['pk']
-            list = App_User.objects.get(id=pk)
+            list = App_User.objects.get(user=pk)
             serializer = App_UserSerializer(list)
             auth = Token.objects.get(user=pk)
             datas = serializer.data.copy()
@@ -142,6 +141,7 @@ class UserVeiwSet(ModelViewSet):
             logger.info("Error")
             logger.info(str(e))
             return Response(str(e), status=200)
+
 
     def delete_User(self, request,*args, **kwargs):
         try:
@@ -189,7 +189,7 @@ def activate_User(request):
 
 @api_view(['POST'])
 @permission_classes((AllowAny, ))
-def create_User(self, request):
+def create_User(request):
     try:
 
         serializer = UserSerializer(data=request.data)

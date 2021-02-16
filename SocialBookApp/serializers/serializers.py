@@ -23,7 +23,7 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book;
-        fields = ('name', 'authname', 'rate', 'likes', 'share','views');
+        fields = ("id", 'name', 'authname', 'rate', 'likes', 'share','views','booktype');
 
     def create(self, validated_data):
         try:

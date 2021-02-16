@@ -11,7 +11,7 @@ from fernet_fields import EncryptedTextField
 
 class App_User(models.Model):
 
-    user = models.OneToOneField(User, related_name='App_User',on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='App_User',on_delete=models.CASCADE)
     first_name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
     username = models.CharField(max_length=200)

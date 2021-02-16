@@ -51,6 +51,7 @@ class LoginCheckSet(ModelViewSet):
                     response['username'] = item.username
                     response['email'] = item.email
                     response['usertype'] = item.usertype
+
                     tokenJson={}
                     tokenJson["token"] = auth.key
                     response['auth_token'] = tokenJson
