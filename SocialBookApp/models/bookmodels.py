@@ -17,7 +17,7 @@ class Book(models.Model):
     publist = UnixTimeStampField(auto_now=True,null=True)
     booktype =  models.CharField(max_length=200,default="Text")
     rate = models.FloatField(default=0.0)
-    likes = models.IntegerField(default=0)
+    stars = models.IntegerField(default=0)
     share = models.IntegerField(default=0)
     views = models.IntegerField(default=0)
     # dp = models.ImageField(upload_to ='bookDP/',default="0")

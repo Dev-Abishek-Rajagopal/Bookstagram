@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from djongo import models
 from django.conf import settings
 from fernet_fields import EncryptedTextField
+from unixtimestampfield.fields import UnixTimeStampField
 
 class App_User(models.Model):
 
@@ -26,11 +27,28 @@ class App_User(models.Model):
 
 
 class friendlist(models.Model):
-    you = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='friendlistyou')
+    user = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='friendlistyou')
     friend = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='friendlistfriend')
-    relationship = models.CharField(max_length=200,default="addfriend")
+    relationship = models.CharField(max_length=200)
 
 class profileComment(models.Model):
-    you = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='profileCommentyou')
+    user = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='profileCommentyou')
     friend = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='profileCommentfriend')
     comments = models.TextField()
+    publist = UnixTimeStampField(auto_now=True,null=True)
+
+class profileTXTPost(models.Model):
+    user = models.ForeignKey(App_User, on_delete=models.CASCADE)
+    post = models.TextField()
+    comments = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+    share = models.IntegerField(default=0)
+    publist = UnixTimeStampField(auto_now=True,null=True)
+
+class TXTPostComments(models.Model):
+
+    user = models.ForeignKey(App_User, on_delete=models.CASCADE)
+    post = models.ForeignKey(profileTXTPost, on_delete=models.CASCADE)
+    comments = models.TextField()
+    likes = models.IntegerField(default=0)
+

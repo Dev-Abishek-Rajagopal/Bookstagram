@@ -376,3 +376,445 @@ WARNING 2021-02-16 18:40:31,241 log 13384 23972 Unauthorized: /store/book/
 WARNING 2021-02-16 18:40:31,241 basehttp 13384 23972 "GET /store/book/ HTTP/1.1" 401 5090
 WARNING 2021-02-16 18:53:46,499 log 6036 18904 Not Found: /
 WARNING 2021-02-16 18:53:46,499 basehttp 6036 18904 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-17 01:34:21,266 log 22164 5312 Unauthorized: /store/book/
+WARNING 2021-02-17 01:34:21,267 basehttp 22164 5312 "GET /store/book/ HTTP/1.1" 401 5090
+WARNING 2021-02-17 02:08:30,168 log 3460 25460 Unauthorized: /store/user/3/
+
+WARNING 2021-02-17 02:08:30,168 basehttp 3460 25460 "PUT /store/user/3/%0A HTTP/1.1" 401 27
+WARNING 2021-02-17 02:09:27,964 log 3460 25460 Unauthorized: /store/user/3/
+
+WARNING 2021-02-17 02:09:27,964 basehttp 3460 25460 "GET /store/user/3/%0A HTTP/1.1" 401 27
+WARNING 2021-02-17 02:22:15,104 log 976 20144 Unauthorized: /store/book/
+WARNING 2021-02-17 02:22:15,104 basehttp 976 20144 "GET /store/book/ HTTP/1.1" 401 5090
+ERROR 2021-02-17 02:37:38,007 log 10628 3320 Internal Server Error: /admin/auth/user/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 932, in _select
+    return SelectQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 116, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 152, in parse
+    self.where = WhereConverter(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\converters.py", line 27, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\converters.py", line 119, in parse
+    self.op = WhereOp(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\operators.py", line 475, in __init__
+    self._statement2ops()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\operators.py", line 438, in _statement2ops
+    if prev_op.lhs is None:
+AttributeError: 'NoneType' object has no attribute 'lhs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 884, in parse
+    raise exe from e
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: SELECT COUNT(*) AS "__count" FROM "auth_user" WHERE "auth_user"."is_staff"
+	Params: ()
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 735, in get_changelist_instance
+    return ChangeList(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\views\main.py", line 100, in __init__
+    self.get_results(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\views\main.py", line 235, in get_results
+    result_count = paginator.count
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-02-17 02:37:38,011 basehttp 10628 3320 "GET /admin/auth/user/?is_staff__exact=1 HTTP/1.1" 500 231251
+ERROR 2021-02-17 02:37:45,538 log 10628 3320 Internal Server Error: /admin/auth/user/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 932, in _select
+    return SelectQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 116, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 152, in parse
+    self.where = WhereConverter(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\converters.py", line 27, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\converters.py", line 119, in parse
+    self.op = WhereOp(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\operators.py", line 476, in __init__
+    self.evaluate()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\operators.py", line 465, in evaluate
+    op.evaluate()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\operators.py", line 258, in evaluate
+    self.rhs.negate()
+AttributeError: 'NoneType' object has no attribute 'negate'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 884, in parse
+    raise exe from e
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: SELECT COUNT(*) AS "__count" FROM "auth_user" WHERE NOT "auth_user"."is_superuser"
+	Params: ()
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 735, in get_changelist_instance
+    return ChangeList(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\views\main.py", line 100, in __init__
+    self.get_results(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\views\main.py", line 235, in get_results
+    result_count = paginator.count
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\paginator.py", line 94, in count
+    return c()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-02-17 02:37:45,540 basehttp 10628 3320 "GET /admin/auth/user/?is_superuser__exact=0 HTTP/1.1" 500 234248
+WARNING 2021-02-17 03:10:15,110 log 8276 16864 Unauthorized: /store/friend/
+
+WARNING 2021-02-17 03:10:15,111 basehttp 8276 16864 "POST /store/friend/%0A HTTP/1.1" 401 58
+WARNING 2021-02-17 03:44:33,348 log 1572 26416 Unauthorized: /store/book/5/
+
+WARNING 2021-02-17 03:44:33,348 basehttp 1572 26416 "GET /store/book/5/%0A HTTP/1.1" 401 27
+WARNING 2021-02-17 03:51:01,712 log 8904 25584 Unauthorized: /store/book/
+
+WARNING 2021-02-17 03:51:01,712 basehttp 8904 25584 "POST /store/book/%0A HTTP/1.1" 401 27
+WARNING 2021-02-17 03:52:41,056 log 8904 25584 Unauthorized: /store/book/7/
+
+WARNING 2021-02-17 03:52:41,057 basehttp 8904 25584 "GET /store/book/7/%0A HTTP/1.1" 401 27
+ERROR 2021-02-17 04:16:48,325 log 24464 3460 Internal Server Error: /store/friend/28/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type friendlist is not JSON serializable
+ERROR 2021-02-17 04:16:48,326 basehttp 24464 3460 "GET /store/friend/28/%0A HTTP/1.1" 500 98960
+ERROR 2021-02-17 04:21:42,086 log 12060 22088 Internal Server Error: /store/friendlist/28/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type friendlist is not JSON serializable
+ERROR 2021-02-17 04:21:42,088 basehttp 12060 22088 "GET /store/friendlist/28/ HTTP/1.1" 500 98980
+ERROR 2021-02-17 04:22:40,904 log 5760 25192 Internal Server Error: /store/friendlist/28/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type friendlist is not JSON serializable
+ERROR 2021-02-17 04:22:40,906 basehttp 5760 25192 "GET /store/friendlist/28/ HTTP/1.1" 500 98980
+ERROR 2021-02-17 04:23:36,417 log 1828 5584 Internal Server Error: /store/friendlist/28/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type friendlist is not JSON serializable
+ERROR 2021-02-17 04:23:36,419 basehttp 1828 5584 "GET /store/friendlist/28/ HTTP/1.1" 500 98980
+ERROR 2021-02-17 04:29:51,792 log 23088 9708 Internal Server Error: /store/friendlist/28/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type friendlist is not JSON serializable
+ERROR 2021-02-17 04:29:51,794 basehttp 23088 9708 "GET /store/friendlist/28/ HTTP/1.1" 500 99144
+WARNING 2021-02-17 04:38:38,649 log 13024 15216 Not Found: /store/friend/9/
+WARNING 2021-02-17 04:38:38,649 basehttp 13024 15216 "PUT /store/friend/9/ HTTP/1.1" 404 3634
+WARNING 2021-02-17 15:17:13,927 log 18560 18316 Not Found: /favicon.ico
+WARNING 2021-02-17 15:17:13,928 basehttp 18560 18316 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-17 15:31:37,759 log 6776 12340 Not Found: /store/listfriend/
+WARNING 2021-02-17 15:31:37,760 basehttp 6776 12340 "GET /store/listfriend/ HTTP/1.1" 404 4379
+WARNING 2021-02-17 16:09:54,210 log 11656 12208 Method Not Allowed: /store/txtpost/
+WARNING 2021-02-17 16:09:54,213 basehttp 11656 12208 "GET /store/txtpost/ HTTP/1.1" 405 40
+WARNING 2021-02-17 16:22:30,262 log 9712 19436 Not Found: /store/friend/11/
+WARNING 2021-02-17 16:22:30,263 basehttp 9712 19436 "POST /store/friend/11/ HTTP/1.1" 404 4523
+WARNING 2021-02-17 16:22:47,953 log 9712 19436 Not Found: /store/friend/11/
+WARNING 2021-02-17 16:22:47,953 basehttp 9712 19436 "PUT /store/friend/11/ HTTP/1.1" 404 4522
+WARNING 2021-02-17 16:26:10,474 log 6816 5852 Not Found: /store/friendlist/
+WARNING 2021-02-17 16:26:10,475 basehttp 6816 5852 "PUT /store/friendlist/ HTTP/1.1" 404 4525
+ERROR 2021-02-17 16:34:40,629 log 5896 6100 Internal Server Error: /store/friendlist/28/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type friendlist is not JSON serializable
+ERROR 2021-02-17 16:34:40,631 basehttp 5896 6100 "GET /store/friendlist/28/ HTTP/1.1" 500 99478
+WARNING 2021-02-17 17:01:12,828 log 8220 15812 Not Found: /store/usertype/reader
+WARNING 2021-02-17 17:01:12,828 basehttp 8220 15812 "GET /store/usertype/reader HTTP/1.1" 404 4722
+WARNING 2021-02-17 17:01:18,103 log 8220 15812 Not Found: /store/usertype/reader/
+WARNING 2021-02-17 17:01:18,103 basehttp 8220 15812 "GET /store/usertype/reader/ HTTP/1.1" 404 4725
+WARNING 2021-02-17 17:01:47,757 log 8220 15812 Not Found: /store/usertype/
+WARNING 2021-02-17 17:01:47,757 basehttp 8220 15812 "GET /store/usertype/?type=reader HTTP/1.1" 404 4716
+WARNING 2021-02-17 17:21:38,160 log 3504 10256 Method Not Allowed: /store/usertype/
+WARNING 2021-02-17 17:21:38,160 basehttp 3504 10256 "POST /store/usertype/ HTTP/1.1" 405 41
+WARNING 2021-02-17 17:31:49,033 log 13076 9612 Not Found: /store/friendprofile/
+WARNING 2021-02-17 17:31:49,034 basehttp 13076 9612 "GET /store/friendprofile/?pk=28 HTTP/1.1" 404 4893
+WARNING 2021-02-17 17:42:25,737 log 11836 12656 Method Not Allowed: /store/txtpostbyuser/
+WARNING 2021-02-17 17:42:25,737 basehttp 11836 12656 "POST /store/txtpostbyuser/?user=28 HTTP/1.1" 405 41
+WARNING 2021-02-17 17:54:24,932 log 15944 16760 Method Not Allowed: /store/txtposthomuser/
+WARNING 2021-02-17 17:54:24,933 basehttp 15944 16760 "POST /store/txtposthomuser/?pk=28 HTTP/1.1" 405 41
+WARNING 2021-02-17 17:57:56,997 log 17016 5360 Not Found: /store/friendlist/
+WARNING 2021-02-17 17:57:56,998 basehttp 17016 5360 "GET /store/friendlist/?pk=23 HTTP/1.1" 404 5201
+ERROR 2021-02-17 19:56:32,567 log 9556 5848 Internal Server Error: /store/postcomment/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserVeiwSet' object has no attribute 'create_TXTPostComments'
+ERROR 2021-02-17 19:56:32,569 basehttp 9556 5848 "DELETE /store/postcomment/ HTTP/1.1" 500 68573
+WARNING 2021-02-17 19:57:24,806 log 3936 1148 Method Not Allowed: /store/postcomment/
+WARNING 2021-02-17 19:57:24,806 basehttp 3936 1148 "DELETE /store/postcomment/ HTTP/1.1" 405 43
+ERROR 2021-02-17 20:04:35,112 log 4744 19392 Internal Server Error: /store/postcomment/1/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'TXTPostCommentsVeiwSet' object has no attribute 'update_User'
+ERROR 2021-02-17 20:04:35,113 basehttp 4744 19392 "PUT /store/postcomment/1/ HTTP/1.1" 500 69159
