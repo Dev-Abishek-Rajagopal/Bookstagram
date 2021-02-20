@@ -699,3 +699,116 @@ INFO 2021-02-17 20:23:20,483 views 6196 11552 hi
 INFO 2021-02-17 20:27:15,872 views 6196 11552 hi
 INFO 2021-02-17 20:27:43,866 views 6196 11552 hi
 INFO 2021-02-17 20:33:32,973 views 6196 11552 hi
+INFO 2021-02-18 00:21:11,757 views 9332 11508 Error
+INFO 2021-02-18 00:21:11,758 views 9332 11508 App_User matching query does not exist.
+INFO 2021-02-18 00:22:39,182 views 9332 14304 Error
+INFO 2021-02-18 00:22:39,182 views 9332 14304 App_User matching query does not exist.
+INFO 2021-02-18 00:22:44,410 views 9332 14304 Error
+INFO 2021-02-18 00:22:44,410 views 9332 14304 App_User matching query does not exist.
+INFO 2021-02-18 00:22:48,878 views 9332 14304 Error
+INFO 2021-02-18 00:22:48,878 views 9332 14304 App_User matching query does not exist.
+INFO 2021-02-18 00:22:53,512 views 9332 14304 Error
+INFO 2021-02-18 00:22:53,512 views 9332 14304 App_User matching query does not exist.
+INFO 2021-02-18 01:56:10,101 views 12176 18608 Error
+INFO 2021-02-18 01:56:10,101 views 12176 18608 App_User matching query does not exist.
+INFO 2021-02-18 01:56:15,997 views 12176 18608 Error
+INFO 2021-02-18 01:56:15,997 views 12176 18608 App_User matching query does not exist.
+INFO 2021-02-19 23:49:07,290 views 3680 22236 Error
+INFO 2021-02-19 23:49:07,291 views 3680 22236 App_User matching query does not exist.
+INFO 2021-02-19 23:49:16,142 views 3680 22236 Error
+INFO 2021-02-19 23:49:16,142 views 3680 22236 App_User matching query does not exist.
+INFO 2021-02-19 23:49:28,171 views 3680 22236 f94280e61158e2c667d98afadd5ce9a0f030cc57
+INFO 2021-02-20 16:00:46,593 views 12300 17176 hi
+INFO 2021-02-20 16:00:46,595 views 12300 17176 <QuerySet [<profileComment: profileComment object (2)>]>
+INFO 2021-02-20 16:02:59,267 views 3524 5728 Error
+INFO 2021-02-20 16:02:59,268 views 3524 5728 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO 2021-02-20 16:03:27,723 views 3524 5728 Error
+INFO 2021-02-20 16:03:27,723 views 3524 5728 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO 2021-02-20 16:03:39,785 views 3524 5728 Error
+INFO 2021-02-20 16:03:39,785 views 3524 5728 Field name `friend` is not valid for model `profileComment`.
+INFO 2021-02-20 16:03:49,582 views 3524 5728 Error
+INFO 2021-02-20 16:03:49,583 views 3524 5728 Field name `friend` is not valid for model `profileComment`.
+INFO 2021-02-20 16:05:54,626 views 1664 13488 hi
+INFO 2021-02-20 16:05:54,626 views 1664 13488 <QuerySet [<profileComment: profileComment object (2)>, <profileComment: profileComment object (4)>, <profileComment: profileComment object (5)>, <profileComment: profileComment object (6)>, <profileComment: profileComment object (7)>, <profileComment: profileComment object (8)>]>
+INFO 2021-02-20 16:07:19,064 views 1664 13488 Error
+INFO 2021-02-20 16:07:19,064 views 1664 13488 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:08:27,537 views 17616 11396 Error
+INFO 2021-02-20 16:08:27,537 views 17616 11396 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:11:43,592 views 17616 11396 Error
+INFO 2021-02-20 16:11:43,592 views 17616 11396 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:11:46,267 views 17616 11396 Error
+INFO 2021-02-20 16:11:46,268 views 17616 11396 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:12:10,485 views 17616 11396 hi
+INFO 2021-02-20 16:12:45,593 views 17616 11396 hi
+INFO 2021-02-20 16:12:51,959 views 17616 11396 hi
+INFO 2021-02-20 16:12:59,526 views 17616 11396 hi
+INFO 2021-02-20 16:13:33,275 views 17616 11396 hi
+INFO 2021-02-20 16:13:33,285 views 17616 11396 Error
+INFO 2021-02-20 16:13:33,285 views 17616 11396 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:14:54,116 views 14760 17384 Error
+INFO 2021-02-20 16:14:54,116 views 14760 17384 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:16:31,992 views 14760 17384 Error
+INFO 2021-02-20 16:16:31,992 views 14760 17384 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:18:04,789 views 7456 6216 Error
+INFO 2021-02-20 16:18:04,789 views 7456 6216 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:19:09,096 views 1368 18308 <QueryDict: {'user': ['28'], 'chatter': ['27'], 'comments': ['Im User 28'], 'publist': ['2021-02-20T10:26:27.071530Z']}>
+INFO 2021-02-20 16:19:09,106 views 1368 18308 Error
+INFO 2021-02-20 16:19:09,106 views 1368 18308 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:19:53,162 views 6116 11376 <QueryDict: {'user': ['28'], 'chatter': ['27'], 'comments': ['Im User 28'], 'publist': ['2021-02-20T10:26:27.071530Z']}>
+INFO 2021-02-20 16:19:53,165 views 6116 11376 hi
+INFO 2021-02-20 16:19:53,174 views 6116 11376 Error
+INFO 2021-02-20 16:19:53,174 views 6116 11376 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:20:39,243 views 11696 15200 <QueryDict: {'user': ['28'], 'chatter': ['27'], 'comments': ['Im User 28'], 'publist': ['2021-02-20T10:26:27.071530Z']}>
+INFO 2021-02-20 16:20:39,246 views 11696 15200 hi
+INFO 2021-02-20 16:20:39,255 views 11696 15200 hihh
+INFO 2021-02-20 16:20:39,255 views 11696 15200 Error
+INFO 2021-02-20 16:20:39,255 views 11696 15200 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:21:04,856 views 18524 16736 <QueryDict: {'user': ['28'], 'chatter': ['27'], 'comments': ['Im User 28'], 'publist': ['2021-02-20T10:26:27.071530Z']}>
+INFO 2021-02-20 16:21:04,858 views 18524 16736 hi
+INFO 2021-02-20 16:21:04,867 views 18524 16736 hihh
+INFO 2021-02-20 16:21:04,867 views 18524 16736 Error
+INFO 2021-02-20 16:21:04,868 views 18524 16736 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:21:13,674 views 14576 18916 <QueryDict: {'user': ['28'], 'chatter': ['27'], 'comments': ['Im User 28'], 'publist': ['2021-02-20T10:26:27.071530Z']}>
+INFO 2021-02-20 16:21:13,677 views 14576 18916 hi
+INFO 2021-02-20 16:21:13,685 views 14576 18916 hihh
+INFO 2021-02-20 16:21:13,685 views 14576 18916 Error
+INFO 2021-02-20 16:21:13,686 views 14576 18916 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:22:08,907 views 628 18640 <QueryDict: {'user': ['28'], 'chatter': ['27'], 'comments': ['Im User 28'], 'publist': ['2021-02-20T10:26:27.071530Z']}>
+INFO 2021-02-20 16:22:08,910 views 628 18640 hi
+INFO 2021-02-20 16:22:08,920 views 628 18640 hihh
+INFO 2021-02-20 16:22:08,920 views 628 18640 profileComment object (1)
+INFO 2021-02-20 16:22:08,920 views 628 18640 Error
+INFO 2021-02-20 16:22:08,920 views 628 18640 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 16:46:54,313 views 12692 10976 hi
+INFO 2021-02-20 16:47:33,203 views 12692 10976 Error
+INFO 2021-02-20 16:47:33,203 views 12692 10976 profileComment matching query does not exist.
+INFO 2021-02-20 17:27:40,165 views 12680 18424 Error
+INFO 2021-02-20 17:27:40,165 views 12680 18424 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 17:39:03,589 views 10256 13976 Error
+INFO 2021-02-20 17:39:03,589 views 10256 13976 TextBook matching query does not exist.
+INFO 2021-02-20 17:39:38,967 views 10256 13976 Error
+INFO 2021-02-20 17:39:38,968 views 10256 13976 Field name `content` is not valid for model `BookComments`.
+INFO 2021-02-20 17:56:00,985 views 11496 5392 Error
+INFO 2021-02-20 17:56:00,986 views 11496 5392 BookComments matching query does not exist.
+INFO 2021-02-20 17:56:38,481 views 11496 5392 hi
+INFO 2021-02-20 17:56:38,481 views 11496 5392 <QuerySet [<BookComments: BookComments object (3)>, <BookComments: BookComments object (4)>]>
+INFO 2021-02-20 18:15:34,580 views 18552 14224 Error
+INFO 2021-02-20 18:15:34,580 views 18552 14224 OwnBook matching query does not exist.
+INFO 2021-02-20 18:17:22,860 views 18552 14224 hi
+INFO 2021-02-20 18:17:22,860 views 18552 14224 <QuerySet [<OwnBook: OwnBook object (5)>, <OwnBook: OwnBook object (7)>]>
+INFO 2021-02-20 18:17:52,358 views 18552 14224 hi
+INFO 2021-02-20 18:17:52,358 views 18552 14224 <QuerySet [<OwnBook: OwnBook object (4)>, <OwnBook: OwnBook object (5)>]>
+INFO 2021-02-20 18:18:22,317 views 18552 14224 hi
+INFO 2021-02-20 18:18:22,317 views 18552 14224 <QuerySet [<OwnBook: OwnBook object (5)>]>
+INFO 2021-02-20 18:25:05,409 views 18552 14224 Error
+INFO 2021-02-20 18:25:05,409 views 18552 14224 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 18:43:04,855 views 15044 11548 Error
+INFO 2021-02-20 18:43:04,855 views 15044 11548 int() argument must be a string, a bytes-like object or a number, not 'ObjectId'
+INFO 2021-02-20 18:48:20,545 views 17792 8108 hi
+INFO 2021-02-20 18:48:20,545 views 17792 8108 <QuerySet [<BookWishlist: BookWishlist object (3)>, <BookWishlist: BookWishlist object (4)>, <BookWishlist: BookWishlist object (5)>]>
+INFO 2021-02-20 18:49:59,529 views 17792 8108 Error
+INFO 2021-02-20 18:49:59,529 views 17792 8108 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 18:52:15,545 views 11872 17428 Error
+INFO 2021-02-20 18:52:15,545 views 11872 17428 'collections.OrderedDict' object has no attribute 'publist'
+INFO 2021-02-20 18:52:33,566 serializers 19300 10268 Error
+INFO 2021-02-20 18:52:33,566 serializers 19300 10268 'BookWishlist' object has no attribute 'Own'

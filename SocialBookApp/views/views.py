@@ -10,10 +10,10 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework.viewsets import ModelViewSet, ViewSet
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
-from SocialBookApp.models.bookmodels import (Book)
-from SocialBookApp.models.usermodels import (App_User,friendlist,profileTXTPost,TXTPostComments)
+from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist)
+from SocialBookApp.models.usermodels import (App_User,friendlist,profileTXTPost,TXTPostComments,profileComment)
 from django.contrib.auth.models import User
-from SocialBookApp.serializers.serializers import (BookSerializer,App_UserSerializer,UserSerializer,friendlistSerializer,profileTXTPostSerializer,App_UserSerializerI,profileTXTPostSerializerI,TXTPostCommentsSerializer)
+from SocialBookApp.serializers.serializers import (BookSerializer,BookSerializerI,App_UserSerializer,UserSerializer,friendlistSerializer,profileTXTPostSerializer,App_UserSerializerI,profileTXTPostSerializerI,TXTPostCommentsSerializer,TXTPostCommentsSerializerI,profileCommentSerializer,TextBookSerializer,TextBookSerializerI,BookCommentsSerializer,OwnBookSerializer,OwnBookSerializerI,WishlistSerializer,profileCommentSerializerI,BookCommentsSerializerI,WishlistSerializerI  )
 from rest_framework.response import Response
 import logging
 from rest_framework.authentication import TokenAuthentication
@@ -41,7 +41,7 @@ class BookVeiwSet(ModelViewSet):
     def list_Book(self, request):
         try:
             book_list = Book.objects.all()
-            serializer = BookSerializer(book_list, many=True)
+            serializer = BookSerializerI(book_list, many=True)
             # logger.info("hi")
             # for i in serializer.data:
             #     image_data =""
@@ -57,7 +57,7 @@ class BookVeiwSet(ModelViewSet):
 
     def create_Book(self, request):
         try:
-            serializer = BookSerializer(data=request.data)
+            serializer = BookSerializerI(data=request.data)
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=200)
@@ -71,7 +71,7 @@ class BookVeiwSet(ModelViewSet):
         try:
             pk = self.kwargs['pk']
             list = Book.objects.get(id=pk)
-            serializer = BookSerializer(list)
+            serializer = BookSerializerI(list)
             return Response(serializer.data, status=200)
         except Exception as e:
             logger.info("Error")
@@ -96,6 +96,10 @@ class BookVeiwSet(ModelViewSet):
             item = Book.objects.get(id=pk)
             if serializer.is_valid():
                 serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = Book.objects.get(id=pk)
+                serializer = BookSerializerI(list)
+
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
 
@@ -378,6 +382,8 @@ class friendlistVeiwSet(ModelViewSet):
 
     def get_notfriendlist(self, request,*args, **kwargs):
         try:
+            pk = self.kwargs['pk']
+            datas = []
             datas =[]
             dbi = friendlist.objects.filter(Q(user_id=int(pk)) & Q(relationship="addfriend")  )
             logger.info("hi")
@@ -396,7 +402,7 @@ class friendlistVeiwSet(ModelViewSet):
             pk = self.kwargs['pk']
             item = friendlist.objects.get(id=pk)
             item.delete()
-            return Response(json.loads('{"response" : "Book deleted successfully."}'), status=200)
+            return Response(json.loads('{"response" : "Unfriend or Ignored successfully."}'), status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -550,12 +556,28 @@ class TXTPostCommentsVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
+    def list_Spec_TXTPostComments(self, request):
+        try:
+            book_list = TXTPostComments.objects.all()
+            pk = request.query_params.get('pk')
+            dbi = TXTPostComments.objects.filter(
+                Q(post_id=int(pk)))
+            serializer1 = TXTPostCommentsSerializer(dbi, many=True)
+            return Response(serializer1.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
 
     def create_TXTPostComments(self, request):
         try:
             serializer = TXTPostCommentsSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
+                datas = serializer.data.copy()
+                list = profileTXTPost.objects.get(id=datas["post"])
+                list.comments = list.comments + 1
+                list.save()
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
         except Exception as e:
@@ -579,7 +601,7 @@ class TXTPostCommentsVeiwSet(ModelViewSet):
             pk = self.kwargs['pk']
             item = TXTPostComments.objects.get(id=pk)
             item.delete()
-            return Response(json.loads('{"response" : "Book deleted successfully."}'), status=200)
+            return Response(json.loads('{"response" : "Comment deleted successfully."}'), status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -587,12 +609,15 @@ class TXTPostCommentsVeiwSet(ModelViewSet):
 
     def update_TXTPostComments(self, request, *args, **kwargs):
         try:
-            serializer = TXTPostCommentsSerializer(data=request.data)
+            serializer = TXTPostCommentsSerializerI(data=request.data)
             pk = self.kwargs['pk']
             logger.info("hi")
             item = TXTPostComments.objects.get(id=pk)
             if serializer.is_valid():
                 serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = TXTPostComments.objects.get(id=pk)
+                serializer = TXTPostCommentsSerializer(list)
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
 
@@ -600,3 +625,503 @@ class TXTPostCommentsVeiwSet(ModelViewSet):
             logger.info("Error")
             logger.info(str(e))
             return Response(str(e), status=200)
+
+
+
+class profileCommentVeiwSet(ModelViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = profileComment.objects.all()
+    serializer_class = profileCommentSerializer
+
+    def list_profileComment(self, request):
+        try:
+            book_list = profileComment.objects.all()
+            serializer = profileCommentSerializer(book_list, many=True)
+
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def create_profileComment(self, request):
+        try:
+            serializer = profileCommentSerializer(data=request.data)
+            logger.info(serializer.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_profileComment(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            list = profileComment.objects.get(id=pk)
+            serializer = profileCommentSerializer(list)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_profileCommentbyuser(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = profileComment.objects.filter(Q(user_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = profileCommentSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def delete_profileComment(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            item = profileComment.objects.get(id=pk)
+            item.delete()
+            return Response(json.loads('{"response" : "Comment deleted successfully."}'), status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def update_profileComment(self, request, *args, **kwargs):
+        try:
+            serializer = profileCommentSerializerI(data=request.data)
+            pk = self.kwargs['pk']
+            item = profileComment.objects.get(id=pk)
+            logger.info('hi')
+            if serializer.is_valid():
+                serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = profileComment.objects.get(id=pk)
+                serializer = profileCommentSerializer(list)
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+
+class TextBookVeiwSet(ModelViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = TextBook.objects.all()
+    serializer_class = TextBookSerializer
+
+    def list_TextBook(self, request):
+        try:
+            book_list = TextBook.objects.all()
+            serializer = TextBookSerializer(book_list, many=True)
+
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def create_TextBook(self, request):
+        try:
+            serializer = TextBookSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_TextBook(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            list = TextBook.objects.get(id=pk)
+            serializer = TextBookSerializer(list)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def delete_TextBook(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            item = TextBook.objects.get(id=pk)
+            item.delete()
+            return Response(json.loads('{"response" : "TextBook deleted successfully."}'), status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def update_TextBook(self, request, *args, **kwargs):
+        try:
+            serializer = TextBookSerializerI(data=request.data)
+            pk = self.kwargs['pk']
+            item = TextBook.objects.get(id=pk)
+            if serializer.is_valid():
+                serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = TextBook.objects.get(id=pk)
+                serializer = TextBookSerializer(list)
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+
+class BookCommentsVeiwSet(ModelViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = BookComments.objects.all()
+    serializer_class = BookCommentsSerializer
+
+    def list_BookComments(self, request):
+        try:
+            book_list = BookComments.objects.all()
+            serializer = BookCommentsSerializer(book_list, many=True)
+
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def create_BookComments(self, request):
+        try:
+            serializer = BookCommentsSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_BookComments(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            list = BookComments.objects.get(id=pk)
+            serializer = BookCommentsSerializer(list)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_BookCommentsyou(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = BookComments.objects.filter(Q(user_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = BookCommentsSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_BookCommentsbybook(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = BookComments.objects.filter(Q(Book_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = BookCommentsSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def delete_BookComments(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            item = BookComments.objects.get(id=pk)
+            item.delete()
+            return Response(json.loads('{"response" : "Comment deleted successfully."}'), status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def update_BookComments(self, request, *args, **kwargs):
+        try:
+            serializer = BookCommentsSerializerI(data=request.data)
+            pk = self.kwargs['pk']
+            item = BookComments.objects.get(id=pk)
+            if serializer.is_valid():
+                serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = BookComments.objects.get(id=pk)
+                serializer = BookCommentsSerializer(list)
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+
+class OwnBookVeiwSet(ModelViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = OwnBook.objects.all()
+    serializer_class = OwnBookSerializer
+
+    def list_OwnBook(self, request):
+        try:
+            book_list = OwnBook.objects.all()
+            serializer = OwnBookSerializer(book_list, many=True)
+
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def create_OwnBook(self, request):
+        try:
+            serializer = OwnBookSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_OwnBook(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            list = OwnBook.objects.get(id=pk)
+            serializer = OwnBookSerializer(list)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_OwnBookyou(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = OwnBook.objects.filter(Q(user_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = OwnBookSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_OwnBookbybook(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = OwnBook.objects.filter(Q(Book_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = OwnBookSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_OwnBookbybookUser(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            user = request.query_params.get('user')
+            dbi = OwnBook.objects.filter(Q(Book_id=int(pk)) & Q(user_id=int(user)))
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = OwnBookSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def delete_OwnBook(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            item = OwnBook.objects.get(id=pk)
+            item.delete()
+            return Response(json.loads('{"response" : "Book owned record deleted successfully."}'), status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def update_OwnBook(self, request, *args, **kwargs):
+        try:
+            serializer = OwnBookSerializerI(data=request.data)
+            pk = self.kwargs['pk']
+            item = OwnBook.objects.get(id=pk)
+            if serializer.is_valid():
+                serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = OwnBook.objects.get(id=pk)
+                serializer = OwnBookSerializer(list)
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+
+class WishlistVeiwSet(ModelViewSet):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = BookWishlist.objects.all()
+    serializer_class = WishlistSerializer
+
+    def list_Wishlist(self, request):
+        try:
+            book_list = BookWishlist.objects.all()
+            serializer = WishlistSerializer(book_list, many=True)
+
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def create_Wishlist(self, request):
+        try:
+            serializer = WishlistSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_Wishlist(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            list = BookWishlist.objects.get(id=pk)
+            serializer = WishlistSerializer(list)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_Wishlistyou(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = BookWishlist.objects.filter(Q(user_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = WishlistSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_Wishlistbybook(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            dbi = BookWishlist.objects.filter(Q(Book_id=int(pk)) )
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = WishlistSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_WishlistbybookUser(self, request, *args, **kwargs):
+        try:
+
+            pk = request.query_params.get('pk')
+            user = request.query_params.get('user')
+            dbi = BookWishlist.objects.filter(Q(Book_id=int(pk)) & Q(user_id=int(user)))
+            logger.info("hi")
+            logger.info(dbi)
+            serializer = WishlistSerializer(dbi, many=True)
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def delete_Wishlist(self, request, *args, **kwargs):
+        try:
+            pk = self.kwargs['pk']
+            item = BookWishlist.objects.get(id=pk)
+            item.delete()
+            return Response(json.loads('{"response" : "Book removed from Wishlist."}'), status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def update_Wishlist(self, request, *args, **kwargs):
+        try:
+            serializer = WishlistSerializerI(data=request.data)
+            pk = self.kwargs['pk']
+            item = BookWishlist.objects.get(id=pk)
+            if serializer.is_valid():
+                serializer.update(item, serializer.data)
+                pk = self.kwargs['pk']
+                list = BookWishlist.objects.get(id=pk)
+                serializer = WishlistSerializer(list)
+                return Response(serializer.data, status=200)
+            return Response(serializer.errors, status=200)
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

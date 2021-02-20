@@ -24,7 +24,7 @@ class App_User(models.Model):
     contact =  models.CharField(max_length=200,null=True)
     friends = models.IntegerField(default=0)
     wallet = models.IntegerField(default=500)
-
+    dp = models.CharField(max_length=200, default="")
 
 class friendlist(models.Model):
     user = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='friendlistyou')
@@ -33,9 +33,10 @@ class friendlist(models.Model):
 
 class profileComment(models.Model):
     user = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='profileCommentyou')
-    friend = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='profileCommentfriend')
+    chatter = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='profileCommentfriend')
     comments = models.TextField()
-    publist = UnixTimeStampField(auto_now=True,null=True)
+    publist = UnixTimeStampField(auto_now=True,null=True,editable=True)
+    likes = models.IntegerField(default=0)
 
 class profileTXTPost(models.Model):
     user = models.ForeignKey(App_User, on_delete=models.CASCADE)
@@ -51,4 +52,5 @@ class TXTPostComments(models.Model):
     post = models.ForeignKey(profileTXTPost, on_delete=models.CASCADE)
     comments = models.TextField()
     likes = models.IntegerField(default=0)
+    publist = UnixTimeStampField(auto_now=True,null=True)
 

@@ -20,7 +20,7 @@ import smtplib
 import logging
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
+from rest_framework.permissions import AllowAny
 
 import json
 
@@ -30,7 +30,7 @@ class LoginCheckSet(ModelViewSet):
 
     queryset = App_User.objects.all()
     serializer_class = App_UserSerializer
-
+    permission_classes = [AllowAny]
 
     def login(self, request):
         try:

@@ -818,3 +818,77 @@ Traceback (most recent call last):
     handler = getattr(self, action)
 AttributeError: 'TXTPostCommentsVeiwSet' object has no attribute 'update_User'
 ERROR 2021-02-17 20:04:35,113 basehttp 4744 19392 "PUT /store/postcomment/1/ HTTP/1.1" 500 69159
+WARNING 2021-02-17 23:58:11,407 log 9332 9948 Not Found: /favicon.ico
+WARNING 2021-02-17 23:58:11,407 basehttp 9332 9948 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-17 23:58:34,133 log 9332 1776 Unauthorized: /store/friend/
+
+WARNING 2021-02-17 23:58:34,133 basehttp 9332 1776 "GET /store/friend/%0A?user=28&friend=27&relationship=addfriend HTTP/1.1" 401 58
+WARNING 2021-02-17 23:59:14,502 log 9332 1776 Unauthorized: /store/friend/
+
+WARNING 2021-02-17 23:59:14,503 basehttp 9332 1776 "GET /store/friend/%0A HTTP/1.1" 401 58
+WARNING 2021-02-19 23:47:42,476 log 3680 15016 Not Found: /
+WARNING 2021-02-19 23:47:42,477 basehttp 3680 15016 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-19 23:47:42,481 log 3680 15016 Not Found: /
+WARNING 2021-02-19 23:47:42,482 basehttp 3680 15016 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-19 23:47:42,532 log 3680 15016 Not Found: /favicon.ico
+WARNING 2021-02-19 23:47:42,532 basehttp 3680 15016 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-19 23:47:42,536 log 3680 15016 Not Found: /favicon.ico
+WARNING 2021-02-19 23:47:42,536 basehttp 3680 15016 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-19 23:48:01,469 log 3680 22236 Not Found: //store/user/2/
+
+WARNING 2021-02-19 23:48:01,469 basehttp 3680 22236 "GET //store/user/2/%0A HTTP/1.1" 404 2210
+WARNING 2021-02-19 23:48:24,091 log 3680 22236 Unauthorized: /store/user/2/
+
+WARNING 2021-02-19 23:48:24,091 basehttp 3680 22236 "GET /store/user/2/%0A HTTP/1.1" 401 27
+WARNING 2021-02-19 23:48:49,255 log 3680 18516 Not Found: /favicon.ico
+WARNING 2021-02-19 23:48:49,256 basehttp 3680 18516 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-20 15:52:25,560 log 2724 1964 Not Found: /
+WARNING 2021-02-20 15:52:25,561 basehttp 2724 1964 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-20 15:52:25,567 log 2724 1964 Not Found: /
+WARNING 2021-02-20 15:52:25,567 basehttp 2724 1964 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-20 15:52:25,611 log 2724 1964 Not Found: /favicon.ico
+WARNING 2021-02-20 15:52:25,611 basehttp 2724 1964 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-20 15:52:25,618 log 2724 1964 Not Found: /favicon.ico
+WARNING 2021-02-20 15:52:25,619 basehttp 2724 1964 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-20 15:52:46,225 log 2724 15448 Not Found: //store/profcomment/
+WARNING 2021-02-20 15:52:46,226 basehttp 2724 15448 "GET //store/profcomment/ HTTP/1.1" 404 2220
+WARNING 2021-02-20 15:53:04,286 log 2724 15448 Unauthorized: /store/profcomment/
+WARNING 2021-02-20 15:53:04,286 basehttp 2724 15448 "GET /store/profcomment/ HTTP/1.1" 401 58
+WARNING 2021-02-20 15:53:58,735 log 2724 15448 Unauthorized: /store/profcomment/
+WARNING 2021-02-20 15:53:58,736 basehttp 2724 15448 "GET /store/profcomment/ HTTP/1.1" 401 58
+WARNING 2021-02-20 16:00:42,108 log 12300 17176 Method Not Allowed: /store/profcommentusr/
+WARNING 2021-02-20 16:00:42,108 basehttp 12300 17176 "POST /store/profcommentusr/?pk=28 HTTP/1.1" 405 41
+WARNING 2021-02-20 16:11:51,999 log 17616 11396 Unauthorized: /store/postcomment/1/
+WARNING 2021-02-20 16:11:51,999 basehttp 17616 11396 "PUT /store/postcomment/1/ HTTP/1.1" 401 58
+ERROR 2021-02-20 17:26:43,021 log 11072 12548 Internal Server Error: /store/textbook/3/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'profileCommentVeiwSet' object has no attribute 'get_TextBook'
+ERROR 2021-02-20 17:26:43,022 basehttp 11072 12548 "PUT /store/textbook/3/ HTTP/1.1" 500 69103
+ERROR 2021-02-20 17:27:37,027 log 11072 12548 Internal Server Error: /store/textbook/3/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'profileCommentVeiwSet' object has no attribute 'get_TextBook'
+ERROR 2021-02-20 17:27:37,028 basehttp 11072 12548 "PUT /store/textbook/3/ HTTP/1.1" 500 69103
+WARNING 2021-02-20 17:39:13,301 log 10256 13976 Method Not Allowed: /store/textbook/2/
+WARNING 2021-02-20 17:39:13,301 basehttp 10256 13976 "POST /store/textbook/2/ HTTP/1.1" 405 41
+WARNING 2021-02-20 17:56:24,644 log 11496 5392 Not Found: /store/bookcommentssbok/2/
+WARNING 2021-02-20 17:56:24,644 basehttp 11496 5392 "GET /store/bookcommentssbok/2/ HTTP/1.1" 404 9208
+WARNING 2021-02-20 18:16:39,909 log 18552 14224 Not Found: /store/ownbookusr/28/
+WARNING 2021-02-20 18:16:39,910 basehttp 18552 14224 "GET /store/ownbookusr/28/ HTTP/1.1" 404 9193
+WARNING 2021-02-20 18:49:33,242 log 17792 8108 Not Found: /store/wishlistusr/1/
+WARNING 2021-02-20 18:49:33,243 basehttp 17792 8108 "GET /store/wishlistusr/1/ HTTP/1.1" 404 9193
