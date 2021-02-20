@@ -23,7 +23,7 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book;
-        fields = ("id", 'name', 'authname', 'rate', 'stars', 'share','views','booktype');
+        fields = ("id", 'name', 'authname', 'rate', 'stars', 'share','views','booktype','desc');
 
     def create(self, validated_data):
         try:
@@ -45,6 +45,7 @@ class BookSerializer(serializers.ModelSerializer):
             instance.stars = validated_data.get('stars', instance.stars);
             instance.share = validated_data.get('share', instance.share);
             instance.views = validated_data.get('rate', instance.views);
+            instance.desc = validated_data.get('desc', instance.desc);
             instance.save();
             return instance;
 
@@ -57,7 +58,7 @@ class BookSerializerI(serializers.ModelSerializer):
 
     class Meta:
         model = Book;
-        fields = ("id", 'name', 'authname', 'rate', 'stars', 'share','views','booktype','publist');
+        fields = ("id", 'name', 'authname', 'rate', 'stars', 'share','views','booktype','publist','desc');
 
     def create(self, validated_data):
         try:

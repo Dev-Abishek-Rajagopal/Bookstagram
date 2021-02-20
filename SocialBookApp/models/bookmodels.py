@@ -21,6 +21,7 @@ class Book(models.Model):
     share = models.IntegerField(default=0)
     views = models.IntegerField(default=0)
     dp = models.CharField(max_length=200, default="")
+    desc = models.CharField(max_length=500, default="")
     # dp = models.ImageField(upload_to ='bookDP/',default="0")
 
 class TextBook(models.Model):
