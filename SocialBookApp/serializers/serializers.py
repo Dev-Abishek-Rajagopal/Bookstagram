@@ -44,7 +44,7 @@ class BookSerializer(serializers.ModelSerializer):
             instance.rate = validated_data.get('rate', instance.rate);
             instance.stars = validated_data.get('stars', instance.stars);
             instance.share = validated_data.get('share', instance.share);
-            instance.views = validated_data.get('rate', instance.views);
+            instance.views = validated_data.get('views', instance.views);
             instance.desc = validated_data.get('desc', instance.desc);
             instance.save();
             return instance;
@@ -426,7 +426,7 @@ class BookCommentsSerializerI(serializers.ModelSerializer):
             instance.id = validated_data.get('id', instance.id);
             instance.Book_id = validated_data.get('Book', instance.Book);
             instance.user_id = validated_data.get('user', instance.user);
-            instance.content = validated_data.get('content', instance.content);
+            instance.comments = validated_data.get('comments', instance.comments);
             instance.save();
             return instance;
 

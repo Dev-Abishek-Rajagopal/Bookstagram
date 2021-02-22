@@ -812,3 +812,45 @@ INFO 2021-02-20 18:52:15,545 views 11872 17428 Error
 INFO 2021-02-20 18:52:15,545 views 11872 17428 'collections.OrderedDict' object has no attribute 'publist'
 INFO 2021-02-20 18:52:33,566 serializers 19300 10268 Error
 INFO 2021-02-20 18:52:33,566 serializers 19300 10268 'BookWishlist' object has no attribute 'Own'
+INFO 2021-02-20 18:59:06,760 views 7532 15888 Error
+INFO 2021-02-20 18:59:06,760 views 7532 15888 Book matching query does not exist.
+INFO 2021-02-20 19:04:23,885 serializers 7532 15888 hi
+INFO 2021-02-20 19:04:23,885 serializers 7532 15888 Error
+INFO 2021-02-20 19:04:23,885 serializers 7532 15888 Field 'id' expected a number but got 'AuthName'.
+INFO 2021-02-20 19:04:32,770 serializers 7532 15888 hi
+INFO 2021-02-20 19:04:32,771 serializers 7532 15888 Error
+INFO 2021-02-20 19:04:32,771 serializers 7532 15888 Field 'id' expected a number but got 'AuthName'.
+INFO 2021-02-20 19:04:42,585 serializers 7532 15888 hi
+INFO 2021-02-20 19:04:42,585 serializers 7532 15888 Error
+INFO 2021-02-20 19:04:42,585 serializers 7532 15888 Field 'id' expected a number but got 'AuthName'.
+INFO 2021-02-20 19:04:44,056 serializers 7532 15888 hi
+INFO 2021-02-20 19:04:44,056 serializers 7532 15888 Error
+INFO 2021-02-20 19:04:44,056 serializers 7532 15888 Field 'id' expected a number but got 'AuthName'.
+INFO 2021-02-20 19:08:22,064 serializers 7532 15888 hi
+INFO 2021-02-20 19:08:46,135 serializers 7532 15888 hi
+INFO 2021-02-20 19:09:50,922 serializers 7532 15888 hi
+INFO 2021-02-20 19:10:14,099 serializers 7532 15888 hi
+INFO 2021-02-20 19:12:49,049 serializers 3928 11736 hi
+INFO 2021-02-22 17:22:49,576 views 18988 20208 Rpbert
+INFO 2021-02-22 17:22:49,584 views 18988 20208 ji
+INFO 2021-02-22 17:22:49,587 views 18988 20208 jay
+INFO 2021-02-22 17:22:49,597 serializers 18988 20208 Error
+INFO 2021-02-22 17:22:49,597 serializers 18988 20208 super(type, obj): obj must be an instance or subtype of type
+INFO 2021-02-22 17:22:49,597 views 18988 20208 Error
+INFO 2021-02-22 17:22:49,597 views 18988 20208 `create()` did not return an object instance.
+INFO 2021-02-22 17:24:57,916 views 13676 10664 sssss
+INFO 2021-02-22 17:24:57,922 views 13676 10664 ji
+INFO 2021-02-22 17:24:57,924 views 13676 10664 jay
+INFO 2021-02-22 17:24:57,943 views 13676 10664 794d578ee8b133e739b08febad5b56d323cb75cb
+INFO 2021-02-22 17:24:57,943 views 13676 10664 794d578ee8b133e739b08febad5b56d323cb75cb
+INFO 2021-02-22 17:24:57,943 process 13676 10664 Sending HTML Email
+INFO 2021-02-22 17:24:57,944 process 13676 10664 in py
+INFO 2021-02-22 17:24:58,740 process 13676 10664 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-02-22 17:25:10,221 views 13676 10664 SSSS
+INFO 2021-02-22 17:25:10,227 views 13676 10664 ji
+INFO 2021-02-22 17:25:10,230 views 13676 10664 jay
+INFO 2021-02-22 17:25:10,243 views 13676 10664 cfd77fb8436224f6f1b905d094f010bd9542ad30
+INFO 2021-02-22 17:25:10,243 views 13676 10664 cfd77fb8436224f6f1b905d094f010bd9542ad30
+INFO 2021-02-22 17:25:10,243 process 13676 10664 Sending HTML Email
+INFO 2021-02-22 17:25:10,243 process 13676 10664 in py
+INFO 2021-02-22 17:25:10,976 process 13676 10664 (220, b'2.0.0 Ready to start TLS')

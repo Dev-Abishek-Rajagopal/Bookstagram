@@ -37,7 +37,7 @@ class LoginCheckSet(ModelViewSet):
             username = request.POST.get('username')
             password = request.POST.get('password')
             try:
-                item = App_User.objects.get(username=username)
+                item = App_User.objects.get(username=username.lower())
                 logger.info(item.password)
 
                 if (item.active == False):
@@ -45,11 +45,11 @@ class LoginCheckSet(ModelViewSet):
 
                 if (item.password == password):
                     response ={}
-                    list = User.objects.get(username=username)
+                    list = User.objects.get(username=username.lower())
                     auth = Token.objects.get(user=list.id)
                     response['message'] ="User Verification Successful"
-                    response['username'] = item.username
-                    response['email'] = item.email
+                    response['username'] = item.username.lower()
+                    response['email'] = item.email.lower()
                     response['usertype'] = item.usertype
 
                     tokenJson={}

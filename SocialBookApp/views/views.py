@@ -648,7 +648,7 @@ class profileCommentVeiwSet(ModelViewSet):
     def create_profileComment(self, request):
         try:
             serializer = profileCommentSerializer(data=request.data)
-            logger.info(serializer.data)
+
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=200)
