@@ -1,0 +1,695 @@
+INFO 2021-03-12 20:20:01,264 views 24916 9364 [{'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: userreader>, 'tree': [{'node': <BookUserTree: — newuser2>, 'tree': []}, {'node': <BookUserTree: — newuser3>, 'tree': [{'node': <BookUserTree: — — newuser10>, 'tree': []}, {'node': <BookUserTree: — — newuser3>, 'tree': []}, {'node': <BookUserTree: — — newuser7>, 'tree': []}]}, {'node': <BookUserTree: — newuser4>, 'tree': []}, {'node': <BookUserTree: — newuser8>, 'tree': []}, {'node': <BookUserTree: — userauthor>, 'tree': [{'node': <BookUserTree: — — newuser11>, 'tree': []}]}]}]
+INFO 2021-03-12 20:20:01,264 views 24916 9364 0
+INFO 2021-03-12 20:20:01,264 views 24916 9364 newuser2
+INFO 2021-03-12 20:20:01,270 views 24916 9364 1
+INFO 2021-03-12 20:20:01,270 views 24916 9364 3
+INFO 2021-03-12 20:20:01,270 views 24916 9364 newuser3
+INFO 2021-03-12 20:20:01,275 views 24916 9364 1
+INFO 2021-03-12 20:20:01,275 views 24916 9364 0
+INFO 2021-03-12 20:20:01,275 views 24916 9364 newuser10
+INFO 2021-03-12 20:20:01,280 views 24916 9364 1
+INFO 2021-03-12 20:20:01,280 views 24916 9364 0
+INFO 2021-03-12 20:20:01,280 views 24916 9364 newuser3
+INFO 2021-03-12 20:20:01,285 views 24916 9364 1
+INFO 2021-03-12 20:20:01,285 views 24916 9364 0
+INFO 2021-03-12 20:20:01,285 views 24916 9364 newuser7
+INFO 2021-03-12 20:20:01,289 views 24916 9364 1
+INFO 2021-03-12 20:20:01,290 views 24916 9364 0
+INFO 2021-03-12 20:20:01,290 views 24916 9364 newuser4
+INFO 2021-03-12 20:20:01,294 views 24916 9364 1
+INFO 2021-03-12 20:20:01,294 views 24916 9364 0
+INFO 2021-03-12 20:20:01,294 views 24916 9364 newuser8
+INFO 2021-03-12 20:20:01,298 views 24916 9364 1
+INFO 2021-03-12 20:20:01,299 views 24916 9364 1
+INFO 2021-03-12 20:20:01,299 views 24916 9364 userauthor
+INFO 2021-03-12 20:20:01,303 views 24916 9364 1
+INFO 2021-03-12 20:20:01,303 views 24916 9364 0
+INFO 2021-03-12 20:20:01,303 views 24916 9364 newuser11
+INFO 2021-03-12 20:20:01,308 views 24916 9364 1
+INFO 2021-03-12 20:20:01,308 views 24916 9364 [{'node': {'id': 17, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser2', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': [{'node': {'id': 25, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser10', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': []}, {'node': {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}, {'node': {'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'country': 'ca'}, 'tree': []}, {'node': {'id': 16, 'first_name': 'im', 'last_name': 'user', 'username': 'userauthor', 'country': 'ca'}, 'tree': [{'node': {'id': 26, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser11', 'country': 'ca'}, 'tree': []}]}]
+INFO 2021-03-12 20:20:01,309 views 24916 9364 0
+INFO 2021-03-12 20:20:01,309 views 24916 9364 newuser2
+INFO 2021-03-12 20:20:01,314 views 24916 9364 1
+INFO 2021-03-12 20:20:01,314 views 24916 9364 3
+INFO 2021-03-12 20:20:01,314 views 24916 9364 newuser3
+INFO 2021-03-12 20:20:01,318 views 24916 9364 1
+INFO 2021-03-12 20:20:01,318 views 24916 9364 0
+INFO 2021-03-12 20:20:01,319 views 24916 9364 newuser10
+INFO 2021-03-12 20:20:01,324 views 24916 9364 1
+INFO 2021-03-12 20:20:01,324 views 24916 9364 0
+INFO 2021-03-12 20:20:01,324 views 24916 9364 newuser3
+INFO 2021-03-12 20:20:01,329 views 24916 9364 1
+INFO 2021-03-12 20:20:01,329 views 24916 9364 0
+INFO 2021-03-12 20:20:01,329 views 24916 9364 newuser7
+INFO 2021-03-12 20:20:01,334 views 24916 9364 1
+INFO 2021-03-12 20:20:01,334 views 24916 9364 0
+INFO 2021-03-12 20:20:01,334 views 24916 9364 newuser4
+INFO 2021-03-12 20:20:01,339 views 24916 9364 1
+INFO 2021-03-12 20:20:01,339 views 24916 9364 0
+INFO 2021-03-12 20:20:01,339 views 24916 9364 newuser8
+INFO 2021-03-12 20:20:01,343 views 24916 9364 1
+INFO 2021-03-12 20:20:01,343 views 24916 9364 1
+INFO 2021-03-12 20:20:01,343 views 24916 9364 userauthor
+INFO 2021-03-12 20:20:01,349 views 24916 9364 1
+INFO 2021-03-12 20:20:01,349 views 24916 9364 0
+INFO 2021-03-12 20:20:01,349 views 24916 9364 newuser11
+INFO 2021-03-12 20:20:01,354 views 24916 9364 1
+INFO 2021-03-12 20:20:01,354 views 24916 9364 [{"node": {"id": 17, "first_name": "im", "last_name": "user", "username": "newuser2", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": [{"node": {"id": 25, "first_name": "im", "last_name": "user", "username": "newuser10", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": []}, {"node": {"id": 22, "first_name": "im", "last_name": "user", "username": "newuser7", "country": "ca"}, "tree": []}]}, {"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}, {"node": {"id": 23, "first_name": "im", "last_name": "user", "username": "newuser8", "country": "ca"}, "tree": []}, {"node": {"id": 16, "first_name": "im", "last_name": "user", "username": "userauthor", "country": "ca"}, "tree": [{"node": {"id": 26, "first_name": "im", "last_name": "user", "username": "newuser11", "country": "ca"}, "tree": []}]}]
+INFO 2021-03-12 20:20:01,364 views 24916 9364 {'id': 15, 'first_name': 'im', 'last_name': 'user', 'username': 'userreader', 'country': 'ca'}
+INFO 2021-03-12 20:20:01,364 views 24916 9364 0
+INFO 2021-03-12 20:20:01,364 views 24916 9364 newuser2
+INFO 2021-03-12 20:20:01,369 views 24916 9364 1
+INFO 2021-03-12 20:20:01,369 views 24916 9364 3
+INFO 2021-03-12 20:20:01,369 views 24916 9364 newuser3
+INFO 2021-03-12 20:20:01,375 views 24916 9364 1
+INFO 2021-03-12 20:20:01,375 views 24916 9364 0
+INFO 2021-03-12 20:20:01,375 views 24916 9364 newuser10
+INFO 2021-03-12 20:20:01,381 views 24916 9364 1
+INFO 2021-03-12 20:20:01,381 views 24916 9364 0
+INFO 2021-03-12 20:20:01,381 views 24916 9364 newuser3
+INFO 2021-03-12 20:20:01,386 views 24916 9364 1
+INFO 2021-03-12 20:20:01,387 views 24916 9364 0
+INFO 2021-03-12 20:20:01,387 views 24916 9364 newuser7
+INFO 2021-03-12 20:20:01,393 views 24916 9364 1
+INFO 2021-03-12 20:20:01,393 views 24916 9364 0
+INFO 2021-03-12 20:20:01,393 views 24916 9364 newuser4
+INFO 2021-03-12 20:20:01,398 views 24916 9364 1
+INFO 2021-03-12 20:20:01,398 views 24916 9364 0
+INFO 2021-03-12 20:20:01,398 views 24916 9364 newuser8
+INFO 2021-03-12 20:20:01,403 views 24916 9364 1
+INFO 2021-03-12 20:20:01,403 views 24916 9364 1
+INFO 2021-03-12 20:20:01,403 views 24916 9364 userauthor
+INFO 2021-03-12 20:20:01,408 views 24916 9364 1
+INFO 2021-03-12 20:20:01,408 views 24916 9364 0
+INFO 2021-03-12 20:20:01,408 views 24916 9364 newuser11
+INFO 2021-03-12 20:20:01,413 views 24916 9364 1
+INFO 2021-03-12 20:23:17,090 views 17424 18968 Error
+INFO 2021-03-12 20:23:17,090 views 17424 18968 activate_Treelist() missing 1 required positional argument: 'num'
+INFO 2021-03-12 20:24:05,696 views 14360 6796 Error
+INFO 2021-03-12 20:24:05,696 views 14360 6796 iterate_Treelist() missing 2 required positional arguments: 'user' and 'book'
+INFO 2021-03-12 20:24:19,911 views 15220 14608 Error
+INFO 2021-03-12 20:24:19,911 views 15220 14608 Cannot assign "<App_User: App_User object (23)>": "BookUserTree.Book" must be a "Book" instance.
+INFO 2021-03-12 20:35:54,953 views 3572 19904 Error
+INFO 2021-03-12 20:35:54,953 views 3572 19904 iterate_Treelist() missing 1 required positional argument: 'book'
+INFO 2021-03-12 21:09:38,959 views 21708 22852 [{'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: ssss>, 'tree': []}, {'node': <BookUserTree: userreader>, 'tree': [{'node': <BookUserTree: — newuser2>, 'tree': []}, {'node': <BookUserTree: — newuser3>, 'tree': [{'node': <BookUserTree: — — newuser10>, 'tree': []}, {'node': <BookUserTree: — — newuser3>, 'tree': []}, {'node': <BookUserTree: — — newuser7>, 'tree': []}]}, {'node': <BookUserTree: — newuser4>, 'tree': []}, {'node': <BookUserTree: — newuser8>, 'tree': [{'node': <BookUserTree: — — newuser4>, 'tree': []}]}, {'node': <BookUserTree: — userauthor>, 'tree': [{'node': <BookUserTree: — — newuser11>, 'tree': []}]}]}]
+INFO 2021-03-12 21:09:38,960 views 21708 22852 0
+INFO 2021-03-12 21:09:38,960 views 21708 22852 newuser2
+INFO 2021-03-12 21:09:38,965 views 21708 22852 1
+INFO 2021-03-12 21:09:38,965 views 21708 22852 3
+INFO 2021-03-12 21:09:38,965 views 21708 22852 newuser3
+INFO 2021-03-12 21:09:38,971 views 21708 22852 1
+INFO 2021-03-12 21:09:38,971 views 21708 22852 0
+INFO 2021-03-12 21:09:38,971 views 21708 22852 newuser10
+INFO 2021-03-12 21:09:38,976 views 21708 22852 1
+INFO 2021-03-12 21:09:38,976 views 21708 22852 0
+INFO 2021-03-12 21:09:38,976 views 21708 22852 newuser3
+INFO 2021-03-12 21:09:38,981 views 21708 22852 1
+INFO 2021-03-12 21:09:38,981 views 21708 22852 0
+INFO 2021-03-12 21:09:38,981 views 21708 22852 newuser7
+INFO 2021-03-12 21:09:38,986 views 21708 22852 1
+INFO 2021-03-12 21:09:38,986 views 21708 22852 0
+INFO 2021-03-12 21:09:38,986 views 21708 22852 newuser4
+INFO 2021-03-12 21:09:38,991 views 21708 22852 1
+INFO 2021-03-12 21:09:38,991 views 21708 22852 1
+INFO 2021-03-12 21:09:38,991 views 21708 22852 newuser8
+INFO 2021-03-12 21:09:38,996 views 21708 22852 1
+INFO 2021-03-12 21:09:38,996 views 21708 22852 0
+INFO 2021-03-12 21:09:38,996 views 21708 22852 newuser4
+INFO 2021-03-12 21:09:39,001 views 21708 22852 1
+INFO 2021-03-12 21:09:39,001 views 21708 22852 1
+INFO 2021-03-12 21:09:39,001 views 21708 22852 userauthor
+INFO 2021-03-12 21:09:39,006 views 21708 22852 1
+INFO 2021-03-12 21:09:39,006 views 21708 22852 0
+INFO 2021-03-12 21:09:39,006 views 21708 22852 newuser11
+INFO 2021-03-12 21:09:39,013 views 21708 22852 1
+INFO 2021-03-12 21:09:39,013 views 21708 22852 [{'node': {'id': 17, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser2', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': [{'node': {'id': 25, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser10', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': []}, {'node': {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}, {'node': {'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'country': 'ca'}, 'tree': [{'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 16, 'first_name': 'im', 'last_name': 'user', 'username': 'userauthor', 'country': 'ca'}, 'tree': [{'node': {'id': 26, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser11', 'country': 'ca'}, 'tree': []}]}]
+INFO 2021-03-12 21:09:39,014 views 21708 22852 0
+INFO 2021-03-12 21:09:39,014 views 21708 22852 newuser2
+INFO 2021-03-12 21:09:39,019 views 21708 22852 1
+INFO 2021-03-12 21:09:39,019 views 21708 22852 3
+INFO 2021-03-12 21:09:39,019 views 21708 22852 newuser3
+INFO 2021-03-12 21:09:39,024 views 21708 22852 1
+INFO 2021-03-12 21:09:39,025 views 21708 22852 0
+INFO 2021-03-12 21:09:39,025 views 21708 22852 newuser10
+INFO 2021-03-12 21:09:39,030 views 21708 22852 1
+INFO 2021-03-12 21:09:39,031 views 21708 22852 0
+INFO 2021-03-12 21:09:39,031 views 21708 22852 newuser3
+INFO 2021-03-12 21:09:39,036 views 21708 22852 1
+INFO 2021-03-12 21:09:39,036 views 21708 22852 0
+INFO 2021-03-12 21:09:39,036 views 21708 22852 newuser7
+INFO 2021-03-12 21:09:39,042 views 21708 22852 1
+INFO 2021-03-12 21:09:39,043 views 21708 22852 0
+INFO 2021-03-12 21:09:39,043 views 21708 22852 newuser4
+INFO 2021-03-12 21:09:39,048 views 21708 22852 1
+INFO 2021-03-12 21:09:39,048 views 21708 22852 1
+INFO 2021-03-12 21:09:39,048 views 21708 22852 newuser8
+INFO 2021-03-12 21:09:39,054 views 21708 22852 1
+INFO 2021-03-12 21:09:39,054 views 21708 22852 0
+INFO 2021-03-12 21:09:39,054 views 21708 22852 newuser4
+INFO 2021-03-12 21:09:39,060 views 21708 22852 1
+INFO 2021-03-12 21:09:39,060 views 21708 22852 1
+INFO 2021-03-12 21:09:39,060 views 21708 22852 userauthor
+INFO 2021-03-12 21:09:39,066 views 21708 22852 1
+INFO 2021-03-12 21:09:39,066 views 21708 22852 0
+INFO 2021-03-12 21:09:39,066 views 21708 22852 newuser11
+INFO 2021-03-12 21:09:39,072 views 21708 22852 1
+INFO 2021-03-12 21:09:39,073 views 21708 22852 [{"node": {"id": 17, "first_name": "im", "last_name": "user", "username": "newuser2", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": [{"node": {"id": 25, "first_name": "im", "last_name": "user", "username": "newuser10", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": []}, {"node": {"id": 22, "first_name": "im", "last_name": "user", "username": "newuser7", "country": "ca"}, "tree": []}]}, {"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}, {"node": {"id": 23, "first_name": "im", "last_name": "user", "username": "newuser8", "country": "ca"}, "tree": [{"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}]}, {"node": {"id": 16, "first_name": "im", "last_name": "user", "username": "userauthor", "country": "ca"}, "tree": [{"node": {"id": 26, "first_name": "im", "last_name": "user", "username": "newuser11", "country": "ca"}, "tree": []}]}]
+INFO 2021-03-12 21:09:39,084 views 21708 22852 {'id': 15, 'first_name': 'im', 'last_name': 'user', 'username': 'userreader', 'country': 'ca'}
+INFO 2021-03-12 21:09:39,084 views 21708 22852 0
+INFO 2021-03-12 21:09:39,084 views 21708 22852 newuser2
+INFO 2021-03-12 21:09:39,090 views 21708 22852 1
+INFO 2021-03-12 21:09:39,090 views 21708 22852 3
+INFO 2021-03-12 21:09:39,090 views 21708 22852 newuser3
+INFO 2021-03-12 21:09:39,097 views 21708 22852 1
+INFO 2021-03-12 21:09:39,097 views 21708 22852 0
+INFO 2021-03-12 21:09:39,097 views 21708 22852 newuser10
+INFO 2021-03-12 21:09:39,102 views 21708 22852 1
+INFO 2021-03-12 21:09:39,102 views 21708 22852 0
+INFO 2021-03-12 21:09:39,103 views 21708 22852 newuser3
+INFO 2021-03-12 21:09:39,108 views 21708 22852 1
+INFO 2021-03-12 21:09:39,108 views 21708 22852 0
+INFO 2021-03-12 21:09:39,108 views 21708 22852 newuser7
+INFO 2021-03-12 21:09:39,114 views 21708 22852 1
+INFO 2021-03-12 21:09:39,114 views 21708 22852 0
+INFO 2021-03-12 21:09:39,114 views 21708 22852 newuser4
+INFO 2021-03-12 21:09:39,119 views 21708 22852 1
+INFO 2021-03-12 21:09:39,119 views 21708 22852 1
+INFO 2021-03-12 21:09:39,119 views 21708 22852 newuser8
+INFO 2021-03-12 21:09:39,123 views 21708 22852 1
+INFO 2021-03-12 21:09:39,124 views 21708 22852 0
+INFO 2021-03-12 21:09:39,124 views 21708 22852 newuser4
+INFO 2021-03-12 21:09:39,128 views 21708 22852 1
+INFO 2021-03-12 21:09:39,128 views 21708 22852 1
+INFO 2021-03-12 21:09:39,128 views 21708 22852 userauthor
+INFO 2021-03-12 21:09:39,133 views 21708 22852 1
+INFO 2021-03-12 21:09:39,133 views 21708 22852 0
+INFO 2021-03-12 21:09:39,134 views 21708 22852 newuser11
+INFO 2021-03-12 21:09:39,138 views 21708 22852 1
+INFO 2021-03-12 21:12:49,715 views 14320 22348 Error
+INFO 2021-03-12 21:12:49,715 views 14320 22348 Field name `user` is not valid for model `BookNewsFeed`.
+INFO 2021-03-13 00:03:07,954 views 11928 25484 Error
+INFO 2021-03-13 00:03:07,954 views 11928 25484 Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+INFO 2021-03-13 00:03:36,634 views 21220 2120 Error
+INFO 2021-03-13 00:03:36,634 views 21220 2120 Field name `Author` is not valid for model `FriendNewsFeed`.
+INFO 2021-03-13 00:13:39,186 serializers 1832 24436 {'user': 31, 'friend': 30, 'relationship': 'friends'}
+INFO 2021-03-13 00:22:05,852 views 5284 24668 hi
+INFO 2021-03-13 00:22:05,853 views 5284 24668 <QuerySet []>
+INFO 2021-03-13 00:22:05,866 views 5284 24668 <QuerySet []>
+INFO 2021-03-13 00:22:05,866 views 5284 24668 dbi
+INFO 2021-03-13 00:22:05,866 views 5284 24668 []
+INFO 2021-03-13 00:22:29,592 views 5284 24668 hi
+INFO 2021-03-13 00:22:29,592 views 5284 24668 <QuerySet []>
+INFO 2021-03-13 00:22:29,601 views 5284 24668 <QuerySet []>
+INFO 2021-03-13 00:22:29,601 views 5284 24668 dbi
+INFO 2021-03-13 00:22:29,602 views 5284 24668 []
+INFO 2021-03-13 00:22:50,960 views 5284 24668 hi
+INFO 2021-03-13 00:22:50,960 views 5284 24668 <QuerySet []>
+INFO 2021-03-13 00:22:50,970 views 5284 24668 <QuerySet []>
+INFO 2021-03-13 00:22:50,971 views 5284 24668 dbi
+INFO 2021-03-13 00:22:50,971 views 5284 24668 []
+INFO 2021-03-13 00:23:16,234 views 5284 24668 hi
+INFO 2021-03-13 00:23:16,235 views 5284 24668 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-13 00:23:16,246 views 5284 24668 hi
+INFO 2021-03-13 00:23:16,251 views 5284 24668 App_User object (23)
+INFO 2021-03-13 00:23:16,255 views 5284 24668 App_User object (23)
+INFO 2021-03-13 00:23:16,256 views 5284 24668 hi
+INFO 2021-03-13 00:23:16,261 views 5284 24668 App_User object (22)
+INFO 2021-03-13 00:23:16,265 views 5284 24668 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-13 00:23:16,265 views 5284 24668 dbi
+INFO 2021-03-13 00:23:16,265 views 5284 24668 [{'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'usertype': 'reader', 'country': 'ca', 'email': 'abimortel@gmail.com', 'contact': '900709090', 'friends': 1}, {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'usertype': 'reader', 'country': 'ca', 'email': 'abimortel@gmail.com', 'contact': None, 'friends': 1}]
+INFO 2021-03-13 00:32:18,673 views 26252 4972 [{'node': <BookUserTree: userreader>, 'tree': [{'node': <BookUserTree: — newuser2>, 'tree': []}, {'node': <BookUserTree: — newuser3>, 'tree': [{'node': <BookUserTree: — — newuser10>, 'tree': []}, {'node': <BookUserTree: — — newuser3>, 'tree': []}, {'node': <BookUserTree: — — newuser7>, 'tree': []}]}, {'node': <BookUserTree: — newuser4>, 'tree': []}, {'node': <BookUserTree: — newuser5>, 'tree': []}, {'node': <BookUserTree: — newuser8>, 'tree': [{'node': <BookUserTree: — — newuser4>, 'tree': []}]}, {'node': <BookUserTree: — userauthor>, 'tree': [{'node': <BookUserTree: — — newuser11>, 'tree': []}]}]}]
+INFO 2021-03-13 00:32:18,674 views 26252 4972 0
+INFO 2021-03-13 00:32:18,674 views 26252 4972 newuser2
+INFO 2021-03-13 00:32:18,679 views 26252 4972 1
+INFO 2021-03-13 00:32:18,679 views 26252 4972 3
+INFO 2021-03-13 00:32:18,680 views 26252 4972 newuser3
+INFO 2021-03-13 00:32:18,684 views 26252 4972 1
+INFO 2021-03-13 00:32:18,684 views 26252 4972 0
+INFO 2021-03-13 00:32:18,685 views 26252 4972 newuser10
+INFO 2021-03-13 00:32:18,689 views 26252 4972 1
+INFO 2021-03-13 00:32:18,690 views 26252 4972 0
+INFO 2021-03-13 00:32:18,690 views 26252 4972 newuser3
+INFO 2021-03-13 00:32:18,694 views 26252 4972 1
+INFO 2021-03-13 00:32:18,694 views 26252 4972 0
+INFO 2021-03-13 00:32:18,694 views 26252 4972 newuser7
+INFO 2021-03-13 00:32:18,699 views 26252 4972 1
+INFO 2021-03-13 00:32:18,699 views 26252 4972 0
+INFO 2021-03-13 00:32:18,699 views 26252 4972 newuser4
+INFO 2021-03-13 00:32:18,704 views 26252 4972 1
+INFO 2021-03-13 00:32:18,704 views 26252 4972 0
+INFO 2021-03-13 00:32:18,704 views 26252 4972 newuser5
+INFO 2021-03-13 00:32:18,708 views 26252 4972 1
+INFO 2021-03-13 00:32:18,709 views 26252 4972 1
+INFO 2021-03-13 00:32:18,709 views 26252 4972 newuser8
+INFO 2021-03-13 00:32:18,716 views 26252 4972 1
+INFO 2021-03-13 00:32:18,716 views 26252 4972 0
+INFO 2021-03-13 00:32:18,716 views 26252 4972 newuser4
+INFO 2021-03-13 00:32:18,721 views 26252 4972 1
+INFO 2021-03-13 00:32:18,721 views 26252 4972 1
+INFO 2021-03-13 00:32:18,721 views 26252 4972 userauthor
+INFO 2021-03-13 00:32:18,726 views 26252 4972 1
+INFO 2021-03-13 00:32:18,726 views 26252 4972 0
+INFO 2021-03-13 00:32:18,726 views 26252 4972 newuser11
+INFO 2021-03-13 00:32:18,731 views 26252 4972 1
+INFO 2021-03-13 00:32:18,731 views 26252 4972 [{'node': {'id': 17, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser2', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': [{'node': {'id': 25, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser10', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': []}, {'node': {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}, {'node': {'id': 20, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser5', 'country': 'ca'}, 'tree': []}, {'node': {'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'country': 'ca'}, 'tree': [{'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 16, 'first_name': 'im', 'last_name': 'user', 'username': 'userauthor', 'country': 'ca'}, 'tree': [{'node': {'id': 26, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser11', 'country': 'ca'}, 'tree': []}]}]
+INFO 2021-03-13 00:32:18,731 views 26252 4972 0
+INFO 2021-03-13 00:32:18,731 views 26252 4972 newuser2
+INFO 2021-03-13 00:32:18,736 views 26252 4972 1
+INFO 2021-03-13 00:32:18,736 views 26252 4972 3
+INFO 2021-03-13 00:32:18,736 views 26252 4972 newuser3
+INFO 2021-03-13 00:32:18,741 views 26252 4972 1
+INFO 2021-03-13 00:32:18,741 views 26252 4972 0
+INFO 2021-03-13 00:32:18,741 views 26252 4972 newuser10
+INFO 2021-03-13 00:32:18,746 views 26252 4972 1
+INFO 2021-03-13 00:32:18,746 views 26252 4972 0
+INFO 2021-03-13 00:32:18,746 views 26252 4972 newuser3
+INFO 2021-03-13 00:32:18,750 views 26252 4972 1
+INFO 2021-03-13 00:32:18,751 views 26252 4972 0
+INFO 2021-03-13 00:32:18,751 views 26252 4972 newuser7
+INFO 2021-03-13 00:32:18,755 views 26252 4972 1
+INFO 2021-03-13 00:32:18,755 views 26252 4972 0
+INFO 2021-03-13 00:32:18,755 views 26252 4972 newuser4
+INFO 2021-03-13 00:32:18,760 views 26252 4972 1
+INFO 2021-03-13 00:32:18,760 views 26252 4972 0
+INFO 2021-03-13 00:32:18,760 views 26252 4972 newuser5
+INFO 2021-03-13 00:32:18,765 views 26252 4972 1
+INFO 2021-03-13 00:32:18,765 views 26252 4972 1
+INFO 2021-03-13 00:32:18,765 views 26252 4972 newuser8
+INFO 2021-03-13 00:32:18,770 views 26252 4972 1
+INFO 2021-03-13 00:32:18,770 views 26252 4972 0
+INFO 2021-03-13 00:32:18,770 views 26252 4972 newuser4
+INFO 2021-03-13 00:32:18,774 views 26252 4972 1
+INFO 2021-03-13 00:32:18,774 views 26252 4972 1
+INFO 2021-03-13 00:32:18,774 views 26252 4972 userauthor
+INFO 2021-03-13 00:32:18,779 views 26252 4972 1
+INFO 2021-03-13 00:32:18,779 views 26252 4972 0
+INFO 2021-03-13 00:32:18,779 views 26252 4972 newuser11
+INFO 2021-03-13 00:32:18,783 views 26252 4972 1
+INFO 2021-03-13 00:32:18,783 views 26252 4972 [{"node": {"id": 17, "first_name": "im", "last_name": "user", "username": "newuser2", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": [{"node": {"id": 25, "first_name": "im", "last_name": "user", "username": "newuser10", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": []}, {"node": {"id": 22, "first_name": "im", "last_name": "user", "username": "newuser7", "country": "ca"}, "tree": []}]}, {"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}, {"node": {"id": 20, "first_name": "im", "last_name": "user", "username": "newuser5", "country": "ca"}, "tree": []}, {"node": {"id": 23, "first_name": "im", "last_name": "user", "username": "newuser8", "country": "ca"}, "tree": [{"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}]}, {"node": {"id": 16, "first_name": "im", "last_name": "user", "username": "userauthor", "country": "ca"}, "tree": [{"node": {"id": 26, "first_name": "im", "last_name": "user", "username": "newuser11", "country": "ca"}, "tree": []}]}]
+INFO 2021-03-13 00:32:18,792 views 26252 4972 {'id': 15, 'first_name': 'im', 'last_name': 'user', 'username': 'userreader', 'country': 'ca'}
+INFO 2021-03-13 00:32:18,792 views 26252 4972 0
+INFO 2021-03-13 00:32:18,793 views 26252 4972 newuser2
+INFO 2021-03-13 00:32:18,797 views 26252 4972 1
+INFO 2021-03-13 00:32:18,798 views 26252 4972 3
+INFO 2021-03-13 00:32:18,798 views 26252 4972 newuser3
+INFO 2021-03-13 00:32:18,802 views 26252 4972 1
+INFO 2021-03-13 00:32:18,802 views 26252 4972 0
+INFO 2021-03-13 00:32:18,802 views 26252 4972 newuser10
+INFO 2021-03-13 00:32:18,807 views 26252 4972 1
+INFO 2021-03-13 00:32:18,807 views 26252 4972 0
+INFO 2021-03-13 00:32:18,807 views 26252 4972 newuser3
+INFO 2021-03-13 00:32:18,811 views 26252 4972 1
+INFO 2021-03-13 00:32:18,812 views 26252 4972 0
+INFO 2021-03-13 00:32:18,812 views 26252 4972 newuser7
+INFO 2021-03-13 00:32:18,816 views 26252 4972 1
+INFO 2021-03-13 00:32:18,816 views 26252 4972 0
+INFO 2021-03-13 00:32:18,816 views 26252 4972 newuser4
+INFO 2021-03-13 00:32:18,821 views 26252 4972 1
+INFO 2021-03-13 00:32:18,821 views 26252 4972 0
+INFO 2021-03-13 00:32:18,821 views 26252 4972 newuser5
+INFO 2021-03-13 00:32:18,825 views 26252 4972 1
+INFO 2021-03-13 00:32:18,826 views 26252 4972 1
+INFO 2021-03-13 00:32:18,826 views 26252 4972 newuser8
+INFO 2021-03-13 00:32:18,831 views 26252 4972 1
+INFO 2021-03-13 00:32:18,831 views 26252 4972 0
+INFO 2021-03-13 00:32:18,831 views 26252 4972 newuser4
+INFO 2021-03-13 00:32:18,836 views 26252 4972 1
+INFO 2021-03-13 00:32:18,836 views 26252 4972 1
+INFO 2021-03-13 00:32:18,836 views 26252 4972 userauthor
+INFO 2021-03-13 00:32:18,841 views 26252 4972 1
+INFO 2021-03-13 00:32:18,841 views 26252 4972 0
+INFO 2021-03-13 00:32:18,841 views 26252 4972 newuser11
+INFO 2021-03-13 00:32:18,845 views 26252 4972 1
+INFO 2021-03-13 00:41:26,254 views 6472 23172 Error
+INFO 2021-03-13 00:41:26,254 views 6472 23172 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO 2021-03-13 00:45:23,806 views 23572 24860 Error
+INFO 2021-03-13 00:45:23,806 views 23572 24860 Field name `user` is not valid for model `BookNewsFeed`.
+INFO 2021-03-13 00:46:10,040 views 592 4008 Error
+INFO 2021-03-13 00:46:10,041 views 592 4008 Got AttributeError when attempting to get a value for field `Author` on serializer `BookNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `FriendNewsFeed` instance.
+Original exception text was: 'FriendNewsFeed' object has no attribute 'Author'.
+INFO 2021-03-13 00:48:01,297 views 22540 13900 Error
+INFO 2021-03-13 00:48:01,297 views 22540 13900 Got AttributeError when attempting to get a value for field `Author` on serializer `BookNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `FriendNewsFeed` instance.
+Original exception text was: 'FriendNewsFeed' object has no attribute 'Author'.
+INFO 2021-03-13 00:55:19,542 views 1164 9192 38
+INFO 2021-03-13 01:00:14,953 views 1164 9192 41
+INFO 2021-03-13 01:04:34,593 views 1164 9192 hi
+INFO 2021-03-13 01:04:34,594 views 1164 9192 <QuerySet [<friendlist: friendlist object (16)>]>
+INFO 2021-03-13 01:04:34,604 views 1164 9192 hi
+INFO 2021-03-13 01:04:34,609 views 1164 9192 App_User object (30)
+INFO 2021-03-13 01:04:34,613 views 1164 9192 App_User object (30)
+INFO 2021-03-13 01:04:34,613 views 1164 9192 <QuerySet [<friendlist: friendlist object (16)>]>
+INFO 2021-03-13 01:04:34,614 views 1164 9192 dbi
+INFO 2021-03-13 01:04:34,614 views 1164 9192 [{'id': 30, 'first_name': 'abi', 'last_name': 'shek', 'username': 'sssss', 'usertype': 'author', 'country': 'ind', 'email': 'abimortel@gmail.com', 'contact': '9865321245', 'friends': 1}]
+INFO 2021-03-13 01:04:51,885 views 1164 9192 hi
+INFO 2021-03-13 01:04:51,885 views 1164 9192 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-13 01:04:51,896 views 1164 9192 hi
+INFO 2021-03-13 01:04:51,901 views 1164 9192 App_User object (23)
+INFO 2021-03-13 01:04:51,905 views 1164 9192 App_User object (23)
+INFO 2021-03-13 01:04:51,906 views 1164 9192 hi
+INFO 2021-03-13 01:04:51,911 views 1164 9192 App_User object (22)
+INFO 2021-03-13 01:04:51,916 views 1164 9192 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-13 01:04:51,916 views 1164 9192 dbi
+INFO 2021-03-13 01:04:51,916 views 1164 9192 [{'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'usertype': 'reader', 'country': 'ca', 'email': 'abimortel@gmail.com', 'contact': '900709090', 'friends': 1}, {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'usertype': 'reader', 'country': 'ca', 'email': 'abimortel@gmail.com', 'contact': None, 'friends': 1}]
+INFO 2021-03-13 01:08:06,050 views 8944 20612 Error
+INFO 2021-03-13 01:08:06,050 views 8944 20612 Got AttributeError when attempting to get a value for field `first_name` on serializer `App_UserSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `FriendNewsFeed` instance.
+Original exception text was: 'FriendNewsFeed' object has no attribute 'first_name'.
+INFO 2021-03-13 01:08:26,902 views 4228 17372 Error
+INFO 2021-03-13 01:08:26,902 views 4228 17372 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:10:45,201 views 8644 16184 Error
+INFO 2021-03-13 01:10:45,201 views 8644 16184 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:11:23,941 views 22664 592 1
+INFO 2021-03-13 01:11:23,944 views 22664 592 2
+INFO 2021-03-13 01:11:23,953 views 22664 592 Error
+INFO 2021-03-13 01:11:23,953 views 22664 592 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:12:10,744 views 17320 23260 1
+INFO 2021-03-13 01:12:10,744 views 17320 23260 k
+INFO 2021-03-13 01:12:10,747 views 17320 23260 2
+INFO 2021-03-13 01:12:10,747 views 17320 23260 k
+INFO 2021-03-13 01:12:10,756 views 17320 23260 Error
+INFO 2021-03-13 01:12:10,756 views 17320 23260 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:13:04,273 views 4764 9456 1
+INFO 2021-03-13 01:13:04,273 views 4764 9456 k
+INFO 2021-03-13 01:13:04,276 views 4764 9456 2
+INFO 2021-03-13 01:13:04,276 views 4764 9456 k
+INFO 2021-03-13 01:13:04,285 views 4764 9456 Error
+INFO 2021-03-13 01:13:04,285 views 4764 9456 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:14:13,077 views 26228 3804 1
+INFO 2021-03-13 01:14:13,077 views 26228 3804 k
+INFO 2021-03-13 01:14:13,080 views 26228 3804 2
+INFO 2021-03-13 01:14:13,080 views 26228 3804 k
+INFO 2021-03-13 01:14:13,089 views 26228 3804 Error
+INFO 2021-03-13 01:14:13,089 views 26228 3804 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:15:08,917 views 26016 19772 1
+INFO 2021-03-13 01:15:08,917 views 26016 19772 k
+INFO 2021-03-13 01:15:08,920 views 26016 19772 FriendNewsFeed object (1)
+INFO 2021-03-13 01:15:08,921 views 26016 19772 2
+INFO 2021-03-13 01:15:08,921 views 26016 19772 k
+INFO 2021-03-13 01:15:08,923 views 26016 19772 FriendNewsFeed object (2)
+INFO 2021-03-13 01:15:08,930 views 26016 19772 Error
+INFO 2021-03-13 01:15:08,930 views 26016 19772 FriendNewsFeed matching query does not exist.
+INFO 2021-03-13 01:18:20,411 views 26036 13112 1
+INFO 2021-03-13 01:18:20,411 views 26036 13112 k
+INFO 2021-03-13 01:18:20,414 views 26036 13112 FriendNewsFeed object (1)
+INFO 2021-03-13 01:18:20,415 views 26036 13112 2
+INFO 2021-03-13 01:18:20,415 views 26036 13112 k
+INFO 2021-03-13 01:18:20,418 views 26036 13112 FriendNewsFeed object (2)
+INFO 2021-03-13 01:21:15,072 views 22132 25020 FriendNewsFeed object (1)
+INFO 2021-03-13 01:21:15,076 views 22132 25020 FriendNewsFeed object (2)
+INFO 2021-03-13 01:22:25,717 views 22132 25020 FriendNewsFeed object (4)
+INFO 2021-03-13 01:22:25,721 views 22132 25020 FriendNewsFeed object (1)
+INFO 2021-03-13 01:22:25,725 views 22132 25020 FriendNewsFeed object (2)
+INFO 2021-03-13 01:22:25,729 views 22132 25020 FriendNewsFeed object (5)
+INFO 2021-03-13 01:28:55,933 views 22132 25020 [{'node': <BookUserTree: first>, 'tree': [{'node': <BookUserTree: — newuser11>, 'tree': [{'node': <BookUserTree: — — ssss>, 'tree': []}]}]}, {'node': <BookUserTree: ssss>, 'tree': [{'node': <BookUserTree: — newuser6>, 'tree': []}]}, {'node': <BookUserTree: userreader>, 'tree': [{'node': <BookUserTree: — newuser2>, 'tree': []}, {'node': <BookUserTree: — newuser3>, 'tree': [{'node': <BookUserTree: — — newuser10>, 'tree': []}, {'node': <BookUserTree: — — newuser3>, 'tree': []}, {'node': <BookUserTree: — — newuser7>, 'tree': []}]}, {'node': <BookUserTree: — newuser4>, 'tree': []}, {'node': <BookUserTree: — newuser5>, 'tree': []}, {'node': <BookUserTree: — newuser8>, 'tree': [{'node': <BookUserTree: — — newuser4>, 'tree': []}]}, {'node': <BookUserTree: — userauthor>, 'tree': [{'node': <BookUserTree: — — newuser11>, 'tree': []}]}]}]
+INFO 2021-03-13 01:28:55,934 views 22132 25020 0
+INFO 2021-03-13 01:28:55,934 views 22132 25020 newuser2
+INFO 2021-03-13 01:28:55,939 views 22132 25020 1
+INFO 2021-03-13 01:28:55,939 views 22132 25020 3
+INFO 2021-03-13 01:28:55,940 views 22132 25020 newuser3
+INFO 2021-03-13 01:28:55,945 views 22132 25020 1
+INFO 2021-03-13 01:28:55,945 views 22132 25020 0
+INFO 2021-03-13 01:28:55,945 views 22132 25020 newuser10
+INFO 2021-03-13 01:28:55,950 views 22132 25020 1
+INFO 2021-03-13 01:28:55,950 views 22132 25020 0
+INFO 2021-03-13 01:28:55,950 views 22132 25020 newuser3
+INFO 2021-03-13 01:28:55,955 views 22132 25020 1
+INFO 2021-03-13 01:28:55,955 views 22132 25020 0
+INFO 2021-03-13 01:28:55,955 views 22132 25020 newuser7
+INFO 2021-03-13 01:28:55,961 views 22132 25020 1
+INFO 2021-03-13 01:28:55,962 views 22132 25020 0
+INFO 2021-03-13 01:28:55,962 views 22132 25020 newuser4
+INFO 2021-03-13 01:28:55,966 views 22132 25020 1
+INFO 2021-03-13 01:28:55,966 views 22132 25020 0
+INFO 2021-03-13 01:28:55,967 views 22132 25020 newuser5
+INFO 2021-03-13 01:28:55,971 views 22132 25020 1
+INFO 2021-03-13 01:28:55,971 views 22132 25020 1
+INFO 2021-03-13 01:28:55,971 views 22132 25020 newuser8
+INFO 2021-03-13 01:28:55,976 views 22132 25020 1
+INFO 2021-03-13 01:28:55,976 views 22132 25020 0
+INFO 2021-03-13 01:28:55,976 views 22132 25020 newuser4
+INFO 2021-03-13 01:28:55,981 views 22132 25020 1
+INFO 2021-03-13 01:28:55,981 views 22132 25020 1
+INFO 2021-03-13 01:28:55,982 views 22132 25020 userauthor
+INFO 2021-03-13 01:28:55,986 views 22132 25020 1
+INFO 2021-03-13 01:28:55,987 views 22132 25020 0
+INFO 2021-03-13 01:28:55,987 views 22132 25020 newuser11
+INFO 2021-03-13 01:28:55,991 views 22132 25020 1
+INFO 2021-03-13 01:28:55,991 views 22132 25020 [{'node': {'id': 17, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser2', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': [{'node': {'id': 25, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser10', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': []}, {'node': {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}, {'node': {'id': 20, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser5', 'country': 'ca'}, 'tree': []}, {'node': {'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'country': 'ca'}, 'tree': [{'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 16, 'first_name': 'im', 'last_name': 'user', 'username': 'userauthor', 'country': 'ca'}, 'tree': [{'node': {'id': 26, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser11', 'country': 'ca'}, 'tree': []}]}]
+INFO 2021-03-13 01:28:55,992 views 22132 25020 0
+INFO 2021-03-13 01:28:55,992 views 22132 25020 newuser2
+INFO 2021-03-13 01:28:55,996 views 22132 25020 1
+INFO 2021-03-13 01:28:55,997 views 22132 25020 3
+INFO 2021-03-13 01:28:55,997 views 22132 25020 newuser3
+INFO 2021-03-13 01:28:56,002 views 22132 25020 1
+INFO 2021-03-13 01:28:56,002 views 22132 25020 0
+INFO 2021-03-13 01:28:56,002 views 22132 25020 newuser10
+INFO 2021-03-13 01:28:56,007 views 22132 25020 1
+INFO 2021-03-13 01:28:56,007 views 22132 25020 0
+INFO 2021-03-13 01:28:56,007 views 22132 25020 newuser3
+INFO 2021-03-13 01:28:56,012 views 22132 25020 1
+INFO 2021-03-13 01:28:56,012 views 22132 25020 0
+INFO 2021-03-13 01:28:56,012 views 22132 25020 newuser7
+INFO 2021-03-13 01:28:56,017 views 22132 25020 1
+INFO 2021-03-13 01:28:56,017 views 22132 25020 0
+INFO 2021-03-13 01:28:56,017 views 22132 25020 newuser4
+INFO 2021-03-13 01:28:56,022 views 22132 25020 1
+INFO 2021-03-13 01:28:56,022 views 22132 25020 0
+INFO 2021-03-13 01:28:56,022 views 22132 25020 newuser5
+INFO 2021-03-13 01:28:56,027 views 22132 25020 1
+INFO 2021-03-13 01:28:56,027 views 22132 25020 1
+INFO 2021-03-13 01:28:56,027 views 22132 25020 newuser8
+INFO 2021-03-13 01:28:56,032 views 22132 25020 1
+INFO 2021-03-13 01:28:56,032 views 22132 25020 0
+INFO 2021-03-13 01:28:56,032 views 22132 25020 newuser4
+INFO 2021-03-13 01:28:56,037 views 22132 25020 1
+INFO 2021-03-13 01:28:56,037 views 22132 25020 1
+INFO 2021-03-13 01:28:56,037 views 22132 25020 userauthor
+INFO 2021-03-13 01:28:56,042 views 22132 25020 1
+INFO 2021-03-13 01:28:56,042 views 22132 25020 0
+INFO 2021-03-13 01:28:56,042 views 22132 25020 newuser11
+INFO 2021-03-13 01:28:56,047 views 22132 25020 1
+INFO 2021-03-13 01:28:56,047 views 22132 25020 [{"node": {"id": 17, "first_name": "im", "last_name": "user", "username": "newuser2", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": [{"node": {"id": 25, "first_name": "im", "last_name": "user", "username": "newuser10", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": []}, {"node": {"id": 22, "first_name": "im", "last_name": "user", "username": "newuser7", "country": "ca"}, "tree": []}]}, {"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}, {"node": {"id": 20, "first_name": "im", "last_name": "user", "username": "newuser5", "country": "ca"}, "tree": []}, {"node": {"id": 23, "first_name": "im", "last_name": "user", "username": "newuser8", "country": "ca"}, "tree": [{"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}]}, {"node": {"id": 16, "first_name": "im", "last_name": "user", "username": "userauthor", "country": "ca"}, "tree": [{"node": {"id": 26, "first_name": "im", "last_name": "user", "username": "newuser11", "country": "ca"}, "tree": []}]}]
+INFO 2021-03-13 01:28:56,057 views 22132 25020 {'id': 15, 'first_name': 'im', 'last_name': 'user', 'username': 'userreader', 'country': 'ca'}
+INFO 2021-03-13 01:28:56,057 views 22132 25020 0
+INFO 2021-03-13 01:28:56,057 views 22132 25020 newuser2
+INFO 2021-03-13 01:28:56,062 views 22132 25020 1
+INFO 2021-03-13 01:28:56,062 views 22132 25020 3
+INFO 2021-03-13 01:28:56,062 views 22132 25020 newuser3
+INFO 2021-03-13 01:28:56,067 views 22132 25020 1
+INFO 2021-03-13 01:28:56,067 views 22132 25020 0
+INFO 2021-03-13 01:28:56,067 views 22132 25020 newuser10
+INFO 2021-03-13 01:28:56,072 views 22132 25020 1
+INFO 2021-03-13 01:28:56,072 views 22132 25020 0
+INFO 2021-03-13 01:28:56,072 views 22132 25020 newuser3
+INFO 2021-03-13 01:28:56,077 views 22132 25020 1
+INFO 2021-03-13 01:28:56,077 views 22132 25020 0
+INFO 2021-03-13 01:28:56,077 views 22132 25020 newuser7
+INFO 2021-03-13 01:28:56,082 views 22132 25020 1
+INFO 2021-03-13 01:28:56,082 views 22132 25020 0
+INFO 2021-03-13 01:28:56,082 views 22132 25020 newuser4
+INFO 2021-03-13 01:28:56,087 views 22132 25020 1
+INFO 2021-03-13 01:28:56,087 views 22132 25020 0
+INFO 2021-03-13 01:28:56,087 views 22132 25020 newuser5
+INFO 2021-03-13 01:28:56,092 views 22132 25020 1
+INFO 2021-03-13 01:28:56,092 views 22132 25020 1
+INFO 2021-03-13 01:28:56,092 views 22132 25020 newuser8
+INFO 2021-03-13 01:28:56,097 views 22132 25020 1
+INFO 2021-03-13 01:28:56,097 views 22132 25020 0
+INFO 2021-03-13 01:28:56,097 views 22132 25020 newuser4
+INFO 2021-03-13 01:28:56,101 views 22132 25020 1
+INFO 2021-03-13 01:28:56,101 views 22132 25020 1
+INFO 2021-03-13 01:28:56,102 views 22132 25020 userauthor
+INFO 2021-03-13 01:28:56,107 views 22132 25020 1
+INFO 2021-03-13 01:28:56,107 views 22132 25020 0
+INFO 2021-03-13 01:28:56,107 views 22132 25020 newuser11
+INFO 2021-03-13 01:28:56,112 views 22132 25020 1
+INFO 2021-03-13 01:33:31,891 views 23936 6532 FriendNewsFeed object (4)
+INFO 2021-03-13 01:33:31,905 views 23936 6532 FriendNewsFeed object (1)
+INFO 2021-03-13 01:33:31,920 views 23936 6532 FriendNewsFeed object (2)
+INFO 2021-03-13 01:33:31,933 views 23936 6532 FriendNewsFeed object (5)
+INFO 2021-03-13 01:34:09,075 views 23252 25788 FriendNewsFeed object (4)
+INFO 2021-03-13 01:34:09,086 views 23252 25788 FriendNewsFeed object (1)
+INFO 2021-03-13 01:34:09,098 views 23252 25788 FriendNewsFeed object (2)
+INFO 2021-03-13 01:34:09,110 views 23252 25788 FriendNewsFeed object (5)
+INFO 2021-03-13 01:36:40,494 views 24432 12504 FriendNewsFeed object (4)
+INFO 2021-03-13 01:36:40,507 views 24432 12504 FriendNewsFeed object (1)
+INFO 2021-03-13 01:36:40,520 views 24432 12504 FriendNewsFeed object (2)
+INFO 2021-03-13 01:36:40,532 views 24432 12504 FriendNewsFeed object (5)
+INFO 2021-03-13 01:38:30,433 views 8788 7496 FriendNewsFeed object (4)
+INFO 2021-03-13 01:38:30,447 views 8788 7496 FriendNewsFeed object (1)
+INFO 2021-03-13 01:38:30,459 views 8788 7496 FriendNewsFeed object (2)
+INFO 2021-03-13 01:38:30,472 views 8788 7496 FriendNewsFeed object (5)
+INFO 2021-03-13 01:38:30,502 views 8788 7496 Error
+INFO 2021-03-13 01:38:30,502 views 8788 7496 local variable 'Book' referenced before assignment
+INFO 2021-03-13 01:39:07,371 views 6376 18696 FriendNewsFeed object (4)
+INFO 2021-03-13 01:39:07,384 views 6376 18696 FriendNewsFeed object (1)
+INFO 2021-03-13 01:39:07,397 views 6376 18696 FriendNewsFeed object (2)
+INFO 2021-03-13 01:39:07,409 views 6376 18696 FriendNewsFeed object (5)
+INFO 2021-03-13 01:39:07,436 views 6376 18696 Error
+INFO 2021-03-13 01:39:07,436 views 6376 18696 local variable 'Book' referenced before assignment
+INFO 2021-03-13 01:40:10,034 views 15912 13140 FriendNewsFeed object (4)
+INFO 2021-03-13 01:40:10,047 views 15912 13140 FriendNewsFeed object (1)
+INFO 2021-03-13 01:40:10,060 views 15912 13140 FriendNewsFeed object (2)
+INFO 2021-03-13 01:40:10,073 views 15912 13140 FriendNewsFeed object (5)
+INFO 2021-03-13 01:46:41,071 views 10876 15792 [{'node': <BookUserTree: first>, 'tree': [{'node': <BookUserTree: — newuser11>, 'tree': [{'node': <BookUserTree: — — ssss>, 'tree': []}]}]}, {'node': <BookUserTree: ssss>, 'tree': [{'node': <BookUserTree: — newuser6>, 'tree': []}]}, {'node': <BookUserTree: userreader>, 'tree': [{'node': <BookUserTree: — newuser2>, 'tree': []}, {'node': <BookUserTree: — newuser3>, 'tree': [{'node': <BookUserTree: — — newuser10>, 'tree': []}, {'node': <BookUserTree: — — newuser3>, 'tree': []}, {'node': <BookUserTree: — — newuser7>, 'tree': []}]}, {'node': <BookUserTree: — newuser4>, 'tree': []}, {'node': <BookUserTree: — newuser5>, 'tree': []}, {'node': <BookUserTree: — newuser8>, 'tree': [{'node': <BookUserTree: — — newuser4>, 'tree': []}]}, {'node': <BookUserTree: — userauthor>, 'tree': [{'node': <BookUserTree: — — newuser11>, 'tree': []}]}]}]
+INFO 2021-03-13 01:46:41,072 views 10876 15792 0
+INFO 2021-03-13 01:46:41,072 views 10876 15792 newuser6
+INFO 2021-03-13 01:46:41,077 views 10876 15792 29
+INFO 2021-03-13 01:46:41,077 views 10876 15792 [{'node': {'id': 21, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser6', 'country': 'ca'}, 'tree': []}]
+INFO 2021-03-13 01:46:41,077 views 10876 15792 0
+INFO 2021-03-13 01:46:41,078 views 10876 15792 newuser6
+INFO 2021-03-13 01:46:41,082 views 10876 15792 29
+INFO 2021-03-13 01:46:41,083 views 10876 15792 [{"node": {"id": 21, "first_name": "im", "last_name": "user", "username": "newuser6", "country": "ca"}, "tree": []}]
+INFO 2021-03-13 01:46:41,092 views 10876 15792 {'id': 31, 'first_name': 'abi', 'last_name': 'shek', 'username': 'ssss', 'country': 'ind'}
+INFO 2021-03-13 01:46:41,092 views 10876 15792 0
+INFO 2021-03-13 01:46:41,092 views 10876 15792 newuser6
+INFO 2021-03-13 01:46:41,096 views 10876 15792 29
+INFO 2021-03-13 01:49:32,776 views 10876 15792 [{'node': <BookUserTree: first>, 'tree': [{'node': <BookUserTree: — newuser11>, 'tree': [{'node': <BookUserTree: — — ssss>, 'tree': []}]}]}, {'node': <BookUserTree: ssss>, 'tree': [{'node': <BookUserTree: — newuser6>, 'tree': []}]}, {'node': <BookUserTree: userreader>, 'tree': [{'node': <BookUserTree: — newuser2>, 'tree': []}, {'node': <BookUserTree: — newuser3>, 'tree': [{'node': <BookUserTree: — — newuser10>, 'tree': []}, {'node': <BookUserTree: — — newuser3>, 'tree': []}, {'node': <BookUserTree: — — newuser7>, 'tree': []}]}, {'node': <BookUserTree: — newuser4>, 'tree': []}, {'node': <BookUserTree: — newuser5>, 'tree': []}, {'node': <BookUserTree: — newuser8>, 'tree': [{'node': <BookUserTree: — — newuser4>, 'tree': []}]}, {'node': <BookUserTree: — userauthor>, 'tree': [{'node': <BookUserTree: — — newuser11>, 'tree': []}]}]}]
+INFO 2021-03-13 01:49:32,776 views 10876 15792 0
+INFO 2021-03-13 01:49:32,776 views 10876 15792 newuser2
+INFO 2021-03-13 01:49:32,782 views 10876 15792 1
+INFO 2021-03-13 01:49:32,782 views 10876 15792 3
+INFO 2021-03-13 01:49:32,782 views 10876 15792 newuser3
+INFO 2021-03-13 01:49:32,787 views 10876 15792 1
+INFO 2021-03-13 01:49:32,787 views 10876 15792 0
+INFO 2021-03-13 01:49:32,787 views 10876 15792 newuser10
+INFO 2021-03-13 01:49:32,792 views 10876 15792 1
+INFO 2021-03-13 01:49:32,792 views 10876 15792 0
+INFO 2021-03-13 01:49:32,792 views 10876 15792 newuser3
+INFO 2021-03-13 01:49:32,797 views 10876 15792 1
+INFO 2021-03-13 01:49:32,797 views 10876 15792 0
+INFO 2021-03-13 01:49:32,797 views 10876 15792 newuser7
+INFO 2021-03-13 01:49:32,802 views 10876 15792 1
+INFO 2021-03-13 01:49:32,802 views 10876 15792 0
+INFO 2021-03-13 01:49:32,803 views 10876 15792 newuser4
+INFO 2021-03-13 01:49:32,807 views 10876 15792 1
+INFO 2021-03-13 01:49:32,807 views 10876 15792 0
+INFO 2021-03-13 01:49:32,807 views 10876 15792 newuser5
+INFO 2021-03-13 01:49:32,812 views 10876 15792 1
+INFO 2021-03-13 01:49:32,812 views 10876 15792 1
+INFO 2021-03-13 01:49:32,813 views 10876 15792 newuser8
+INFO 2021-03-13 01:49:32,817 views 10876 15792 1
+INFO 2021-03-13 01:49:32,818 views 10876 15792 0
+INFO 2021-03-13 01:49:32,818 views 10876 15792 newuser4
+INFO 2021-03-13 01:49:32,822 views 10876 15792 1
+INFO 2021-03-13 01:49:32,822 views 10876 15792 1
+INFO 2021-03-13 01:49:32,822 views 10876 15792 userauthor
+INFO 2021-03-13 01:49:32,827 views 10876 15792 1
+INFO 2021-03-13 01:49:32,827 views 10876 15792 0
+INFO 2021-03-13 01:49:32,827 views 10876 15792 newuser11
+INFO 2021-03-13 01:49:32,832 views 10876 15792 1
+INFO 2021-03-13 01:49:32,832 views 10876 15792 [{'node': {'id': 17, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser2', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': [{'node': {'id': 25, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser10', 'country': 'ca'}, 'tree': []}, {'node': {'id': 18, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser3', 'country': 'ca'}, 'tree': []}, {'node': {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}, {'node': {'id': 20, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser5', 'country': 'ca'}, 'tree': []}, {'node': {'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'country': 'ca'}, 'tree': [{'node': {'id': 19, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser4', 'country': 'ca'}, 'tree': []}]}, {'node': {'id': 16, 'first_name': 'im', 'last_name': 'user', 'username': 'userauthor', 'country': 'ca'}, 'tree': [{'node': {'id': 26, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser11', 'country': 'ca'}, 'tree': []}]}]
+INFO 2021-03-13 01:49:32,832 views 10876 15792 0
+INFO 2021-03-13 01:49:32,833 views 10876 15792 newuser2
+INFO 2021-03-13 01:49:32,838 views 10876 15792 1
+INFO 2021-03-13 01:49:32,838 views 10876 15792 3
+INFO 2021-03-13 01:49:32,838 views 10876 15792 newuser3
+INFO 2021-03-13 01:49:32,843 views 10876 15792 1
+INFO 2021-03-13 01:49:32,843 views 10876 15792 0
+INFO 2021-03-13 01:49:32,843 views 10876 15792 newuser10
+INFO 2021-03-13 01:49:32,848 views 10876 15792 1
+INFO 2021-03-13 01:49:32,848 views 10876 15792 0
+INFO 2021-03-13 01:49:32,848 views 10876 15792 newuser3
+INFO 2021-03-13 01:49:32,853 views 10876 15792 1
+INFO 2021-03-13 01:49:32,853 views 10876 15792 0
+INFO 2021-03-13 01:49:32,853 views 10876 15792 newuser7
+INFO 2021-03-13 01:49:32,858 views 10876 15792 1
+INFO 2021-03-13 01:49:32,858 views 10876 15792 0
+INFO 2021-03-13 01:49:32,858 views 10876 15792 newuser4
+INFO 2021-03-13 01:49:32,863 views 10876 15792 1
+INFO 2021-03-13 01:49:32,863 views 10876 15792 0
+INFO 2021-03-13 01:49:32,863 views 10876 15792 newuser5
+INFO 2021-03-13 01:49:32,868 views 10876 15792 1
+INFO 2021-03-13 01:49:32,868 views 10876 15792 1
+INFO 2021-03-13 01:49:32,868 views 10876 15792 newuser8
+INFO 2021-03-13 01:49:32,873 views 10876 15792 1
+INFO 2021-03-13 01:49:32,873 views 10876 15792 0
+INFO 2021-03-13 01:49:32,873 views 10876 15792 newuser4
+INFO 2021-03-13 01:49:32,879 views 10876 15792 1
+INFO 2021-03-13 01:49:32,879 views 10876 15792 1
+INFO 2021-03-13 01:49:32,879 views 10876 15792 userauthor
+INFO 2021-03-13 01:49:32,884 views 10876 15792 1
+INFO 2021-03-13 01:49:32,884 views 10876 15792 0
+INFO 2021-03-13 01:49:32,885 views 10876 15792 newuser11
+INFO 2021-03-13 01:49:32,889 views 10876 15792 1
+INFO 2021-03-13 01:49:32,889 views 10876 15792 [{"node": {"id": 17, "first_name": "im", "last_name": "user", "username": "newuser2", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": [{"node": {"id": 25, "first_name": "im", "last_name": "user", "username": "newuser10", "country": "ca"}, "tree": []}, {"node": {"id": 18, "first_name": "im", "last_name": "user", "username": "newuser3", "country": "ca"}, "tree": []}, {"node": {"id": 22, "first_name": "im", "last_name": "user", "username": "newuser7", "country": "ca"}, "tree": []}]}, {"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}, {"node": {"id": 20, "first_name": "im", "last_name": "user", "username": "newuser5", "country": "ca"}, "tree": []}, {"node": {"id": 23, "first_name": "im", "last_name": "user", "username": "newuser8", "country": "ca"}, "tree": [{"node": {"id": 19, "first_name": "im", "last_name": "user", "username": "newuser4", "country": "ca"}, "tree": []}]}, {"node": {"id": 16, "first_name": "im", "last_name": "user", "username": "userauthor", "country": "ca"}, "tree": [{"node": {"id": 26, "first_name": "im", "last_name": "user", "username": "newuser11", "country": "ca"}, "tree": []}]}]
+INFO 2021-03-13 01:49:32,900 views 10876 15792 {'id': 15, 'first_name': 'im', 'last_name': 'user', 'username': 'userreader', 'country': 'ca'}
+INFO 2021-03-13 01:49:32,901 views 10876 15792 0
+INFO 2021-03-13 01:49:32,901 views 10876 15792 newuser2
+INFO 2021-03-13 01:49:32,906 views 10876 15792 1
+INFO 2021-03-13 01:49:32,906 views 10876 15792 3
+INFO 2021-03-13 01:49:32,906 views 10876 15792 newuser3
+INFO 2021-03-13 01:49:32,910 views 10876 15792 1
+INFO 2021-03-13 01:49:32,911 views 10876 15792 0
+INFO 2021-03-13 01:49:32,911 views 10876 15792 newuser10
+INFO 2021-03-13 01:49:32,915 views 10876 15792 1
+INFO 2021-03-13 01:49:32,916 views 10876 15792 0
+INFO 2021-03-13 01:49:32,916 views 10876 15792 newuser3
+INFO 2021-03-13 01:49:32,921 views 10876 15792 1
+INFO 2021-03-13 01:49:32,921 views 10876 15792 0
+INFO 2021-03-13 01:49:32,921 views 10876 15792 newuser7
+INFO 2021-03-13 01:49:32,926 views 10876 15792 1
+INFO 2021-03-13 01:49:32,926 views 10876 15792 0
+INFO 2021-03-13 01:49:32,926 views 10876 15792 newuser4
+INFO 2021-03-13 01:49:32,931 views 10876 15792 1
+INFO 2021-03-13 01:49:32,931 views 10876 15792 0
+INFO 2021-03-13 01:49:32,931 views 10876 15792 newuser5
+INFO 2021-03-13 01:49:32,936 views 10876 15792 1
+INFO 2021-03-13 01:49:32,936 views 10876 15792 1
+INFO 2021-03-13 01:49:32,936 views 10876 15792 newuser8
+INFO 2021-03-13 01:49:32,942 views 10876 15792 1
+INFO 2021-03-13 01:49:32,942 views 10876 15792 0
+INFO 2021-03-13 01:49:32,943 views 10876 15792 newuser4
+INFO 2021-03-13 01:49:32,948 views 10876 15792 1
+INFO 2021-03-13 01:49:32,948 views 10876 15792 1
+INFO 2021-03-13 01:49:32,948 views 10876 15792 userauthor
+INFO 2021-03-13 01:49:32,953 views 10876 15792 1
+INFO 2021-03-13 01:49:32,954 views 10876 15792 0
+INFO 2021-03-13 01:49:32,954 views 10876 15792 newuser11
+INFO 2021-03-13 01:49:32,959 views 10876 15792 1
+INFO 2021-03-14 23:49:44,452 process 7100 17412 Error
+INFO 2021-03-14 23:49:44,452 process 7100 17412 'builtin_function_or_method' object has no attribute 'split'
+INFO 2021-03-15 23:29:35,306 views 1672 12648 hi
+INFO 2021-03-15 23:29:35,308 views 1672 12648 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-15 23:29:35,322 views 1672 12648 hi
+INFO 2021-03-15 23:29:35,327 views 1672 12648 App_User object (23)
+INFO 2021-03-15 23:29:35,332 views 1672 12648 App_User object (23)
+INFO 2021-03-15 23:29:35,333 views 1672 12648 hi
+INFO 2021-03-15 23:29:35,339 views 1672 12648 App_User object (22)
+INFO 2021-03-15 23:29:35,344 views 1672 12648 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-15 23:29:35,344 views 1672 12648 dbi
+INFO 2021-03-15 23:29:35,344 views 1672 12648 [{'id': 23, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser8', 'usertype': 'reader', 'country': 'ca', 'email': 'abimortel@gmail.com', 'contact': '900709090', 'friends': 1}, {'id': 22, 'first_name': 'im', 'last_name': 'user', 'username': 'newuser7', 'usertype': 'reader', 'country': 'ca', 'email': 'abimortel@gmail.com', 'contact': None, 'friends': 1}]
+INFO 2021-03-15 23:47:09,551 views 14904 6272 hi
+INFO 2021-03-15 23:47:09,551 views 14904 6272 <QuerySet []>
+INFO 2021-03-15 23:52:58,541 views 2248 14076 hi
+INFO 2021-03-15 23:52:58,541 views 2248 14076 <QuerySet []>
+INFO 2021-03-15 23:53:42,532 views 21220 21620 hi
+INFO 2021-03-15 23:53:42,532 views 21220 21620 <QuerySet []>
+INFO 2021-03-15 23:54:10,023 views 21220 21620 hi
+INFO 2021-03-15 23:54:10,024 views 21220 21620 <QuerySet [<friendlist: friendlist object (11)>, <friendlist: friendlist object (12)>]>
+INFO 2021-03-15 23:54:10,035 views 21220 21620 hi
+INFO 2021-03-15 23:54:10,041 views 21220 21620 App_User object (23)
+INFO 2021-03-15 23:54:10,045 views 21220 21620 App_User object (23)
+INFO 2021-03-15 23:54:10,046 views 21220 21620 hi
+INFO 2021-03-15 23:54:10,050 views 21220 21620 App_User object (22)
+INFO 2021-03-16 00:09:21,881 views 20652 21124 App_User object (23)
+INFO 2021-03-17 02:03:00,948 views 19232 19720 hi
+INFO 2021-03-17 02:03:00,948 views 19232 19720 <QuerySet []>
+INFO 2021-03-17 02:03:11,219 views 19232 19720 hi
+INFO 2021-03-17 02:03:11,219 views 19232 19720 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:03:11,228 views 19232 19720 hi
+INFO 2021-03-17 02:03:11,229 views 19232 19720 Error
+INFO 2021-03-17 02:03:11,229 views 19232 19720 'collections.OrderedDict' object has no attribute 'friend'
+INFO 2021-03-17 02:03:25,328 views 20152 20236 hi
+INFO 2021-03-17 02:03:25,329 views 20152 20236 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:03:25,337 views 20152 20236 Error
+INFO 2021-03-17 02:03:25,337 views 20152 20236 'collections.OrderedDict' object has no attribute 'friend_id'
+INFO 2021-03-17 02:05:16,016 views 20312 19644 hi
+INFO 2021-03-17 02:05:16,016 views 20312 19644 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:05:16,025 views 20312 19644 Error
+INFO 2021-03-17 02:05:16,025 views 20312 19644 'collections.OrderedDict' object has no attribute 'friend'
+INFO 2021-03-17 02:05:31,400 views 19352 628 hi
+INFO 2021-03-17 02:05:31,400 views 19352 628 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:05:31,421 views 19352 628 App_User object (31)

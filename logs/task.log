@@ -1,0 +1,149 @@
+INFO 2021-03-17 02:06:24,612 views 6556 1848 hi
+INFO 2021-03-17 02:06:24,612 views 6556 1848 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:06:24,624 views 6556 1848 App_User object (31)
+INFO 2021-03-17 02:06:52,567 views 6556 1848 hi
+INFO 2021-03-17 02:06:52,567 views 6556 1848 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:06:52,580 views 6556 1848 App_User object (31)
+INFO 2021-03-17 02:06:58,276 views 14436 20144 hi
+INFO 2021-03-17 02:06:58,276 views 14436 20144 <QuerySet [<friendlist: friendlist object (18)>]>
+INFO 2021-03-17 02:06:58,289 views 14436 20144 App_User object (31)
+INFO 2021-03-17 16:25:11,114 views 14192 3140 FriendNewsFeed object (4)
+INFO 2021-03-17 16:25:11,128 views 14192 3140 FriendNewsFeed object (1)
+INFO 2021-03-17 16:25:11,144 views 14192 3140 FriendNewsFeed object (2)
+INFO 2021-03-17 16:25:11,159 views 14192 3140 FriendNewsFeed object (5)
+INFO 2021-03-17 16:25:11,210 views 14192 3140 Error
+INFO 2021-03-17 16:25:11,210 views 14192 3140 CommentsNewsFeed matching query does not exist.
+INFO 2021-03-17 16:25:58,448 views 15880 10888 FriendNewsFeed object (4)
+INFO 2021-03-17 16:25:58,465 views 15880 10888 FriendNewsFeed object (1)
+INFO 2021-03-17 16:25:58,479 views 15880 10888 FriendNewsFeed object (2)
+INFO 2021-03-17 16:25:58,494 views 15880 10888 FriendNewsFeed object (5)
+INFO 2021-03-17 16:25:58,552 views 15880 10888 Error
+INFO 2021-03-17 16:25:58,552 views 15880 10888 CommentsNewsFeed matching query does not exist.
+INFO 2021-03-17 16:26:16,491 views 15880 10888 FriendNewsFeed object (4)
+INFO 2021-03-17 16:26:16,504 views 15880 10888 FriendNewsFeed object (1)
+INFO 2021-03-17 16:26:16,518 views 15880 10888 FriendNewsFeed object (2)
+INFO 2021-03-17 16:26:16,536 views 15880 10888 FriendNewsFeed object (5)
+INFO 2021-03-17 16:26:16,598 views 15880 10888 Error
+INFO 2021-03-17 16:26:16,598 views 15880 10888 CommentsNewsFeed matching query does not exist.
+INFO 2021-03-17 16:27:51,081 views 9464 6032 FriendNewsFeed object (4)
+INFO 2021-03-17 16:27:51,096 views 9464 6032 FriendNewsFeed object (1)
+INFO 2021-03-17 16:27:51,109 views 9464 6032 FriendNewsFeed object (2)
+INFO 2021-03-17 16:27:51,124 views 9464 6032 FriendNewsFeed object (5)
+INFO 2021-03-17 16:30:56,659 views 15868 4816 FriendNewsFeed object (4)
+INFO 2021-03-17 16:30:56,677 views 15868 4816 FriendNewsFeed object (1)
+INFO 2021-03-17 16:30:56,691 views 15868 4816 FriendNewsFeed object (2)
+INFO 2021-03-17 16:30:56,710 views 15868 4816 FriendNewsFeed object (5)
+INFO 2021-03-17 16:30:56,792 views 15868 4816 Error
+INFO 2021-03-17 16:30:56,792 views 15868 4816 Got AttributeError when attempting to get a value for field `authname` on serializer `BookSerializerII`.
+The serializer field might be named incorrectly and not match any attribute or key on the `BookComments` instance.
+Original exception text was: 'BookComments' object has no attribute 'authname'.
+INFO 2021-03-17 16:31:35,694 views 13848 21072 FriendNewsFeed object (4)
+INFO 2021-03-17 16:31:35,707 views 13848 21072 FriendNewsFeed object (1)
+INFO 2021-03-17 16:31:35,720 views 13848 21072 FriendNewsFeed object (2)
+INFO 2021-03-17 16:31:35,739 views 13848 21072 FriendNewsFeed object (5)
+INFO 2021-03-17 16:38:35,018 views 21116 12788 FriendNewsFeed object (4)
+INFO 2021-03-17 16:38:35,032 views 21116 12788 FriendNewsFeed object (1)
+INFO 2021-03-17 16:38:35,046 views 21116 12788 FriendNewsFeed object (2)
+INFO 2021-03-17 16:38:35,065 views 21116 12788 FriendNewsFeed object (5)
+INFO 2021-03-17 16:38:35,143 views 21116 12788 Error
+INFO 2021-03-17 16:38:35,143 views 21116 12788 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:38:40,081 views 21116 12788 FriendNewsFeed object (4)
+INFO 2021-03-17 16:38:40,095 views 21116 12788 FriendNewsFeed object (1)
+INFO 2021-03-17 16:38:40,108 views 21116 12788 FriendNewsFeed object (2)
+INFO 2021-03-17 16:38:40,120 views 21116 12788 FriendNewsFeed object (5)
+INFO 2021-03-17 16:38:40,196 views 21116 12788 Error
+INFO 2021-03-17 16:38:40,196 views 21116 12788 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:40:27,458 views 17036 18220 FriendNewsFeed object (4)
+INFO 2021-03-17 16:40:27,472 views 17036 18220 FriendNewsFeed object (1)
+INFO 2021-03-17 16:40:27,488 views 17036 18220 FriendNewsFeed object (2)
+INFO 2021-03-17 16:40:27,501 views 17036 18220 FriendNewsFeed object (5)
+INFO 2021-03-17 16:40:27,581 views 17036 18220 Error
+INFO 2021-03-17 16:40:27,581 views 17036 18220 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:40:29,105 views 17036 18220 FriendNewsFeed object (4)
+INFO 2021-03-17 16:40:29,118 views 17036 18220 FriendNewsFeed object (1)
+INFO 2021-03-17 16:40:29,132 views 17036 18220 FriendNewsFeed object (2)
+INFO 2021-03-17 16:40:29,146 views 17036 18220 FriendNewsFeed object (5)
+INFO 2021-03-17 16:40:29,223 views 17036 18220 Error
+INFO 2021-03-17 16:40:29,223 views 17036 18220 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:40:30,544 views 17036 18220 FriendNewsFeed object (4)
+INFO 2021-03-17 16:40:30,557 views 17036 18220 FriendNewsFeed object (1)
+INFO 2021-03-17 16:40:30,569 views 17036 18220 FriendNewsFeed object (2)
+INFO 2021-03-17 16:40:30,582 views 17036 18220 FriendNewsFeed object (5)
+INFO 2021-03-17 16:40:30,662 views 17036 18220 Error
+INFO 2021-03-17 16:40:30,662 views 17036 18220 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:57:13,082 views 7928 2424 FriendNewsFeed object (4)
+INFO 2021-03-17 16:57:13,096 views 7928 2424 FriendNewsFeed object (1)
+INFO 2021-03-17 16:57:13,110 views 7928 2424 FriendNewsFeed object (2)
+INFO 2021-03-17 16:57:13,124 views 7928 2424 FriendNewsFeed object (5)
+INFO 2021-03-17 16:57:13,203 views 7928 2424 Error
+INFO 2021-03-17 16:57:13,203 views 7928 2424 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:57:40,396 views 20684 19792 FriendNewsFeed object (4)
+INFO 2021-03-17 16:57:40,410 views 20684 19792 FriendNewsFeed object (1)
+INFO 2021-03-17 16:57:40,425 views 20684 19792 FriendNewsFeed object (2)
+INFO 2021-03-17 16:57:40,441 views 20684 19792 FriendNewsFeed object (5)
+INFO 2021-03-17 16:57:40,522 views 20684 19792 Error
+INFO 2021-03-17 16:57:40,522 views 20684 19792 Got AttributeError when attempting to get a value for field `user` on serializer `CommentsNewsFeedSerializerI`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+INFO 2021-03-17 16:58:23,320 views 14332 16408 FriendNewsFeed object (4)
+INFO 2021-03-17 16:58:23,335 views 14332 16408 FriendNewsFeed object (1)
+INFO 2021-03-17 16:58:23,348 views 14332 16408 FriendNewsFeed object (2)
+INFO 2021-03-17 16:58:23,363 views 14332 16408 FriendNewsFeed object (5)
+INFO 2021-03-17 17:02:58,100 views 3268 15428 FriendNewsFeed object (4)
+INFO 2021-03-17 17:02:58,114 views 3268 15428 FriendNewsFeed object (1)
+INFO 2021-03-17 17:02:58,128 views 3268 15428 FriendNewsFeed object (2)
+INFO 2021-03-17 17:02:58,145 views 3268 15428 FriendNewsFeed object (5)
+INFO 2021-03-17 17:02:58,228 views 3268 15428 Error
+INFO 2021-03-17 17:02:58,228 views 3268 15428 'CommentsNewsFeed' object is not subscriptable
+INFO 2021-03-17 17:03:11,882 views 11336 9572 FriendNewsFeed object (4)
+INFO 2021-03-17 17:03:11,897 views 11336 9572 FriendNewsFeed object (1)
+INFO 2021-03-17 17:03:11,912 views 11336 9572 FriendNewsFeed object (2)
+INFO 2021-03-17 17:03:11,927 views 11336 9572 FriendNewsFeed object (5)
+INFO 2021-03-17 17:03:12,017 views 11336 9572 Error
+INFO 2021-03-17 17:03:12,017 views 11336 9572 'CommentsNewsFeed' object is not subscriptable
+INFO 2021-03-17 17:03:56,717 views 14908 12660 FriendNewsFeed object (4)
+INFO 2021-03-17 17:03:56,731 views 14908 12660 FriendNewsFeed object (1)
+INFO 2021-03-17 17:03:56,744 views 14908 12660 FriendNewsFeed object (2)
+INFO 2021-03-17 17:03:56,764 views 14908 12660 FriendNewsFeed object (5)
+INFO 2021-03-17 17:04:49,120 views 18232 2228 FriendNewsFeed object (4)
+INFO 2021-03-17 17:04:49,144 views 18232 2228 FriendNewsFeed object (1)
+INFO 2021-03-17 17:04:49,168 views 18232 2228 FriendNewsFeed object (2)
+INFO 2021-03-17 17:04:49,195 views 18232 2228 FriendNewsFeed object (5)
+INFO 2021-03-17 17:06:20,052 views 18232 2228 FriendNewsFeed object (4)
+INFO 2021-03-17 17:06:20,097 views 18232 2228 FriendNewsFeed object (1)
+INFO 2021-03-17 17:06:20,113 views 18232 2228 FriendNewsFeed object (2)
+INFO 2021-03-17 17:06:20,128 views 18232 2228 FriendNewsFeed object (5)
+INFO 2021-03-17 17:07:23,465 views 1592 16864 FriendNewsFeed object (4)
+INFO 2021-03-17 17:07:23,481 views 1592 16864 FriendNewsFeed object (1)
+INFO 2021-03-17 17:07:23,497 views 1592 16864 FriendNewsFeed object (2)
+INFO 2021-03-17 17:07:23,514 views 1592 16864 FriendNewsFeed object (5)
+INFO 2021-03-17 17:07:41,309 views 2180 18796 FriendNewsFeed object (4)
+INFO 2021-03-17 17:07:41,324 views 2180 18796 FriendNewsFeed object (1)
+INFO 2021-03-17 17:07:41,339 views 2180 18796 FriendNewsFeed object (2)
+INFO 2021-03-17 17:07:41,357 views 2180 18796 FriendNewsFeed object (5)
+INFO 2021-03-17 17:07:41,436 views 2180 18796 Error
+INFO 2021-03-17 17:07:41,436 views 2180 18796 'collections.OrderedDict' object has no attribute 'Author'
+INFO 2021-03-17 17:08:10,913 views 8224 20956 FriendNewsFeed object (4)
+INFO 2021-03-17 17:08:10,928 views 8224 20956 FriendNewsFeed object (1)
+INFO 2021-03-17 17:08:10,943 views 8224 20956 FriendNewsFeed object (2)
+INFO 2021-03-17 17:08:10,957 views 8224 20956 FriendNewsFeed object (5)
+INFO 2021-03-17 17:08:11,039 views 8224 20956 hi
+INFO 2021-03-17 17:08:11,039 views 8224 20956 Error
+INFO 2021-03-17 17:08:11,039 views 8224 20956 'collections.OrderedDict' object has no attribute 'id'
+INFO 2021-03-17 17:08:25,881 views 13684 12308 FriendNewsFeed object (4)
+INFO 2021-03-17 17:08:25,895 views 13684 12308 FriendNewsFeed object (1)
+INFO 2021-03-17 17:08:25,910 views 13684 12308 FriendNewsFeed object (2)
+INFO 2021-03-17 17:08:25,927 views 13684 12308 FriendNewsFeed object (5)
+INFO 2021-03-17 17:08:26,011 views 13684 12308 hi

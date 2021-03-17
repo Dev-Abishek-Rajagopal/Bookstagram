@@ -10,8 +10,8 @@ import json
 import logging
 
 from rest_framework import serializers
-
-from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist)
+from rest_framework_recursive.fields import RecursiveField
+from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist,BookUserTree,BookTreeDB,BookTreeConnect,BookNewsFeed,FriendNewsFeed,CommentsNewsFeed)
 from SocialBookApp.models.usermodels import (App_User,friendlist,profileComment,profileTXTPost,TXTPostComments,profileTXTPost)
 from django.contrib.auth.models import User
 from rest_framework.response import Response
@@ -27,6 +27,10 @@ class BookSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         try:
+            # tree = {}
+            # tree["Book"]=validated_data['id']
+            # tree["User"] = validated_data['authname']
+            # BookUserTree.objects.create(tree)
             return Book.objects.create(**validated_data);
 
         except Exception as e:
@@ -69,6 +73,37 @@ class BookSerializerI(serializers.ModelSerializer):
             logger.info(str(e))
 
 
+class BookSerializerII(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = Book;
+        fields = ("id", 'name', 'authname', 'stars','booktype','desc');
+
+    def create(self, validated_data):
+        try:
+            return Book.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+class BookTreeDBSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = BookTreeConnect;
+        fields = ("id", 'Tree','Book');
+
+    def create(self, validated_data):
+        try:
+            return BookTreeConnect.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -101,6 +136,9 @@ class UserSerializer(serializers.ModelSerializer):
             logger.info("Error")
             logger.info(str(e))
 
+# class TreeSerializer(serializers.Serializer):
+#     node = serializers.CharField()
+#     tree = serializers.ListField(child=RecursiveField())
 
 class App_UserSerializer(serializers.ModelSerializer):
 
@@ -111,6 +149,7 @@ class App_UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         try:
+
             return App_User.objects.create(**validated_data);
 
         except Exception as e:
@@ -154,6 +193,20 @@ class App_UserSerializerI(serializers.ModelSerializer):
             logger.info(str(e))
 
 
+class App_UserSerializerII(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = App_User;
+        fields = ('id','first_name', 'last_name','username', 'country');
+
+    def create(self, validated_data):
+        try:
+            return App_User.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
 
 
 
@@ -392,11 +445,15 @@ class TextBookSerializerI(serializers.ModelSerializer):
             logger.info("Error")
             logger.info(str(e))
 
+# class BookCommentsSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = BookComments;
+#         fields = ('id', 'Book', 'user','comments', 'publist','ratings');
 
 class BookCommentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookComments;
-        fields = ('id', 'Book', 'user','comments', 'publist');
+        fields = ('id', 'Book', 'user','comments', 'publist','ratings');
 
     def create(self, validated_data):
         try:
@@ -410,7 +467,7 @@ class BookCommentsSerializer(serializers.ModelSerializer):
 class BookCommentsSerializerI(serializers.ModelSerializer):
     class Meta:
         model = BookComments;
-        fields = ('id', 'Book', 'user','comments');
+        fields = ('id', 'Book', 'user','comments','ratings');
 
     def create(self, validated_data):
         try:
@@ -427,6 +484,7 @@ class BookCommentsSerializerI(serializers.ModelSerializer):
             instance.Book_id = validated_data.get('Book', instance.Book);
             instance.user_id = validated_data.get('user', instance.user);
             instance.comments = validated_data.get('comments', instance.comments);
+            instance.ratings = validated_data.get('ratings', instance.comments);
             instance.save();
             return instance;
 
@@ -437,7 +495,7 @@ class BookCommentsSerializerI(serializers.ModelSerializer):
 class OwnBookSerializer(serializers.ModelSerializer):
     class Meta:
         model = OwnBook;
-        fields = ('id', 'Book', 'user','Own', 'publist');
+        fields = ('id', 'Book', 'user','Own', 'referrer','publist');
 
     def create(self, validated_data):
         try:
@@ -516,3 +574,92 @@ class WishlistSerializerI(serializers.ModelSerializer):
             logger.info("Error")
             logger.info(str(e))
 
+class BookNewsFeedSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = BookNewsFeed;
+        fields = ("id", 'Author', 'Buyer','Book','comments');
+
+    def create(self, validated_data):
+        try:
+            return BookNewsFeed.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+class BookNewsFeedSerializerI(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = BookNewsFeed;
+        fields = ("id", 'Author', 'Buyer','Book','comments','publist');
+
+    def create(self, validated_data):
+        try:
+            return BookNewsFeed.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+class FriendNewsFeedSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = FriendNewsFeed;
+        fields = ("id", 'user', 'friend','comments');
+
+    def create(self, validated_data):
+        try:
+            return FriendNewsFeed.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+class FriendNewsFeedSerializerI(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = FriendNewsFeed;
+        fields = ("id", 'user', 'friend',"comments",'publist');
+
+    def create(self, validated_data):
+        try:
+            return FriendNewsFeed.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+class CommentsNewsFeedSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = CommentsNewsFeed;
+        fields = ("id",  'user', 'Author',"Bookcomments","Book","comments");
+
+    def create(self, validated_data):
+        try:
+            return CommentsNewsFeed.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+
+class CommentsNewsFeedSerializerI(serializers.ModelSerializer):
+
+
+    class Meta:
+        model = CommentsNewsFeed;
+        fields = ("id", 'user', 'Author',"Bookcomments","Book","comments",'publist');
+
+    def create(self, validated_data):
+        try:
+            return CommentsNewsFeed.objects.create(**validated_data);
+
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))

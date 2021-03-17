@@ -10,10 +10,10 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework.viewsets import ModelViewSet, ViewSet
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
-from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist)
+from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist,BookUserTree,BookTreeConnect,BookNewsFeed,FriendNewsFeed,CommentsNewsFeed)
 from SocialBookApp.models.usermodels import (App_User,friendlist,profileTXTPost,TXTPostComments,profileComment)
 from django.contrib.auth.models import User
-from SocialBookApp.serializers.serializers import (BookSerializer,BookSerializerI,App_UserSerializer,UserSerializer,friendlistSerializer,profileTXTPostSerializer,App_UserSerializerI,profileTXTPostSerializerI,TXTPostCommentsSerializer,TXTPostCommentsSerializerI,profileCommentSerializer,TextBookSerializer,TextBookSerializerI,BookCommentsSerializer,OwnBookSerializer,OwnBookSerializerI,WishlistSerializer,profileCommentSerializerI,BookCommentsSerializerI,WishlistSerializerI  )
+from SocialBookApp.serializers.serializers import (BookSerializer,BookSerializerI,BookSerializerII,BookTreeDBSerializer,App_UserSerializer,App_UserSerializerII,UserSerializer,friendlistSerializer,profileTXTPostSerializer,App_UserSerializerI,profileTXTPostSerializerI,TXTPostCommentsSerializer,TXTPostCommentsSerializerI,profileCommentSerializer,TextBookSerializer,TextBookSerializerI,BookCommentsSerializer,OwnBookSerializer,OwnBookSerializerI,WishlistSerializer,profileCommentSerializerI,BookCommentsSerializerI,WishlistSerializerI,BookNewsFeedSerializer,FriendNewsFeedSerializer,FriendNewsFeedSerializerI,BookNewsFeedSerializerI,CommentsNewsFeedSerializerI,CommentsNewsFeedSerializer  )
 from rest_framework.response import Response
 import logging
 from rest_framework.authentication import TokenAuthentication
@@ -24,11 +24,17 @@ from SocialBookApp.views.process import (smtpsender)
 from django.shortcuts import redirect
 from rest_framework.permissions import AllowAny
 from django.db.models import Q
+import PyPDF2
+import slate3k as slate
+from django.core import serializers
+from django.conf import settings
+import base64
+import os
 from django.forms.models import model_to_dict
 from itertools import chain
 from django.core import serializers
 
-logger = logging.getLogger("book.request")
+logger = logging.getLogger("book.task")
 
 class BookVeiwSet(ModelViewSet):
 
@@ -48,6 +54,11 @@ class BookVeiwSet(ModelViewSet):
             #     with open(i['dp'], "rb") as image_file:
             #         image_data = base64.b64encode(image_file.read()).decode('utf-8')
             #     i['dp']= image_data
+            for i in serializer.data:
+                logger.info(i)
+                list = App_User.objects.get(id=i['authname'])
+                serializer1 = App_UserSerializerII(list)
+                i['authJSON'] = serializer1.data
             return Response(serializer.data, status=200)
         except Exception as e:
             logger.info("Error")
@@ -60,6 +71,26 @@ class BookVeiwSet(ModelViewSet):
             serializer = BookSerializerI(data=request.data)
             if serializer.is_valid():
                 serializer.save()
+                own={}
+                own["Book"]=serializer.data['id']
+                own["user"] = serializer.data['authname']
+                own["Own"] = "yes"
+                own["referrer"] = serializer.data['authname']
+                serializerw = OwnBookSerializer(data=own)
+                if serializerw.is_valid():
+                    serializerw.save()
+                list = Book.objects.get(id=serializer.data['id'])
+                list1 = App_User.objects.get(id=serializer.data['authname'])
+                treeobj = BookUserTree(Book=list,user=list1)
+                treeobj.save()
+                tree = {}
+                tree["Book"] = serializer.data['id']
+                list8 = BookUserTree.objects.get(Book_id=serializer.data['id'])
+                tree["Tree"] = list8.id
+                serializer1 = BookTreeDBSerializer(data=tree)
+                if serializer1.is_valid():
+                    serializer1.save()
+
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
         except Exception as e:
@@ -72,7 +103,27 @@ class BookVeiwSet(ModelViewSet):
             pk = self.kwargs['pk']
             list = Book.objects.get(id=pk)
             serializer = BookSerializerI(list)
-            return Response(serializer.data, status=200)
+            list = App_User.objects.get(id=serializer.data['authname'])
+            serializer1 = App_UserSerializerII(list)
+            logger.info(serializer1.data)
+            datas = serializer.data.copy()
+            datas['authJSON'] = serializer1.data
+
+            dbi = BookComments.objects.filter(Q(Book_id=int(pk)))
+            logger.info("hi")
+            logger.info(dbi)
+            serializer5 = BookCommentsSerializer(dbi, many=True)
+            comments = serializer5.data.copy()
+            for i in comments:
+                logger.info("i")
+                logger.info(i["user"])
+                logger.info(i)
+                list11 = App_User.objects.get(id=int(i["user"]))
+                serializer11 = App_UserSerializerII(list11)
+                i["AuthJSON"] = serializer11.data
+
+            datas['CommentJSON'] = comments
+            return Response(datas, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -179,7 +230,8 @@ class UserVeiwSet(ModelViewSet):
 
 
 @api_view(['GET'])
-@permission_classes((AllowAny, ))
+@authentication_classes((TokenAuthentication, ))
+@permission_classes((IsAuthenticated, ))
 def activate_User(request):
     try:
         pk = request.query_params.get('pk')
@@ -192,6 +244,52 @@ def activate_User(request):
         logger.info("Error")
         logger.info(str(e))
         return Response(str(e), status=200)
+
+@api_view(['GET'])
+@authentication_classes((TokenAuthentication, ))
+@permission_classes((IsAuthenticated, ))
+def activate_Tree(request):
+    try:
+        pks = request.query_params.get('pk')
+        user = request.query_params.get('user')
+
+        datas = BookTreeConnect.objects.get(Book=int(pks))
+        serializer = BookTreeDBSerializer(datas)
+        pk = BookUserTree.objects.get(id=int(serializer.data["Tree"]))
+        logger.info(pk.get_tree())
+        logger.info(activate_Treelist(pk.get_descendants_tree(),pks))
+        logger.info(json.dumps(activate_Treelist(pk.get_descendants_tree(),pks)))
+        list1 = Book.objects.get(id=int(pk.Book_id))
+        serializer1 = BookSerializerII(list1)
+        list2 = App_User.objects.get(id=serializer1.data['authname'])
+        serializer11 = App_UserSerializerII(list2)
+        logger.info(serializer11.data)
+
+        res = {}
+        res["Book"]=serializer1.data
+        res["AuthJSON"] = serializer11.data
+        res["BookTree"] = json.loads(json.dumps(activate_Treelist(pk.get_descendants_tree(),pks)))
+        return Response(res, status=200)
+
+    except Exception as e:
+        logger.info("Error")
+        logger.info(str(e))
+        return Response(str(e), status=200)
+
+
+def activate_Treelist(tree,num):
+
+    for i in tree:
+        logger.info(i['node'].tn_children_count)
+
+        logger.info(str(i['node']).split("— ")[-1])
+        list = App_User.objects.get(username=str(i['node']).split("— ")[-1])
+        serializer = App_UserSerializerII(list)
+        i['node']= serializer.data
+        logger.info(num)
+
+        activate_Treelist(i['tree'],num)
+    return tree
 
 
 @api_view(['POST'])
@@ -252,6 +350,11 @@ class friendlistVeiwSet(ModelViewSet):
             serializer = friendlistSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
+                datas = serializer.data.copy()
+                datas['comments'] = datas['relationship']
+                serializer1 = FriendNewsFeedSerializer(data=datas)
+                if serializer1.is_valid():
+                    serializer1.save()
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
         except Exception as e:
@@ -273,6 +376,11 @@ class friendlistVeiwSet(ModelViewSet):
                     list = App_User.objects.get(id=datas["friend"])
                     list.friends = list.friends + 1
                     list.save()
+                datas1 = serializer.data.copy()
+                datas1['comments'] = datas1['relationship']
+                serializer1 = FriendNewsFeedSerializer(data=datas1)
+                if serializer1.is_valid():
+                    serializer1.save()
                 serializer.update(item, serializer.data)
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
@@ -337,8 +445,16 @@ class friendlistVeiwSet(ModelViewSet):
             logger.info("hi")
             logger.info(dbi)
             serializer = friendlistSerializer(dbi, many=True)
+            datas = serializer.data.copy()
+            arr = []
+            for i in datas:
 
-            return Response(serializer.data, status=200)
+                list = App_User.objects.get(id=i["friend"])
+                logger.info(list)
+                serializerF = App_UserSerializerI(list)
+                arr.append(serializerF.data)
+
+            return Response(arr, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -346,15 +462,30 @@ class friendlistVeiwSet(ModelViewSet):
 
     def get_allUsers(self, request,*args, **kwargs):
         try:
+            pk = request.query_params.get('pk')
+            dbi = friendlist.objects.filter(Q(user_id=int(pk)) & Q(relationship="friends") | Q(friend_id=int(pk)) & Q(relationship="friends"))
+            arr = []
+            for i in dbi:
+                if i.user_id == int(pk):
+                    list = App_User.objects.get(id=i.friend_id)
+                    logger.info(list)
+                    serializer = App_UserSerializerI(list)
+                    arr.append(serializer.data['id'])
+                if i.friend_id == int(pk):
+                    list = App_User.objects.get(id=i.user_id)
+                    serializer = App_UserSerializerI(list)
+                    arr.append(serializer.data['id'])
             App_User_list = App_User.objects.all()
-            serializer = App_UserSerializerI(App_User_list, many=True)
-            # logger.info("hi")
-            # for i in serializer.data:
-            #     image_data =""
-            #     with open(i['dp'], "rb") as image_file:
-            #         image_data = base64.b64encode(image_file.read()).decode('utf-8')
-            #     i['dp']= image_data
-            return Response(serializer.data, status=200)
+            serializerF = App_UserSerializerI(App_User_list, many=True)
+            list = App_User.objects.get(id=pk)
+            serializerU = App_UserSerializer(list)
+            arr.append(serializerU.data['id'])
+            datas = serializerF.data.copy()
+            findatas =[]
+            for i in datas:
+                if i['id'] not in arr:
+                    findatas.append(i)
+            return Response(findatas, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -746,9 +877,27 @@ class TextBookVeiwSet(ModelViewSet):
     def get_TextBook(self, request, *args, **kwargs):
         try:
             pk = self.kwargs['pk']
-            list = TextBook.objects.get(id=pk)
+            list = TextBook.objects.get(Book=pk)
             serializer = TextBookSerializer(list)
-            return Response(serializer.data, status=200)
+            # image_data = "S:/ASE/mygit/"+"\Bookstore\harry-potter-book-1.pdf"
+            f = open("S:\ASE\\mygit\\Bookstagram\\Bookstore\\harry-potter-book-1.pdf", "rb")
+            contents =""
+            # with open("S:\ASE\\mygit\\Bookstagram\\Bookstore\\harry-potter-book-1.pdf", 'rb') as f:
+            #     contents = f.read()
+
+            pdfReader = PyPDF2.PdfFileReader(f)
+            data = ""
+            #
+            pageObj = pdfReader.getPage(22)
+            data = pageObj.extractText()
+            # for i in range(1,pdfReader.numPages):
+            #     pageObj = pdfReader.getPage(i)
+            #     data = data + pageObj.extractText()
+            # f.close()
+            with open('S:\ASE\\mygit\\Bookstagram\\Bookstore\\harry.pdf', 'rb') as f:
+                extracted_text = slate.PDF(f)
+
+            return Response(extracted_text, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -806,6 +955,17 @@ class BookCommentsVeiwSet(ModelViewSet):
             serializer = BookCommentsSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
+                Bndata = {}
+                list = Book.objects.get(id=serializer.data['Book'])
+                serializer4 = BookSerializerI(list)
+                Bndata['Author'] = serializer4.data['authname']
+                Bndata['Book'] = serializer.data['Book']
+                Bndata['user'] = serializer.data['user']
+                Bndata['Bookcomments'] = serializer.data['id']
+                Bndata['comments'] = "Commented"
+                serializerBn = CommentsNewsFeedSerializer(data=Bndata)
+                if serializerBn.is_valid():
+                    serializerBn.save()
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
         except Exception as e:
@@ -881,6 +1041,22 @@ class BookCommentsVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
+def iterate_Treelist(tree,user,buyer,book):
+
+    list2 = App_User.objects.get(id=user)
+    serializer = App_UserSerializerII(list2)
+    listB = App_User.objects.get(id=buyer)
+    list1 = Book.objects.get(id=book)
+    for i in tree:
+        list = App_User.objects.get(username=str(i['node']).split("— ")[-1])
+        serializer3 = App_UserSerializerII(list)
+        if serializer3.data['id'] == serializer.data['id']:
+            pk = BookUserTree.objects.get(id=int(i['node'].id))
+            treeobj = BookUserTree(Book=list1, user=listB, tn_parent=pk)
+            treeobj.save()
+            return
+        iterate_Treelist(i['tree'],user,buyer,book)
+    return tree
 
 class OwnBookVeiwSet(ModelViewSet):
     authentication_classes = [TokenAuthentication]
@@ -903,7 +1079,37 @@ class OwnBookVeiwSet(ModelViewSet):
         try:
             serializer = OwnBookSerializer(data=request.data)
             if serializer.is_valid():
+
                 serializer.save()
+                list = Book.objects.get(id=serializer.data['Book'])
+                serializer4 = BookSerializerI(list)
+                list1 = App_User.objects.get(id=serializer.data['user'])
+                serializerU = App_UserSerializerII(list1)
+                datas = BookTreeConnect.objects.get(Book=int(list.id))
+                serializer1 = BookTreeDBSerializer(datas)
+                pk = BookUserTree.objects.get(id=int(serializer1.data["Tree"]))
+                if serializer.data['referrer'] == serializer4.data['authname']:
+                    treeobj = BookUserTree(Book=list, user=list1, tn_parent=pk)
+                    treeobj.save()
+                    Bndata = {}
+                    Bndata['Author'] = serializer4.data['authname']
+                    Bndata['Buyer'] = serializer.data['user']
+                    Bndata['Book'] = serializer.data['Book']
+                    Bndata['comments'] = "Bought"
+                    serializerBn = BookNewsFeedSerializer(data=Bndata)
+                    if serializerBn.is_valid():
+                        serializerBn.save()
+                else:
+                    Bndata = {}
+                    Bndata['Author'] = serializer4.data['authname']
+                    Bndata['Buyer'] = serializer.data['user']
+                    Bndata['Book'] = serializer.data['Book']
+                    Bndata['comments'] = "referred"
+                    serializerBn = BookNewsFeedSerializer(data=Bndata)
+                    if serializerBn.is_valid():
+                        serializerBn.save()
+                    iterate_Treelist(pk.get_descendants_tree(), serializer.data['referrer'], serializerU.data['id'], serializer4.data['id'])
+
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
         except Exception as e:
@@ -930,6 +1136,11 @@ class OwnBookVeiwSet(ModelViewSet):
             logger.info("hi")
             logger.info(dbi)
             serializer = OwnBookSerializer(dbi, many=True)
+            for i in serializer.data:
+                logger.info(i['Book'])
+                list = Book.objects.get(id=i['Book'])
+                serializer1 = BookSerializerI(list)
+                i["bookJSON"] = serializer1.data
             return Response(serializer.data, status=200)
         except Exception as e:
             logger.info("Error")
@@ -1107,7 +1318,151 @@ class WishlistVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
+@api_view(['GET'])
+@authentication_classes((TokenAuthentication, ))
+@permission_classes((IsAuthenticated, ))
+def list_Newsfeed(request):
+    try:
+        arr = []
+        pks = request.query_params.get('pk')
+        dbi = friendlist.objects.filter(Q(user_id=int(pk)) & Q(relationship="friends") | Q(friend_id=int(pk)) & Q(relationship="friends") )
+        return Response(arr, status=200)
 
+    except Exception as e:
+        logger.info("Error")
+        logger.info(str(e))
+        return Response(str(e), status=200)
+
+
+class NewsfeedVeiwSet(ModelViewSet):
+
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    queryset = BookNewsFeed.objects.all()
+    serializer_class = BookNewsFeedSerializer
+
+
+    def list_Feed(self, request):
+        try:
+            App_User_list = FriendNewsFeed.objects.all()
+            serializer = FriendNewsFeedSerializer(App_User_list, many=True)
+
+            return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def get_UserFeed(self, request,*args, **kwargs):
+        try:
+            arr = []
+            pks = request.query_params.get('pk')
+            dbi = FriendNewsFeed.objects.filter(Q(user_id=int(pks)) | Q(friend_id=int(pks)) )
+            serializer = FriendNewsFeedSerializerI(dbi, many=True)
+            for i in serializer.data:
+                list = FriendNewsFeed.objects.get(id=int(i["id"]))
+                logger.info(list)
+                serializerF = FriendNewsFeedSerializerI(list)
+                datas = serializerF.data.copy()
+                user = App_User.objects.get(id=datas['user'])
+                serializerU = App_UserSerializerII(user)
+                datas["userJSON"] = serializerU.data
+                friend = App_User.objects.get(id=datas['friend'])
+                serializerf = App_UserSerializerII(friend)
+                datas["friendJSON"] = serializerf.data
+                arr.append(datas)
+            dbj = BookNewsFeed.objects.filter(Q(Author_id=int(pks)) | Q(Buyer_id=int(pks)) )
+            for i in dbj:
+                list = BookNewsFeed.objects.get(id=i.id)
+                serializerB = BookNewsFeedSerializerI(list)
+                datas = serializerB.data.copy()
+                Author = App_User.objects.get(id=datas['Author'])
+                serializerA = App_UserSerializerII(Author)
+                datas["authorJSON"] = serializerA.data
+                Buyer = App_User.objects.get(id=datas['Buyer'])
+                serializerBy = App_UserSerializerII(Buyer)
+                datas["buyerJSON"] = serializerBy.data
+                book = Book.objects.get(id=datas['Book'])
+                serializerBook = BookSerializerII(book)
+                datas["bookJSON"] = serializerBook.data
+                arr.append(datas)
+            arr2=[]
+            dbk = CommentsNewsFeed.objects.filter(Q(user_id=int(pks)))
+            for i in dbk:
+                list = CommentsNewsFeed.objects.get(id=i.id)
+                serializerB = CommentsNewsFeedSerializerI(list)
+                datas = serializerB.data.copy()
+                Author = App_User.objects.get(id=datas['Author'])
+                serializerA = App_UserSerializerII(Author)
+                datas["authorJSON"] = serializerA.data
+                Buyer = App_User.objects.get(id=datas['user'])
+                serializerBy = App_UserSerializerII(Buyer)
+                datas["user"] = serializerBy.data
+                book = Book.objects.get(id=datas['Book'])
+                arr2.append(datas['Book'])
+                serializerBook = BookSerializerII(book)
+                datas["bookJSON"] = serializerBook.data
+                bookcom = BookComments.objects.get(id=datas['Bookcomments'])
+                serializerBookcom = BookCommentsSerializerI(bookcom)
+                datas["BookcommentsJSON"] = serializerBookcom.data
+                arr.append(datas)
+
+            Comments_list = CommentsNewsFeed.objects.all()
+            serializerCC = CommentsNewsFeedSerializerI(Comments_list, many=True)
+            datasCC = serializerCC.data.copy()
+
+            for i in datasCC:
+
+                if i["Author"] == int(pks):
+                    logger.info("hi")
+                    list = CommentsNewsFeed.objects.get(id=int(i["id"]))
+                    serializerB = CommentsNewsFeedSerializerI(list)
+                    datas = serializerB.data.copy()
+                    Author = App_User.objects.get(id=datas['Author'])
+                    serializerA = App_UserSerializerII(Author)
+                    datas["authorJSON"] = serializerA.data
+                    Buyer = App_User.objects.get(id=datas['user'])
+                    serializerBy = App_UserSerializerII(Buyer)
+                    datas["user"] = serializerBy.data
+                    book = Book.objects.get(id=datas['Book'])
+                    serializerBook = BookSerializerII(book)
+                    datas["bookJSON"] = serializerBook.data
+                    bookcom = BookComments.objects.get(id=datas['Bookcomments'])
+                    serializerBookcom = BookCommentsSerializerI(bookcom)
+                    datas["BookcommentsJSON"] = serializerBookcom.data
+                    arr.append(datas)
+                if i["Book"] in arr2:
+                    list = CommentsNewsFeed.objects.get(id=int(i["id"]))
+                    serializerB = CommentsNewsFeedSerializerI(list)
+                    datas = serializerB.data.copy()
+                    Author = App_User.objects.get(id=datas['Author'])
+                    serializerA = App_UserSerializerII(Author)
+                    datas["authorJSON"] = serializerA.data
+                    Buyer = App_User.objects.get(id=datas['user'])
+                    serializerBy = App_UserSerializerII(Buyer)
+                    datas["user"] = serializerBy.data
+                    book = Book.objects.get(id=datas['Book'])
+                    serializerBook = BookSerializerII(book)
+                    datas["bookJSON"] = serializerBook.data
+                    bookcom = BookComments.objects.get(id=datas['Bookcomments'])
+                    serializerBookcom = BookCommentsSerializerI(bookcom)
+                    datas["BookcommentsJSON"] = serializerBookcom.data
+                    arr.append(datas)
+
+
+
+
+
+            # serializer1 = BookNewsFeedSerializerI(dbj, many=True)
+
+            # arr.append(serializer.data)
+            # arr.append(serializer1.data)
+            arr = sorted(arr, key=lambda k: k['publist'])
+            return Response(arr, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
 
 
 

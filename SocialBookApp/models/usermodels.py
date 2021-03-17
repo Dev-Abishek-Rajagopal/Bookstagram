@@ -9,6 +9,8 @@ from djongo import models
 from django.conf import settings
 from fernet_fields import EncryptedTextField
 from unixtimestampfield.fields import UnixTimeStampField
+from django.contrib.auth.models import AbstractUser
+
 
 
 
@@ -26,14 +28,13 @@ class App_User(models.Model):
     contact =  models.CharField(max_length=200,null=True)
     friends = models.IntegerField(default=0)
     wallet = models.IntegerField(default=500)
-    dp = models.CharField(max_length=200, default="")
+    dp = models.TextField()
 
     def save(self, *args, **kwargs):
         self.username = self.username.lower()
         self.email = self.email.lower()
-        self.usertype = self.email.usertype ()
-        return super(App_User, self).save(*args, **kwargs)
 
+        return super(App_User, self).save(*args, **kwargs)
 
 class friendlist(models.Model):
     user = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='friendlistyou')
@@ -54,6 +55,9 @@ class profileTXTPost(models.Model):
     likes = models.IntegerField(default=0)
     share = models.IntegerField(default=0)
     publist = UnixTimeStampField(auto_now=True,null=True)
+
+
+
 
 class TXTPostComments(models.Model):
 

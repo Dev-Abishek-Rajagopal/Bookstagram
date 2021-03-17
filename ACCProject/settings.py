@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_json_api',
     'SocialBookApp',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'treenode',
 
 ]
 
@@ -63,6 +64,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ACCProject.urls'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '...',
+    },
+    'treenode': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    },
+}
 
 TEMPLATES = [
     {
@@ -79,6 +90,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'ACCProject.wsgi.application'
 
@@ -157,7 +170,7 @@ LOGGING = {
             },
             'request': {
                 'class': 'logging.handlers.RotatingFileHandler',
-                'filename': str(BASE_DIR) + '/logs/debug.log',
+                'filename': str(BASE_DIR) + '/logs/debugger.log',
                 'formatter': 'verbose',
                 'maxBytes': 5000000,
                 'backupCount' : 2

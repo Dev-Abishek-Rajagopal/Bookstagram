@@ -900,3 +900,1986 @@ WARNING 2021-02-22 17:21:53,253 log 18988 20304 Not Found: /favicon.ico
 WARNING 2021-02-22 17:21:53,254 basehttp 18988 20304 "GET /favicon.ico HTTP/1.1" 404 2196
 WARNING 2021-02-22 17:21:53,258 log 18988 20304 Not Found: /favicon.ico
 WARNING 2021-02-22 17:21:53,258 basehttp 18988 20304 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-25 17:37:50,748 log 22188 17088 Not Found: /
+WARNING 2021-02-25 17:37:50,748 basehttp 22188 17088 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-25 17:37:50,815 log 22188 17088 Not Found: /favicon.ico
+WARNING 2021-02-25 17:37:50,815 basehttp 22188 17088 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-25 17:38:15,991 log 22188 13568 Unauthorized: /store/ownbookusr/
+WARNING 2021-02-25 17:38:15,992 basehttp 22188 13568 "GET /store/ownbookusr/?pk=2 HTTP/1.1" 401 27
+WARNING 2021-02-25 17:38:31,614 log 22188 23300 Not Found: /favicon.ico
+WARNING 2021-02-25 17:38:31,614 basehttp 22188 23300 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-02-25 17:43:26,077 log 13992 20220 Unauthorized: /store/ownbook/
+WARNING 2021-02-25 17:43:26,078 basehttp 13992 20220 "POST /store/ownbook/ HTTP/1.1" 401 27
+WARNING 2021-02-26 12:35:26,084 log 9336 12592 Not Found: /
+WARNING 2021-02-26 12:35:26,085 basehttp 9336 12592 "GET / HTTP/1.1" 404 2145
+WARNING 2021-02-26 12:38:21,888 log 24568 16052 Unauthorized: /store/book/
+WARNING 2021-02-26 12:38:21,888 basehttp 24568 16052 "GET /store/book/ HTTP/1.1" 401 27
+WARNING 2021-03-03 14:48:57,311 log 2200 19808 Not Found: /
+WARNING 2021-03-03 14:48:57,311 basehttp 2200 19808 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-03 14:48:57,419 log 2200 19808 Not Found: /favicon.ico
+WARNING 2021-03-03 14:48:57,420 basehttp 2200 19808 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-03 14:51:03,860 log 2200 20372 Unauthorized: /store/profile/
+WARNING 2021-03-03 14:51:03,860 basehttp 2200 20372 "GET /store/profile/?pk=5 HTTP/1.1" 401 27
+WARNING 2021-03-03 15:03:31,317 log 13232 5768 Unauthorized: /store/book/5/
+
+WARNING 2021-03-03 15:03:31,317 basehttp 13232 5768 "GET /store/book/5/%0A HTTP/1.1" 401 27
+WARNING 2021-03-08 22:59:29,913 log 11096 12876 Not Found: /
+WARNING 2021-03-08 22:59:29,914 basehttp 11096 12876 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-08 22:59:30,018 log 11096 12876 Not Found: /favicon.ico
+WARNING 2021-03-08 22:59:30,019 basehttp 11096 12876 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-08 23:00:45,786 log 11096 4528 Unauthorized: /store/textbook/1/
+WARNING 2021-03-08 23:00:45,786 basehttp 11096 4528 "GET /store/textbook/1/ HTTP/1.1" 401 27
+WARNING 2021-03-08 23:00:55,694 log 11096 14536 Not Found: /favicon.ico
+WARNING 2021-03-08 23:00:55,694 basehttp 11096 14536 "GET /favicon.ico HTTP/1.1" 404 2196
+ERROR 2021-03-08 23:01:08,415 log 11096 4528 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type WindowsPath is not JSON serializable
+ERROR 2021-03-08 23:01:08,418 basehttp 11096 4528 "GET /store/textbook/1/ HTTP/1.1" 500 98927
+ERROR 2021-03-09 00:03:39,429 log 24272 21264 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\views\views.py", line 768, in get_TextBook
+    pdfReader = PyPDF2.PdfFileReader(f)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\PyPDF2\pdf.py", line 1084, in __init__
+    self.read(stream)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\PyPDF2\pdf.py", line 1689, in read
+    stream.seek(-1, 2)
+io.UnsupportedOperation: can't do nonzero end-relative seeks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\views\views.py", line 780, in get_TextBook
+    return Response(str(pageObj.extractText()), status=200)
+UnboundLocalError: local variable 'pageObj' referenced before assignment
+ERROR 2021-03-09 00:03:39,431 basehttp 24272 21264 "GET /store/textbook/1/ HTTP/1.1" 500 107537
+ERROR 2021-03-09 00:09:46,517 log 23956 18380 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\views\views.py", line 768, in get_TextBook
+    pdfReader = PyPDF2.PdfFileReader(f)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\PyPDF2\pdf.py", line 1084, in __init__
+    self.read(stream)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\PyPDF2\pdf.py", line 1689, in read
+    stream.seek(-1, 2)
+io.UnsupportedOperation: can't do nonzero end-relative seeks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\views\views.py", line 780, in get_TextBook
+    return Response(str(pageObj.extractText()), status=200)
+UnboundLocalError: local variable 'pageObj' referenced before assignment
+ERROR 2021-03-09 00:09:46,519 basehttp 23956 18380 "GET /store/textbook/1/ HTTP/1.1" 500 107519
+ERROR 2021-03-09 00:13:07,917 log 12872 24780 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\views\views.py", line 768, in get_TextBook
+    pdfReader = PyPDF2.PdfFileReader(f)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\PyPDF2\pdf.py", line 1084, in __init__
+    self.read(stream)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\PyPDF2\pdf.py", line 1689, in read
+    stream.seek(-1, 2)
+io.UnsupportedOperation: can't do nonzero end-relative seeks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\views\views.py", line 780, in get_TextBook
+    return Response(str(pageObj.extractText()), status=200)
+NameError: name 'pageObj' is not defined
+ERROR 2021-03-09 00:13:07,919 basehttp 12872 24780 "GET /store/textbook/1/ HTTP/1.1" 500 107343
+ERROR 2021-03-09 00:19:11,534 log 13944 20676 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 240: invalid start byte
+ERROR 2021-03-09 00:19:11,537 basehttp 13944 20676 "GET /store/textbook/1/ HTTP/1.1" 500 133735
+ERROR 2021-03-09 00:21:44,752 log 9964 2252 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 240: invalid start byte
+ERROR 2021-03-09 00:21:44,755 basehttp 9964 2252 "GET /store/textbook/1/ HTTP/1.1" 500 133735
+ERROR 2021-03-09 00:34:18,207 log 25860 26172 Internal Server Error: /store/textbook/1/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type IndirectObject is not JSON serializable
+ERROR 2021-03-09 00:34:18,209 basehttp 25860 26172 "GET /store/textbook/1/ HTTP/1.1" 500 100277
+WARNING 2021-03-10 00:39:59,695 log 10912 13076 Not Found: /
+WARNING 2021-03-10 00:39:59,696 basehttp 10912 13076 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-10 00:39:59,750 log 10912 13076 Not Found: /favicon.ico
+WARNING 2021-03-10 00:39:59,750 basehttp 10912 13076 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-10 00:40:15,772 log 10912 25528 Unauthorized: /store/book/1/
+
+WARNING 2021-03-10 00:40:15,772 basehttp 10912 25528 "GET /store/book/1/%0A HTTP/1.1" 401 27
+WARNING 2021-03-10 00:43:03,470 log 5988 24444 Not Found: //store/bookcomments/
+WARNING 2021-03-10 00:43:03,470 basehttp 5988 24444 "POST //store/bookcomments/ HTTP/1.1" 404 2224
+WARNING 2021-03-10 00:43:09,446 log 5988 24444 Unauthorized: /store/bookcomments/
+WARNING 2021-03-10 00:43:09,447 basehttp 5988 24444 "POST /store/bookcomments/ HTTP/1.1" 401 27
+WARNING 2021-03-10 00:54:57,008 log 23384 14880 Unauthorized: /store/bookcomments/1/
+WARNING 2021-03-10 00:54:57,009 basehttp 23384 14880 "PUT /store/bookcomments/1/ HTTP/1.1" 401 27
+WARNING 2021-03-10 01:21:18,474 log 4052 13816 Not Found: //store/book/4/
+
+WARNING 2021-03-10 01:21:18,474 basehttp 4052 13816 "GET //store/book/4/%0A HTTP/1.1" 404 2210
+WARNING 2021-03-10 01:21:40,142 log 4052 13816 Unauthorized: /store/book/4/
+
+WARNING 2021-03-10 01:21:40,142 basehttp 4052 13816 "GET /store/book/4/%0A HTTP/1.1" 401 27
+WARNING 2021-03-12 00:01:29,328 log 20448 18316 Not Found: /favicon.ico
+WARNING 2021-03-12 00:01:29,329 basehttp 20448 18316 "GET /favicon.ico HTTP/1.1" 404 2196
+ERROR 2021-03-12 00:02:29,536 log 22620 1728 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1567, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 335, in get_fieldsets
+    return [(None, {'fields': self.get_fields(request, obj)})]
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 326, in get_fields
+    form = self._get_form_for_get_fields(request, obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 666, in _get_form_for_get_fields
+    return self.get_form(request, obj, fields=None)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 709, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\models.py", line 555, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\models.py", line 253, in __new__
+    fields = fields_for_model(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\models.py", line 179, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 153, in formfield_for_dbfield
+    formfield = self.formfield_for_foreignkey(db_field, request, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 240, in formfield_for_foreignkey
+    return db_field.formfield(**kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\fields.py", line 25, in formfield
+    return super().formfield(**kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\related.py", line 989, in formfield
+    return super().formfield(**{
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\related.py", line 419, in formfield
+    return super().formfield(**defaults)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\__init__.py", line 929, in formfield
+    return form_class(**defaults)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\forms.py", line 29, in __init__
+    mptt_opts = queryset.model._mptt_meta
+AttributeError: type object 'App_User' has no attribute '_mptt_meta'
+ERROR 2021-03-12 00:02:29,541 basehttp 22620 1728 "GET /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 179658
+ERROR 2021-03-12 00:05:43,622 log 5824 17664 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:05:43,625 basehttp 5824 17664 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226960
+ERROR 2021-03-12 00:06:18,316 log 5824 17664 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:06:18,319 basehttp 5824 17664 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226960
+ERROR 2021-03-12 00:08:09,838 log 26608 19176 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:08:09,841 basehttp 26608 19176 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226807
+ERROR 2021-03-12 00:09:33,428 log 26608 19176 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:09:33,429 basehttp 26608 19176 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226807
+ERROR 2021-03-12 00:19:00,422 log 25304 3116 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:19:00,425 basehttp 25304 3116 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226807
+ERROR 2021-03-12 00:19:08,683 log 25304 3116 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:19:08,684 basehttp 25304 3116 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226807
+ERROR 2021-03-12 00:26:39,036 log 4072 16208 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 00:26:39,039 basehttp 4072 16208 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226807
+WARNING 2021-03-12 01:06:05,914 log 25036 11776 Not Found: //store/create_user/
+
+WARNING 2021-03-12 01:06:05,914 basehttp 25036 11776 "POST //store/create_user/%0A HTTP/1.1" 404 2226
+ERROR 2021-03-12 01:08:41,439 log 25036 9936 Internal Server Error: /admin/SocialBookApp/app_user/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\models\usermodels.py", line 35, in save
+    self.usertype = self.email.usertype ()
+AttributeError: 'str' object has no attribute 'usertype'
+ERROR 2021-03-12 01:08:41,441 basehttp 25036 9936 "POST /admin/SocialBookApp/app_user/add/ HTTP/1.1" 500 118351
+ERROR 2021-03-12 01:08:50,953 log 25036 9936 Internal Server Error: /admin/SocialBookApp/app_user/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\models\usermodels.py", line 35, in save
+    self.usertype = self.email.usertype ()
+AttributeError: 'str' object has no attribute 'usertype'
+ERROR 2021-03-12 01:08:50,954 basehttp 25036 9936 "POST /admin/SocialBookApp/app_user/add/ HTTP/1.1" 500 118329
+ERROR 2021-03-12 01:09:22,811 log 25036 9936 Internal Server Error: /admin/SocialBookApp/app_user/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\models\usermodels.py", line 35, in save
+    self.usertype = self.email.usertype ()
+AttributeError: 'str' object has no attribute 'usertype'
+ERROR 2021-03-12 01:09:22,811 basehttp 25036 9936 "POST /admin/SocialBookApp/app_user/add/ HTTP/1.1" 500 118329
+ERROR 2021-03-12 01:11:29,800 log 17984 14560 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 01:11:29,803 basehttp 17984 14560 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226782
+ERROR 2021-03-12 01:11:57,329 log 17984 14560 Internal Server Error: /admin/SocialBookApp/booktree/1/delete/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([2, -2, 2, -2, 1, 2, 2],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1846, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1876, in _delete_view
+    self.delete_model(request, obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1099, in delete_model
+    obj.delete()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1130, in delete
+    self._tree_manager._close_gap(tree_width, target_right, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 809, in _close_gap
+    self._manage_space(-size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 01:11:57,332 basehttp 17984 14560 "POST /admin/SocialBookApp/booktree/1/delete/ HTTP/1.1" 500 205719
+ERROR 2021-03-12 01:12:22,790 log 17984 14560 Internal Server Error: /admin/SocialBookApp/booktree/1/change/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 2, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1019, in save
+    self._tree_manager._move_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 574, in _move_node
+    self._move_root_node(node, target, position)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1281, in _move_root_node
+    self._create_space(width, space_target, new_tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 01:12:22,792 basehttp 17984 14560 "POST /admin/SocialBookApp/booktree/1/change/ HTTP/1.1" 500 228390
+ERROR 2021-03-12 01:30:20,743 log 19536 25232 Internal Server Error: /admin/SocialBookApp/booktree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 51, in execute
+    self.result = Query(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 783, in __init__
+    self._query = self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 875, in parse
+    raise e
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 856, in parse
+    return handler(self, statement)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 917, in _update
+    query = UpdateQuery(self.db, self.connection_properties, sm, self._params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 297, in __init__
+    super().__init__(*args)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 62, in __init__
+    self.parse()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 318, in parse
+    raise SQLDecodeError
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: ('\n            UPDATE "SocialBookApp_booktree"\n            SET "lft" = CASE\n                    WHEN "lft" > %(0)s\n                        THEN "lft" + %(1)s\n                    ELSE "lft" END,\n                "rght" = CASE\n                    WHEN "rght" > %(2)s\n                        THEN "rght" + %(3)s\n                    ELSE "rght" END\n            WHERE "tree_id" = %(4)s\n              AND ("lft" > %(5)s OR "rght" > %(6)s)',)
+	Params: ([1, 2, 1, 2, 1, 1, 1],)
+	Version: 1.3.3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 1091, in save
+    self.insert_at(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\models.py", line 771, in insert_at
+    self._tree_manager.insert_node(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 43, in wrapped
+    return method(self, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 537, in insert_node
+    self._create_space(2, space_target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 816, in _create_space
+    self._manage_space(size, target, tree_id)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\mptt\managers.py", line 1052, in _manage_space
+    cursor.execute(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 01:30:20,747 basehttp 19536 25232 "POST /admin/SocialBookApp/booktree/add/ HTTP/1.1" 500 226872
+ERROR 2021-03-12 01:38:38,728 log 6564 23424 Internal Server Error: /admin/SocialBookApp/booktree/2/change/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 807, in __iter__
+    yield from iter(self._query)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 160, in __iter__
+    self._cursor = self._get_cursor()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 236, in _get_cursor
+    cur = self.db[self.left_table].aggregate(pipeline)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\collection.py", line 2453, in aggregate
+    return self._aggregate(_CollectionAggregationCommand,
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\collection.py", line 2375, in _aggregate
+    return self.__database.client._retryable_read(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\mongo_client.py", line 1471, in _retryable_read
+    return func(session, server, sock_info, slave_ok)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\aggregation.py", line 136, in get_cursor
+    result = sock_info.command(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\network.py", line 159, in command
+    helpers._check_command_response(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\pymongo\helpers.py", line 160, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Unrecognized expression '$nin', full error: OrderedDict([('ok', 0.0), ('errmsg', "Unrecognized expression '$nin'"), ('code', 168), ('codeName', 'InvalidPipelineOperator')])
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 65, in fetchmany
+    ret.append(self.result.next())
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 796, in __next__
+    result = next(self._result_generator)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\sql2mongo\query.py", line 820, in __iter__
+    raise exe from e
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: FAILED SQL: SELECT "SocialBookApp_booktree"."id", "SocialBookApp_booktree"."User_id", "SocialBookApp_booktree"."UserName", "SocialBookApp_booktree"."parent_id", "SocialBookApp_booktree"."lft", "SocialBookApp_booktree"."rght", "SocialBookApp_booktree"."tree_id", "SocialBookApp_booktree"."level" FROM "SocialBookApp_booktree" WHERE NOT ("SocialBookApp_booktree"."id" IN (SELECT U0."id" FROM "SocialBookApp_booktree" U0 WHERE U0."id" = %(0)s)) ORDER BY "SocialBookApp_booktree"."tree_id" ASC, "SocialBookApp_booktree"."lft" ASC
+Params: (2,)
+Pymongo error: OrderedDict([('ok', 0.0), ('errmsg', "Unrecognized expression '$nin'"), ('code', 168), ('codeName', 'InvalidPipelineOperator')])
+Version: 1.3.3
+	Sub SQL: None
+	FAILED SQL: None
+	Params: None
+	Version: None
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 97, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 70, in fetchmany
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 192, in render
+    return template.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 312, in render
+    return nodelist.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 994, in render
+    return render_value_in_context(output, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 973, in render_value_in_context
+    value = str(value)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\html.py", line 376, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\boundfield.py", line 93, in as_widget
+    return widget.render(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 241, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\widgets.py", line 283, in get_context
+    'rendered_widget': self.widget.render(name, value, attrs),
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 241, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 678, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 639, in get_context
+    context['widget']['optgroups'] = self.optgroups(name, context['widget']['value'], attrs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\widgets.py", line 587, in optgroups
+    for index, (option_value, option_label) in enumerate(self.choices):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\forms\models.py", line 1156, in __iter__
+    for obj in queryset:
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 360, in _iterator
+    yield from self._iterable_class(self, chunked_fetch=use_chunked_fetch, chunk_size=chunk_size)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 70, in __iter__
+    for row in compiler.results_iter(results):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1606, in cursor_iter
+    for rows in iter((lambda: cursor.fetchmany(itersize)), sentinel):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1606, in <lambda>
+    for rows in iter((lambda: cursor.fetchmany(itersize)), sentinel):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 97, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 97, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\djongo\cursor.py", line 70, in fetchmany
+    raise db_exe from e
+django.db.utils.DatabaseError
+ERROR 2021-03-12 01:38:38,734 basehttp 6564 23424 "GET /admin/SocialBookApp/booktree/2/change/ HTTP/1.1" 500 699453
+ERROR 2021-03-12 02:01:18,346 log 18976 13360 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Category is not JSON serializable
+ERROR 2021-03-12 02:01:18,348 basehttp 18976 13360 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 99161
+ERROR 2021-03-12 02:02:51,316 log 22280 26364 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Category is not JSON serializable
+ERROR 2021-03-12 02:02:51,321 basehttp 22280 26364 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 99161
+ERROR 2021-03-12 02:03:18,258 log 22804 22796 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Category is not JSON serializable
+ERROR 2021-03-12 02:03:18,260 basehttp 22804 22796 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 99161
+ERROR 2021-03-12 02:03:41,573 log 22804 22796 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Category is not JSON serializable
+ERROR 2021-03-12 02:03:41,574 basehttp 22804 22796 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 99161
+ERROR 2021-03-12 02:06:25,392 log 19380 7704 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Category is not JSON serializable
+ERROR 2021-03-12 02:06:25,394 basehttp 19380 7704 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 99315
+ERROR 2021-03-12 02:23:36,216 log 10004 8604 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Category is not JSON serializable
+ERROR 2021-03-12 02:23:36,218 basehttp 10004 8604 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 100040
+WARNING 2021-03-12 02:28:27,807 log 26408 6556 Not Found: /admin/SocialBookApp/category/1/change/
+WARNING 2021-03-12 02:28:27,807 basehttp 26408 6556 "GET /admin/SocialBookApp/category/1/change/ HTTP/1.1" 404 6167
+WARNING 2021-03-12 02:28:30,723 log 26408 6556 Not Found: /admin/SocialBookApp/category/
+WARNING 2021-03-12 02:28:30,723 basehttp 26408 6556 "GET /admin/SocialBookApp/category/ HTTP/1.1" 404 6140
+WARNING 2021-03-12 02:28:31,192 log 26408 6556 Not Found: /admin/SocialBookApp/category/add/
+WARNING 2021-03-12 02:28:31,192 basehttp 26408 6556 "GET /admin/SocialBookApp/category/add/ HTTP/1.1" 404 6152
+ERROR 2021-03-12 02:38:59,907 log 25928 12116 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type BookUserTree is not JSON serializable
+ERROR 2021-03-12 02:38:59,909 basehttp 25928 12116 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 104150
+ERROR 2021-03-12 02:57:27,850 log 18224 18356 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type BookUserTree is not JSON serializable
+ERROR 2021-03-12 02:57:27,852 basehttp 18224 18356 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 100186
+ERROR 2021-03-12 03:04:22,934 log 7564 7592 Internal Server Error: /admin/SocialBookApp/bookusertree/add/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'App_User'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1653, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1580, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1093, in save_model
+    obj.save()
+  File "S:\ASE\mygit\Bookstagram\SocialBookApp\models\bookmodels.py", line 69, in save
+    list = App_User.objects.get(id=self.user)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <App_User: App_User object (18)>.
+ERROR 2021-03-12 03:04:22,937 basehttp 7564 7592 "POST /admin/SocialBookApp/bookusertree/add/ HTTP/1.1" 500 181109
+ERROR 2021-03-12 03:07:33,477 log 13836 3376 Internal Server Error: /store/activate_Tree/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type BookUserTree is not JSON serializable
+ERROR 2021-03-12 03:07:33,479 basehttp 13836 3376 "GET /store/activate_Tree/%0A?pk=1 HTTP/1.1" 500 99696
+WARNING 2021-03-12 15:53:48,854 log 8300 11912 Not Found: /favicon.ico
+WARNING 2021-03-12 15:53:48,854 basehttp 8300 11912 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-12 17:43:39,384 log 15076 15068 Unauthorized: /store/book/
+
+WARNING 2021-03-12 17:43:39,384 basehttp 15076 15068 "POST /store/book/%0A HTTP/1.1" 401 27
+ERROR 2021-03-12 18:22:28,114 log 7492 6240 Internal Server Error: /admin/SocialBookApp/booktreedb/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'None'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1719, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\contrib\admin\options.py", line 1400, in response_action
+    queryset = queryset.filter(pk__in=selected)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\lookups.py", line 227, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'None'.
+ERROR 2021-03-12 18:22:28,117 basehttp 7492 6240 "POST /admin/SocialBookApp/booktreedb/ HTTP/1.1" 500 159004
+WARNING 2021-03-13 00:02:45,208 log 11928 25484 Unauthorized: /store/friend/
+WARNING 2021-03-13 00:02:45,210 basehttp 11928 25484 "POST /store/friend/ HTTP/1.1" 401 27
+WARNING 2021-03-13 00:13:21,682 log 1832 24436 Unauthorized: /store/friendlist/16/
+WARNING 2021-03-13 00:13:21,682 basehttp 1832 24436 "PUT /store/friendlist/16/ HTTP/1.1" 401 27
+WARNING 2021-03-13 00:33:01,863 log 26252 4972 Unauthorized: /store/feed/
+WARNING 2021-03-13 00:33:01,863 basehttp 26252 4972 "GET /store/feed/ HTTP/1.1" 401 58
+WARNING 2021-03-14 23:49:11,248 log 7100 21096 Not Found: /
+WARNING 2021-03-14 23:49:11,249 basehttp 7100 21096 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-14 23:49:11,325 log 7100 21096 Not Found: /favicon.ico
+WARNING 2021-03-14 23:49:11,325 basehttp 7100 21096 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-14 23:49:39,964 log 7100 17412 Method Not Allowed: /store/dp/
+
+WARNING 2021-03-14 23:49:39,965 basehttp 7100 17412 "GET /store/dp/%0A HTTP/1.1" 405 40
+ERROR 2021-03-14 23:51:04,140 log 20560 13452 Internal Server Error: /store/dp/
+Traceback (most recent call last):
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\Abi Blista\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\utils\encoders.py", line 50, in default
+    return obj.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte
+ERROR 2021-03-14 23:51:04,141 basehttp 20560 13452 "POST /store/dp/%0A HTTP/1.1" 500 100991
+WARNING 2021-03-15 17:42:36,495 log 1672 5080 Not Found: /
+WARNING 2021-03-15 17:42:36,495 basehttp 1672 5080 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-15 17:42:36,542 log 1672 5080 Not Found: /favicon.ico
+WARNING 2021-03-15 17:42:36,543 basehttp 1672 5080 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-15 23:26:46,780 log 1672 10864 Not Found: /
+WARNING 2021-03-15 23:26:46,781 basehttp 1672 10864 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-15 23:27:08,741 log 1672 12648 Unauthorized: /store/friend/
+
+WARNING 2021-03-15 23:27:08,742 basehttp 1672 12648 "GET /store/friend/%0A HTTP/1.1" 401 27
+WARNING 2021-03-15 23:49:21,355 log 19368 5044 Not Found: /store/allfriend/
+
+WARNING 2021-03-15 23:49:21,356 basehttp 19368 5044 "GET /store/allfriend/%0A?pk=15 HTTP/1.1" 404 10031
+WARNING 2021-03-15 23:50:05,407 log 19368 5044 Not Found: /store/allfriend/
+
+WARNING 2021-03-15 23:50:05,407 basehttp 19368 5044 "GET /store/allfriend/%0A?pk=15 HTTP/1.1" 404 10031
+WARNING 2021-03-15 23:52:05,297 log 19368 5044 Not Found: /store/allfriend/
+
+WARNING 2021-03-15 23:52:05,297 basehttp 19368 5044 "GET /store/allfriend/%0A?pk=15 HTTP/1.1" 404 10031
+WARNING 2021-03-15 23:52:21,396 log 1696 21744 Not Found: /store/allfriend/
+
+WARNING 2021-03-15 23:52:21,396 basehttp 1696 21744 "GET /store/allfriend/%0A?pk=15 HTTP/1.1" 404 10031
+WARNING 2021-03-17 02:02:19,207 log 19232 2544 Not Found: /
+WARNING 2021-03-17 02:02:19,208 basehttp 19232 2544 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-17 02:02:19,310 log 19232 2544 Not Found: /favicon.ico
+WARNING 2021-03-17 02:02:19,310 basehttp 19232 2544 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-17 15:59:32,959 log 21124 5784 Not Found: /
+WARNING 2021-03-17 15:59:32,959 basehttp 21124 5784 "GET / HTTP/1.1" 404 2145
+WARNING 2021-03-17 15:59:33,003 log 21124 5784 Not Found: /favicon.ico
+WARNING 2021-03-17 15:59:33,003 basehttp 21124 5784 "GET /favicon.ico HTTP/1.1" 404 2196
+WARNING 2021-03-17 16:01:10,188 log 1172 11360 Unauthorized: /store/txtpost/
+WARNING 2021-03-17 16:01:10,189 basehttp 1172 11360 "POST /store/txtpost/ HTTP/1.1" 401 27

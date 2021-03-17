@@ -7,8 +7,8 @@ Created on 20-JAN-2021
 
 from django.conf.urls import url
 
-from SocialBookApp.views.views import (BookVeiwSet,UserVeiwSet,activate_User,create_User,friendlistVeiwSet,profileTXTPostVeiwSet,TXTPostCommentsVeiwSet,profileCommentVeiwSet,TextBookVeiwSet,BookCommentsVeiwSet,OwnBookVeiwSet,WishlistVeiwSet  )
-from SocialBookApp.views.process import (LoginCheckSet)
+from SocialBookApp.views.views import (activate_Tree,BookVeiwSet,UserVeiwSet,activate_User,create_User,friendlistVeiwSet,profileTXTPostVeiwSet,TXTPostCommentsVeiwSet,profileCommentVeiwSet,TextBookVeiwSet,BookCommentsVeiwSet,OwnBookVeiwSet,WishlistVeiwSet,NewsfeedVeiwSet  )
+from SocialBookApp.views.process import (LoginCheckSet,create_Dp)
 
 
 
@@ -36,6 +36,11 @@ user_id = UserVeiwSet.as_view({
 
 friend = friendlistVeiwSet.as_view({
     'post' : 'create_relationship',
+
+})
+
+friend_user_id = friendlistVeiwSet.as_view({
+
      'get' : 'get_allUsers'
 })
 
@@ -227,6 +232,16 @@ Wishlistusrbok_id = WishlistVeiwSet.as_view({
 
 })
 
+feed = NewsfeedVeiwSet.as_view({
+    'get' : 'list_Feed',
+    # 'post' : 'create_Book',
+})
+
+feed_id = NewsfeedVeiwSet.as_view({
+    'get' : 'get_UserFeed',
+    # 'post' : 'create_Book',
+})
+
 
 
 urlpatterns = [
@@ -235,13 +250,18 @@ urlpatterns = [
 
     url(r'^book/login/$', login),
 
+    url(r'^dp/$', create_Dp),
+
     url(r'^user/$', user),
     url(r'^user/(?P<pk>\d+)/$', user_id),
 
     url(r'^activate_user/$', activate_User),
     url(r'^create_user/$', create_User),
 
+    url(r'^activate_Tree/$', activate_Tree),
+
     url(r'^friend/$', friend),
+    url(r'^allfriend/$', friend_user_id),
     url(r'^friendlist/(?P<pk>\d+)/$', friend_id),
     url(r'^notfriend/(?P<pk>\d+)/$', notfriend_id),
     url(r'^acceptfriend/(?P<pk>\d+)/$', addfriend_id),
@@ -283,5 +303,7 @@ urlpatterns = [
     url(r'^wishlistbok/$', Wishlistbok_id),
     url(r'^wishlistusrbok/$', Wishlistusrbok_id),
 
+    url(r'^feed/$', feed),
+    url(r'^userfeed/$', feed_id),
 
 ]
