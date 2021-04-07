@@ -49,9 +49,13 @@ INSTALLED_APPS = [
     'rest_framework_json_api',
     'SocialBookApp',
     'rest_framework.authtoken',
+    'dbbackup',
     'treenode',
 
 ]
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': str(BASE_DIR) + 'DBbackup/'}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

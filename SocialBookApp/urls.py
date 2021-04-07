@@ -68,7 +68,7 @@ notfriend_id = friendlistVeiwSet.as_view({
 
 addfriend_id = friendlistVeiwSet.as_view({
 
-    'get': 'get_acceptfriendlist'
+    'get': '  '
 })
                             #pending request to accept friend
 unfriend_id = friendlistVeiwSet.as_view({
@@ -83,6 +83,16 @@ listfriend_id = friendlistVeiwSet.as_view({
 
 login = LoginCheckSet.as_view({
     'post' : 'login',
+
+})
+
+chpass = LoginCheckSet.as_view({
+    'post' : 'change_pass',
+
+})
+
+genpass = LoginCheckSet.as_view({
+    'post' : 'generate_pass',
 
 })
 
@@ -206,6 +216,11 @@ OwnBookusrbok_id = OwnBookVeiwSet.as_view({
 
 })
 
+OwnBook_check = OwnBookVeiwSet.as_view({
+    'get' : 'Check_OwnBook',
+
+})
+
 Wishlist = WishlistVeiwSet.as_view({
     'get' : 'list_Wishlist',
     'post' : 'create_Wishlist',
@@ -249,6 +264,8 @@ urlpatterns = [
     url(r'^book/(?P<pk>\d+)/$', book_id),
 
     url(r'^book/login/$', login),
+    url(r'^chpass/$', chpass),
+    url(r'^genpass/$', genpass),
 
     url(r'^dp/$', create_Dp),
 
@@ -292,6 +309,7 @@ urlpatterns = [
     url(r'^ownbookusr/$', OwnBookusr_id),
     url(r'^ownbookbok/$', OwnBookbok_id),
     url(r'^ownbookusrbok/$', OwnBookusrbok_id),
+    url(r'^ownbookcheck/$', OwnBook_check),
 
     url(r'^bookcomments/$', BookComments),
     url(r'^bookcomments/(?P<pk>\d+)/$', BookComments_id),

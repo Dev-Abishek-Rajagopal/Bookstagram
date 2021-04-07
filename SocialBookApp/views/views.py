@@ -10,10 +10,10 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework.viewsets import ModelViewSet, ViewSet
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
-from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist,BookUserTree,BookTreeConnect,BookNewsFeed,FriendNewsFeed,CommentsNewsFeed)
-from SocialBookApp.models.usermodels import (App_User,friendlist,profileTXTPost,TXTPostComments,profileComment)
+from SocialBookApp.models.bookmodels import (Book,TextBook,BookComments,OwnBook,BookWishlist,BookUserTree,BookTreeConnect,BookNewsFeed,FriendNewsFeed,CommentsNewsFeed,TXTPostCommentsNewsFeed,profileTXTPost,TXTPostComments, BookTickerNewsFeed)
+from SocialBookApp.models.usermodels import (App_User,friendlist,profileComment)
 from django.contrib.auth.models import User
-from SocialBookApp.serializers.serializers import (BookSerializer,BookSerializerI,BookSerializerII,BookTreeDBSerializer,App_UserSerializer,App_UserSerializerII,UserSerializer,friendlistSerializer,profileTXTPostSerializer,App_UserSerializerI,profileTXTPostSerializerI,TXTPostCommentsSerializer,TXTPostCommentsSerializerI,profileCommentSerializer,TextBookSerializer,TextBookSerializerI,BookCommentsSerializer,OwnBookSerializer,OwnBookSerializerI,WishlistSerializer,profileCommentSerializerI,BookCommentsSerializerI,WishlistSerializerI,BookNewsFeedSerializer,FriendNewsFeedSerializer,FriendNewsFeedSerializerI,BookNewsFeedSerializerI,CommentsNewsFeedSerializerI,CommentsNewsFeedSerializer  )
+from SocialBookApp.serializers.serializers import (BookSerializer,BookSerializerI,BookSerializerII,BookTreeDBSerializer,App_UserSerializer,App_UserSerializerII,UserSerializer,friendlistSerializer,profileTXTPostSerializer,App_UserSerializerI,profileTXTPostSerializerI,TXTPostCommentsSerializer,TXTPostCommentsSerializerI,profileCommentSerializer,TextBookSerializer,TextBookSerializerI,BookCommentsSerializer,OwnBookSerializer,OwnBookSerializerI,WishlistSerializer,profileCommentSerializerI,BookCommentsSerializerI,WishlistSerializerI,BookNewsFeedSerializer,FriendNewsFeedSerializer,FriendNewsFeedSerializerI,BookNewsFeedSerializerI,CommentsNewsFeedSerializerI,CommentsNewsFeedSerializer,TXTPostCommentsNewsFeedSerializer,TXTPostCommentsNewsFeedSerializerI,App_UserSerializerforPUT , BookTickerNewsFeedSerializer, BookTickerNewsFeedSerializerI )
 from rest_framework.response import Response
 import logging
 from rest_framework.authentication import TokenAuthentication
@@ -34,7 +34,7 @@ from django.forms.models import model_to_dict
 from itertools import chain
 from django.core import serializers
 
-logger = logging.getLogger("book.task")
+logger = logging.getLogger("book.request")
 
 class BookVeiwSet(ModelViewSet):
 
@@ -120,6 +120,7 @@ class BookVeiwSet(ModelViewSet):
                 logger.info(i)
                 list11 = App_User.objects.get(id=int(i["user"]))
                 serializer11 = App_UserSerializerII(list11)
+                i["AuthJSON"] = serializer11.data
                 i["AuthJSON"] = serializer11.data
 
             datas['CommentJSON'] = comments
@@ -214,7 +215,7 @@ class UserVeiwSet(ModelViewSet):
 
     def update_User(self, request, *args, **kwargs):
         try:
-            serializer = App_UserSerializer(data=request.data)
+            serializer = App_UserSerializerforPUT(data=request.data)
             pk = self.kwargs['pk']
             item = App_User.objects.get(id=pk)
             if serializer.is_valid():
@@ -577,7 +578,21 @@ class profileTXTPostVeiwSet(ModelViewSet):
             logger.info("hi")
             logger.info(dbi)
             serializer = profileTXTPostSerializer(dbi, many=True)
-            return Response(serializer.data, status=200)
+            datas = serializer.data.copy()
+
+            for i in datas:
+                logger.info(i["id"])
+                dbi = TXTPostComments.objects.filter(Q(post=(i["id"])))
+                logger.info(dbi)
+                serializerC = TXTPostCommentsSerializer(dbi, many=True)
+                dataC = serializerC.data.copy()
+                for j in dataC:
+                    listU = App_User.objects.get(id=j["user"])
+                    serializerUS = App_UserSerializerI(listU)
+                    j['userJSON'] = serializerUS.data
+                i["CommentsJSON"] = dataC
+
+            return Response(datas, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -628,8 +643,21 @@ class profileTXTPostVeiwSet(ModelViewSet):
                     postarr.append(j)
 
             logger.info(postarr)
-            postarr = sorted(postarr, key=lambda k: k['publist'])
-            return Response(postarr, status=200)
+            datasH = postarr.copy()
+            for i in datasH:
+                logger.info(i["id"])
+                dbi = TXTPostComments.objects.filter(Q(post=(i["id"])))
+                logger.info(dbi)
+                serializerC = TXTPostCommentsSerializer(dbi, many=True)
+                dataC = serializerC.data.copy()
+                for j in dataC:
+                    listU = App_User.objects.get(id=j["user"])
+                    serializerUS = App_UserSerializerI(listU)
+                    j['userJSON'] = serializerUS.data
+                i["CommentsJSON"] = dataC
+
+            datasH = sorted(datasH, key=lambda k: k['publist'])
+            return Response(datasH, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -709,6 +737,19 @@ class TXTPostCommentsVeiwSet(ModelViewSet):
                 list = profileTXTPost.objects.get(id=datas["post"])
                 list.comments = list.comments + 1
                 list.save()
+
+                Bndata = {}
+
+                list11 = App_User.objects.get(id=serializer.data['user'])
+                serializerU = App_UserSerializer(list11)
+                Bndata['Postuser'] = serializerU.data['id']
+                Bndata['post'] = serializer.data['id']
+                Bndata['PostWriter'] = list.user.id
+                Bndata['comments'] = "PostCommented"
+                logger.info(Bndata)
+                serializerBn = TXTPostCommentsNewsFeedSerializer(data=Bndata)
+                if serializerBn.is_valid():
+                    serializerBn.save()
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
         except Exception as e:
@@ -1041,20 +1082,36 @@ class BookCommentsVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
+def alreadyChilden(buyer,pk):
+
+    if pk.get_children() ==[]:
+        return True
+    else:
+        userarr = []
+        userarr = pk.get_children()
+        for i in userarr:
+
+            if (i.user.id == buyer):
+                logger.info("Already Here")
+                return False
+    return True
+
 def iterate_Treelist(tree,user,buyer,book):
 
     list2 = App_User.objects.get(id=user)
     serializer = App_UserSerializerII(list2)
     listB = App_User.objects.get(id=buyer)
+    serializerBB = App_UserSerializerII(listB)
     list1 = Book.objects.get(id=book)
     for i in tree:
         list = App_User.objects.get(username=str(i['node']).split("— ")[-1])
         serializer3 = App_UserSerializerII(list)
         if serializer3.data['id'] == serializer.data['id']:
             pk = BookUserTree.objects.get(id=int(i['node'].id))
-            treeobj = BookUserTree(Book=list1, user=listB, tn_parent=pk)
-            treeobj.save()
-            return
+            if alreadyChilden(serializerBB.data['id'],pk):
+                treeobj = BookUserTree(Book=list1, user=listB, tn_parent=pk)
+                treeobj.save()
+                return
         iterate_Treelist(i['tree'],user,buyer,book)
     return tree
 
@@ -1070,6 +1127,26 @@ class OwnBookVeiwSet(ModelViewSet):
             serializer = OwnBookSerializer(book_list, many=True)
 
             return Response(serializer.data, status=200)
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
+
+    def Check_OwnBook(self, request):
+        try:
+            pk = request.query_params.get('pk')
+            book = request.query_params.get('book')
+            book_list = OwnBook.objects.all()
+            dbi = OwnBook.objects.filter(Q(user_id=int(pk)) & Q(Book_id=int(book)) )
+            response={}
+            logger.info(dbi)
+            serializer4 = OwnBookSerializerI(dbi, many=True)
+
+            if (len(serializer4.data) == 0):
+                response["Own"] = False
+                return Response(response, status=200)
+            response["Own"] = True
+            return Response(response, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -1095,6 +1172,7 @@ class OwnBookVeiwSet(ModelViewSet):
                     Bndata['Author'] = serializer4.data['authname']
                     Bndata['Buyer'] = serializer.data['user']
                     Bndata['Book'] = serializer.data['Book']
+                    Bndata['referrer'] = serializer4.data['authname']
                     Bndata['comments'] = "Bought"
                     serializerBn = BookNewsFeedSerializer(data=Bndata)
                     if serializerBn.is_valid():
@@ -1104,11 +1182,21 @@ class OwnBookVeiwSet(ModelViewSet):
                     Bndata['Author'] = serializer4.data['authname']
                     Bndata['Buyer'] = serializer.data['user']
                     Bndata['Book'] = serializer.data['Book']
+                    Bndata['referrer'] = serializer.data['referrer']
                     Bndata['comments'] = "referred"
                     serializerBn = BookNewsFeedSerializer(data=Bndata)
                     if serializerBn.is_valid():
                         serializerBn.save()
                     iterate_Treelist(pk.get_descendants_tree(), serializer.data['referrer'], serializerU.data['id'], serializer4.data['id'])
+
+                Tndata = {}
+                Tndata['Buyer'] = serializer.data['user']
+                Tndata['Author'] = serializer4.data['authname']
+                Tndata['Book'] = serializer.data['Book']
+                Tndata['comments'] = "Book Bought Ticker"
+                serializerTn = BookTickerNewsFeedSerializer(data=Tndata)
+                if serializerTn.is_valid():
+                    serializerTn.save()
 
                 return Response(serializer.data, status=200)
             return Response(serializer.errors, status=200)
@@ -1141,7 +1229,8 @@ class OwnBookVeiwSet(ModelViewSet):
                 list = Book.objects.get(id=i['Book'])
                 serializer1 = BookSerializerI(list)
                 i["bookJSON"] = serializer1.data
-            return Response(serializer.data, status=200)
+            unique = {each['Book']: each for each in serializer.data}.values()
+            return Response(unique, status=200)
         except Exception as e:
             logger.info("Error")
             logger.info(str(e))
@@ -1359,6 +1448,7 @@ class NewsfeedVeiwSet(ModelViewSet):
             pks = request.query_params.get('pk')
             dbi = FriendNewsFeed.objects.filter(Q(user_id=int(pks)) | Q(friend_id=int(pks)) )
             serializer = FriendNewsFeedSerializerI(dbi, many=True)
+            logger.info("hi")
             for i in serializer.data:
                 list = FriendNewsFeed.objects.get(id=int(i["id"]))
                 logger.info(list)
@@ -1372,6 +1462,7 @@ class NewsfeedVeiwSet(ModelViewSet):
                 datas["friendJSON"] = serializerf.data
                 arr.append(datas)
             dbj = BookNewsFeed.objects.filter(Q(Author_id=int(pks)) | Q(Buyer_id=int(pks)) )
+            logger.info("hi")
             for i in dbj:
                 list = BookNewsFeed.objects.get(id=i.id)
                 serializerB = BookNewsFeedSerializerI(list)
@@ -1382,12 +1473,16 @@ class NewsfeedVeiwSet(ModelViewSet):
                 Buyer = App_User.objects.get(id=datas['Buyer'])
                 serializerBy = App_UserSerializerII(Buyer)
                 datas["buyerJSON"] = serializerBy.data
+                referrer = App_User.objects.get(id=datas['referrer'])
+                serializerref = App_UserSerializerII(referrer)
+                datas["referrer"] = serializerref.data
                 book = Book.objects.get(id=datas['Book'])
                 serializerBook = BookSerializerII(book)
                 datas["bookJSON"] = serializerBook.data
                 arr.append(datas)
             arr2=[]
             dbk = CommentsNewsFeed.objects.filter(Q(user_id=int(pks)))
+            logger.info("hi")
             for i in dbk:
                 list = CommentsNewsFeed.objects.get(id=i.id)
                 serializerB = CommentsNewsFeedSerializerI(list)
@@ -1449,9 +1544,79 @@ class NewsfeedVeiwSet(ModelViewSet):
                     datas["BookcommentsJSON"] = serializerBookcom.data
                     arr.append(datas)
 
+            dbl = TXTPostCommentsNewsFeed.objects.filter(Q(PostWriter_id=int(pks)))
+            for i in dbl:
 
+                list = TXTPostCommentsNewsFeed.objects.get(id=i.id)
+                serializerB = TXTPostCommentsNewsFeedSerializerI(list)
+                datas = serializerB.data.copy()
+                Postuser = App_User.objects.get(id=datas['Postuser'])
+                serializerA = App_UserSerializerII(Postuser)
+                datas["PostuserJSON"] = serializerA.data
+                PostWriter = App_User.objects.get(id=datas['PostWriter'])
+                serializerBy = App_UserSerializerII(PostWriter)
+                datas["PostWriterJSON"] = serializerBy.data
+                post = profileTXTPost.objects.get(id=datas['post'])
+                arr2.append(datas['post'])
+                serializerBook = profileTXTPostSerializer(post)
+                datas["post"] = serializerBook.data
+                arr.append(datas)
 
+            Comments_list = TXTPostCommentsNewsFeed.objects.all()
+            serializerCC = TXTPostCommentsNewsFeedSerializerI(Comments_list, many=True)
+            datasCC = serializerCC.data.copy()
+            for i in datasCC:
 
+                if i["Postuser"] == int(pks):
+                    list = TXTPostCommentsNewsFeed.objects.get(id=int(i["id"]))
+                    serializerB = TXTPostCommentsNewsFeedSerializerI(list)
+                    datas = serializerB.data.copy()
+                    Postuser = App_User.objects.get(id=datas['Postuser'])
+                    serializerA = App_UserSerializerII(Postuser)
+                    datas["PostuserJSON"] = serializerA.data
+                    PostWriter = App_User.objects.get(id=datas['PostWriter'])
+                    serializerBy = App_UserSerializerII(PostWriter)
+                    datas["PostWriterJSON"] = serializerBy.data
+                    post = profileTXTPost.objects.get(id=datas['post'])
+                    arr2.append(datas['post'])
+                    serializerBook = profileTXTPostSerializer(post)
+                    datas["post"] = serializerBook.data
+                    arr.append(datas)
+                if i["post"] in arr2:
+                    list = TXTPostCommentsNewsFeed.objects.get(id=int(i["id"]))
+                    serializerB = TXTPostCommentsNewsFeedSerializerI(list)
+                    datas = serializerB.data.copy()
+                    Postuser = App_User.objects.get(id=datas['Postuser'])
+                    serializerA = App_UserSerializerII(Postuser)
+                    datas["PostuserJSON"] = serializerA.data
+                    PostWriter = App_User.objects.get(id=datas['PostWriter'])
+                    serializerBy = App_UserSerializerII(PostWriter)
+                    datas["PostWriterJSON"] = serializerBy.data
+                    post = profileTXTPost.objects.get(id=datas['post'])
+                    arr2.append(datas['post'])
+                    serializerBook = profileTXTPostSerializer(post)
+                    datas["post"] = serializerBook.data
+                    arr.append(datas)
+
+            TickerNewsFeed_list = BookTickerNewsFeed.objects.all()
+            serializerTT = BookTickerNewsFeedSerializerI(TickerNewsFeed_list, many=True)
+            datasTT = serializerTT.data.copy()
+            logger.info("hii")
+            for i in datasTT:
+
+                list = BookTickerNewsFeed.objects.get(id=int(i["id"]))
+                serializerB = BookTickerNewsFeedSerializerI(list)
+                datas = serializerB.data.copy()
+                Author = App_User.objects.get(id=datas['Author'])
+                serializerA = App_UserSerializerII(Author)
+                datas["authorJSON"] = serializerA.data
+                Buyer = App_User.objects.get(id=datas['Buyer'])
+                serializerBy = App_UserSerializerII(Buyer)
+                datas["buyerJSON"] = serializerBy.data
+                book = Book.objects.get(id=datas['Book'])
+                serializerBook = BookSerializerII(book)
+                datas["bookJSON"] = serializerBook.data
+                arr.append(datas)
 
             # serializer1 = BookNewsFeedSerializerI(dbj, many=True)
 
@@ -1464,9 +1629,16 @@ class NewsfeedVeiwSet(ModelViewSet):
             logger.info(str(e))
             return Response(str(e), status=200)
 
+@api_view(['POST'])
+@permission_classes((AllowAny, ))
+def Bookstagram_keepAlive(request):
+        try:
+            return Response("live", status=200)
 
-
-
+        except Exception as e:
+            logger.info("Error")
+            logger.info(str(e))
+            return Response(str(e), status=200)
 
 
 

@@ -26,6 +26,8 @@ class Book(models.Model):
     desc = models.CharField(max_length=500, default="")
     # dp = models.ImageField(upload_to ='bookDP/',default="0")
 
+
+
 class TextBook(models.Model):
     Book = models.ForeignKey(Book, on_delete=models.CASCADE,)
     content = models.TextField()
@@ -70,6 +72,18 @@ class BookNewsFeed(models.Model):
     comments = models.TextField()
     publist = UnixTimeStampField(auto_now=True,null=True)
 
+class BookTickerNewsFeed(models.Model):
+
+    Author = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='Authjson')
+    Buyer = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='BuyerJson')
+    Book = models.ForeignKey(Book, on_delete=models.CASCADE,related_name='BookJson' )
+    comments = models.TextField()
+    publist = UnixTimeStampField(auto_now=True,null=True)
+
+
+
+
+
 class FriendNewsFeed(models.Model):
 
     user = models.ForeignKey(App_User, on_delete=models.CASCADE,related_name='friendyou')
@@ -84,6 +98,65 @@ class CommentsNewsFeed(models.Model):
     Book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='book')
     Bookcomments = models.ForeignKey(BookComments, on_delete=models.CASCADE)
     comments = models.TextField()
+    publist = UnixTimeStampField(auto_now=True,null=True)
+
+class profileTXTPost(models.Model):
+    user = models.ForeignKey(App_User, on_delete=models.CASCADE)
+    post = models.TextField()
+    header = models.CharField(max_length=50,null=True)
+    types = models.CharField(max_length=50,null=True)
+    related = models.CharField(max_length=50,null=True)
+    url = models.CharField(max_length=200,null=True)
+    dp = models.TextField(null=True, blank=True)
+    comments = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+    share = models.IntegerField(default=0)
+    publist = UnixTimeStampField(auto_now=True,null=True)
+
+    def save(self, *args, **kwargs):
+
+        if self.dp == None and self.types != None and self.related != None:
+
+            if  self.types == 'Book':
+                list = Book.objects.get(id=self.related)
+                self.dp = list.dp
+
+            if  self.types == 'User':
+                list = App_User.objects.get(id=self.related)
+                self.dp = list.dp
+
+            if  self.types == 'Post':
+                list = profileTXTPost.objects.get(id=self.related)
+                self.dp = list.dp
+
+        elif self.dp != None:
+            self.dp = self.dp
+
+        else:
+            self.dp = ""
+
+        return super(profileTXTPost, self).save(*args, **kwargs)
+
+
+
+class TXTPostCommentsNewsFeed(models.Model):
+    Postuser = models.ForeignKey(App_User, on_delete=models.CASCADE, related_name='Postuser')
+    PostWriter = models.ForeignKey(App_User, on_delete=models.CASCADE, related_name='PostWriter')
+    post = models.ForeignKey(profileTXTPost, on_delete=models.CASCADE)
+    comments = models.TextField()
+    publist = UnixTimeStampField(auto_now=True, null=True)
+
+
+
+
+
+
+class TXTPostComments(models.Model):
+
+    user = models.ForeignKey(App_User, on_delete=models.CASCADE)
+    post = models.ForeignKey(profileTXTPost, on_delete=models.CASCADE)
+    comments = models.TextField()
+    likes = models.IntegerField(default=0)
     publist = UnixTimeStampField(auto_now=True,null=True)
 
 class BookUserTree(TreeNodeModel):

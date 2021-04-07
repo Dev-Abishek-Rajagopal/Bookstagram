@@ -693,3 +693,93 @@ INFO 2021-03-17 02:05:16,025 views 20312 19644 'collections.OrderedDict' object 
 INFO 2021-03-17 02:05:31,400 views 19352 628 hi
 INFO 2021-03-17 02:05:31,400 views 19352 628 <QuerySet [<friendlist: friendlist object (18)>]>
 INFO 2021-03-17 02:05:31,421 views 19352 628 App_User object (31)
+INFO 2021-03-25 01:48:34,628 serializers 20540 20272 Error
+INFO 2021-03-25 01:48:34,630 serializers 20540 20272 name 'null' is not defined
+INFO 2021-03-25 01:50:00,137 serializers 11352 12744 Error
+INFO 2021-03-25 01:50:00,137 serializers 11352 12744 name 'null' is not defined
+INFO 2021-03-25 01:50:01,348 serializers 11352 12744 Error
+INFO 2021-03-25 01:50:01,348 serializers 11352 12744 name 'null' is not defined
+INFO 2021-03-25 01:50:34,765 serializers 11352 12744 Error
+INFO 2021-03-25 01:50:34,765 serializers 11352 12744 name 'null' is not defined
+INFO 2021-03-25 01:50:35,565 serializers 11352 12744 Error
+INFO 2021-03-25 01:50:35,565 serializers 11352 12744 name 'null' is not defined
+INFO 2021-04-06 21:20:20,620 process 21352 3520 reader
+INFO 2021-04-06 21:21:14,177 process 21352 3520 reader
+INFO 2021-04-06 21:24:25,115 process 21352 3520 pass
+INFO 2021-04-06 21:25:23,174 process 21352 3520 reader
+INFO 2021-04-06 21:27:05,630 process 15392 24336 abiblista@gmail.com
+INFO 2021-04-06 21:27:13,943 process 15392 24336 abiblista@gmail.com
+INFO 2021-04-06 21:29:14,250 process 20164 9372 abiblista@gmail.com
+INFO 2021-04-06 21:29:23,894 process 25972 22104 abiblista@gmail.com
+INFO 2021-04-06 21:29:35,906 process 25972 22104 abiblista@gmail.com
+INFO 2021-04-06 21:29:38,882 process 25972 22104 abiblista@gmail.com
+INFO 2021-04-06 21:58:31,519 process 9100 4788 abiblista@gmail.com
+INFO 2021-04-06 21:58:31,524 process 9100 4788 Sending HTML Email
+INFO 2021-04-06 21:58:31,524 process 9100 4788 in py
+INFO 2021-04-06 21:58:31,818 process 9100 4788 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 21:59:24,180 process 9100 4788 abiblista@gmail.com
+INFO 2021-04-06 21:59:24,185 process 9100 4788 Sending HTML Email
+INFO 2021-04-06 21:59:24,185 process 9100 4788 in py
+INFO 2021-04-06 21:59:24,437 process 9100 4788 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:01:55,532 process 9100 4788 abiblista@gmail.com
+INFO 2021-04-06 22:01:55,537 process 9100 4788 Sending HTML Email
+INFO 2021-04-06 22:01:55,537 process 9100 4788 in py
+INFO 2021-04-06 22:01:55,843 process 9100 4788 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:02:37,944 process 16596 26592 abiblista@gmail.com
+INFO 2021-04-06 22:02:37,948 process 16596 26592 Sending HTML Email
+INFO 2021-04-06 22:02:37,948 process 16596 26592 in py
+INFO 2021-04-06 22:02:38,192 process 16596 26592 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:04:11,341 process 16596 26592 abiblista@gmail.com
+INFO 2021-04-06 22:04:11,347 process 16596 26592 Sending HTML Email
+INFO 2021-04-06 22:04:11,347 process 16596 26592 in py
+INFO 2021-04-06 22:04:11,608 process 16596 26592 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:04:26,768 process 3624 3520 abiblista@gmail.com
+INFO 2021-04-06 22:04:26,772 process 3624 3520 Sending HTML Email
+INFO 2021-04-06 22:04:26,773 process 3624 3520 in py
+INFO 2021-04-06 22:04:27,033 process 3624 3520 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:04:37,633 process 19020 15932 abiblista@gmail.com
+INFO 2021-04-06 22:04:37,638 process 19020 15932 Sending HTML Email
+INFO 2021-04-06 22:04:37,639 process 19020 15932 in py
+INFO 2021-04-06 22:04:37,887 process 19020 15932 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:04:51,697 process 20200 12124 abiblista@gmail.com
+INFO 2021-04-06 22:04:51,702 process 20200 12124 Sending HTML Email
+INFO 2021-04-06 22:04:51,703 process 20200 12124 in py
+INFO 2021-04-06 22:04:51,952 process 20200 12124 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:05:08,073 process 17312 19792 abiblista@gmail.com
+INFO 2021-04-06 22:05:08,077 process 17312 19792 Sending HTML Email
+INFO 2021-04-06 22:05:08,078 process 17312 19792 in py
+INFO 2021-04-06 22:05:08,325 process 17312 19792 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:06:33,565 process 17076 21904 abiblista@gmail.com
+INFO 2021-04-06 22:06:33,570 process 17076 21904 Sending HTML Email
+INFO 2021-04-06 22:06:33,571 process 17076 21904 in py
+INFO 2021-04-06 22:06:33,822 process 17076 21904 'SMTP' object has no attribute 'info'
+INFO 2021-04-06 22:07:04,106 process 24064 7412 abiblista@gmail.com
+INFO 2021-04-06 22:07:04,110 process 24064 7412 Sending HTML Email
+INFO 2021-04-06 22:07:04,111 process 24064 7412 in py
+INFO 2021-04-06 22:07:04,874 process 24064 7412 (220, b'2.0.0 Ready to start TLS')
+INFO 2021-04-06 23:01:35,361 views 2244 21840 hi
+INFO 2021-04-06 23:01:35,361 views 2244 21840 <QuerySet [<OwnBook: OwnBook object (9)>, <OwnBook: OwnBook object (10)>, <OwnBook: OwnBook object (11)>, <OwnBook: OwnBook object (29)>, <OwnBook: OwnBook object (39)>, <OwnBook: OwnBook object (40)>, <OwnBook: OwnBook object (42)>, <OwnBook: OwnBook object (69)>, <OwnBook: OwnBook object (70)>, <OwnBook: OwnBook object (71)>, <OwnBook: OwnBook object (72)>]>
+INFO 2021-04-06 23:01:35,374 views 2244 21840 2
+INFO 2021-04-06 23:01:35,379 views 2244 21840 7
+INFO 2021-04-06 23:01:35,384 views 2244 21840 1
+INFO 2021-04-06 23:01:35,388 views 2244 21840 28
+INFO 2021-04-06 23:01:35,392 views 2244 21840 27
+INFO 2021-04-06 23:01:35,396 views 2244 21840 29
+INFO 2021-04-06 23:01:35,401 views 2244 21840 30
+INFO 2021-04-06 23:01:35,405 views 2244 21840 30
+INFO 2021-04-06 23:01:35,409 views 2244 21840 30
+INFO 2021-04-06 23:01:35,414 views 2244 21840 30
+INFO 2021-04-06 23:01:35,418 views 2244 21840 30
+INFO 2021-04-06 23:03:02,666 views 25348 11668 hi
+INFO 2021-04-06 23:03:02,666 views 25348 11668 <QuerySet [<OwnBook: OwnBook object (9)>, <OwnBook: OwnBook object (10)>, <OwnBook: OwnBook object (11)>, <OwnBook: OwnBook object (29)>, <OwnBook: OwnBook object (39)>, <OwnBook: OwnBook object (40)>, <OwnBook: OwnBook object (42)>, <OwnBook: OwnBook object (69)>, <OwnBook: OwnBook object (70)>, <OwnBook: OwnBook object (71)>, <OwnBook: OwnBook object (72)>]>
+INFO 2021-04-06 23:03:02,679 views 25348 11668 2
+INFO 2021-04-06 23:03:02,683 views 25348 11668 7
+INFO 2021-04-06 23:03:02,690 views 25348 11668 1
+INFO 2021-04-06 23:03:02,694 views 25348 11668 28
+INFO 2021-04-06 23:03:02,699 views 25348 11668 27
+INFO 2021-04-06 23:03:02,703 views 25348 11668 29
+INFO 2021-04-06 23:03:02,708 views 25348 11668 30
+INFO 2021-04-06 23:03:02,712 views 25348 11668 30
+INFO 2021-04-06 23:03:02,717 views 25348 11668 30
+INFO 2021-04-06 23:03:02,721 views 25348 11668 30
+INFO 2021-04-06 23:03:02,726 views 25348 11668 30
