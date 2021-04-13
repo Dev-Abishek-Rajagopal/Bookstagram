@@ -1,3 +1,14 @@
+|||     DB Structure    |||
+
+
+
+ <img src = "https://drive.google.com/uc?id=1JXR5OXjUDstoY1qSuFcDygnDBYRbHUwx&export=download">
+ 
+ 
+ 
+|||     Django Configuration     ||| 
+ 
+
 pip3 install Django
 
 pip3 install djangorestframework
@@ -9,6 +20,8 @@ pip3 install djongo
 pip3 install django-unixtimestampfield
 
 pip3 install django-fernet-fields==0.6
+
+pip3 install -r requirement.txt
 
 
 
@@ -66,8 +79,3 @@ sudo apt-get install libapache2-mod-wsgi-py3
 sudo vi book.conf
 
 
-
-|||     DB Structure    |||
-
-
- <img src = "https://drive.google.com/uc?id=1JXR5OXjUDstoY1qSuFcDygnDBYRbHUwx&export=download">
