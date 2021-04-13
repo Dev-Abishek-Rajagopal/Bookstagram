@@ -1,4 +1,4 @@
-|||     DB Structure    |||
+<b><h1>|||     DB Structure    |||</b></h1>
 
 
 
@@ -6,7 +6,7 @@
  
  
  
-|||     Django Configuration     ||| 
+<b><h1>|||     Django Configuration     |||</b></h1> 
  
 
 pip3 install Django
@@ -25,7 +25,7 @@ pip3 install -r requirement.txt
 
 
 
-|||     Server Configuration     |||
+<b><h1>|||     Server Configuration     |||</b></h1>
 
 
 
