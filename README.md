@@ -70,4 +70,4 @@ sudo vi book.conf
 |||     DB Structure    |||
 
 
-<img align="left" width="100" height="100" src="https://drive.google.com/open?id=1JXR5OXjUDstoY1qSuFcDygnDBYRbHUwx">
+<img align="left" width="100" height="100" src=" https://drive.google.com/thumbnail?id=1JXR5OXjUDstoY1qSuFcDygnDBYRbHUwx">
